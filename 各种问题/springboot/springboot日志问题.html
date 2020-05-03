@@ -1,0 +1,2128 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>springboot日志问题 · java实用笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="springboot配置属性DataSource问题.html" />
+    
+    
+
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://liangqingxiang.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Devops
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    Docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../devops/docker/docker-install.html">
+            
+                <a href="../../devops/docker/docker-install.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../devops/docker/docker实战1.html">
+            
+                <a href="../../devops/docker/docker实战1.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    docker实战1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../devops/docker/docker实战3-运行和查看.html">
+            
+                <a href="../../devops/docker/docker实战3-运行和查看.html">
+            
+                    
+                        <b>1.2.1.3.</b>
+                    
+                    docker实战3-运行和查看
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../devops/docker/docker实战4-挂载目录.html">
+            
+                <a href="../../devops/docker/docker实战4-挂载目录.html">
+            
+                    
+                        <b>1.2.1.4.</b>
+                    
+                    docker实战4-挂载目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../devops/docker/docker实战5-曲线拉取国外镜像.html">
+            
+                <a href="../../devops/docker/docker实战5-曲线拉取国外镜像.html">
+            
+                    
+                        <b>1.2.1.5.</b>
+                    
+                    docker实战5-曲线拉取国外镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    Jenkins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../devops/jenkins/Jenkins全局工具配置.html">
+            
+                <a href="../../devops/jenkins/Jenkins全局工具配置.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    Jenkins全局工具配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    Kettle
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../devops/kettle/kettle数据同步技术攻克.html">
+            
+                <a href="../../devops/kettle/kettle数据同步技术攻克.html">
+            
+                    
+                        <b>1.2.3.1.</b>
+                    
+                    kettle数据同步技术攻克
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Elasticsearch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    es实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../elasticsearch/es实战/es实战1-常见命令.html">
+            
+                <a href="../../elasticsearch/es实战/es实战1-常见命令.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    es实战1-常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../elasticsearch/es实战/es实战2-查询命令.html">
+            
+                <a href="../../elasticsearch/es实战/es实战2-查询命令.html">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    es实战2-查询命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../elasticsearch/es实战/es实战3-综合查询案例.html">
+            
+                <a href="../../elasticsearch/es实战/es实战3-综合查询案例.html">
+            
+                    
+                        <b>1.3.1.3.</b>
+                    
+                    es实战3-综合查询案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../elasticsearch/es实战/es实战4-java常见查询实例.html">
+            
+                <a href="../../elasticsearch/es实战/es实战4-java常见查询实例.html">
+            
+                    
+                        <b>1.3.1.4.</b>
+                    
+                    es实战4-java常见查询实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
+            
+                <a href="../../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
+            
+                    
+                        <b>1.3.1.5.</b>
+                    
+                    es实战5-聚合分组查询案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
+            
+                <a href="../../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
+            
+                    
+                        <b>1.3.1.6.</b>
+                    
+                    es实战6-springboot2.0集成elasticsearch6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
+            
+                <a href="../../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
+            
+                    
+                        <b>1.3.1.7.</b>
+                    
+                    es实战7-elasticsearch实现springboot自动配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    es知识点
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../elasticsearch/es知识点/和Elasticsearch交互.html">
+            
+                <a href="../../elasticsearch/es知识点/和Elasticsearch交互.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    和Elasticsearch交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../gitbook/gitbook教程.html">
+            
+                <a href="../../gitbook/gitbook教程.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    gitbook教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Java 8
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../java8/java8新特性.html">
+            
+                <a href="../../java8/java8新特性.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    java8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../python/python小牛试刀-获取微信关注用户信息.html">
+            
+                <a href="../../python/python小牛试刀-获取微信关注用户信息.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    python小牛试刀-获取微信关注用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                        <b>1.7.</b>
+                    
+                    Spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../spring/spring事件.html">
+            
+                <a href="../../spring/spring事件.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    spring事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                        <b>1.8.</b>
+                    
+                    Swagger
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../swagger/更改swagger上下文.html">
+            
+                <a href="../../swagger/更改swagger上下文.html">
+            
+                    
+                        <b>1.8.1.</b>
+                    
+                    更改swagger上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                        <b>1.9.</b>
+                    
+                    Uml
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../uml/建模工具plantuml介绍.html">
+            
+                <a href="../../uml/建模工具plantuml介绍.html">
+            
+                    
+                        <b>1.9.1.</b>
+                    
+                    建模工具plantuml介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                        <b>1.10.</b>
+                    
+                    Util
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" >
+            
+                <span>
+            
+                    
+                        <b>1.10.1.</b>
+                    
+                    Http
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../../util/http/RestTemplate用法.html">
+            
+                <a href="../../util/http/RestTemplate用法.html">
+            
+                    
+                        <b>1.10.1.1.</b>
+                    
+                    RestTemplate用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" >
+            
+                <span>
+            
+                    
+                        <b>1.10.2.</b>
+                    
+                    Json
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../../util/json/json序列化和反序列化工具.html">
+            
+                <a href="../../util/json/json序列化和反序列化工具.html">
+            
+                    
+                        <b>1.10.2.1.</b>
+                    
+                    json序列化和反序列化工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" >
+            
+                <span>
+            
+                    
+                        <b>1.10.3.</b>
+                    
+                    日志
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" data-path="../../util/日志/logback日志文件配置.html">
+            
+                <a href="../../util/日志/logback日志文件配置.html">
+            
+                    
+                        <b>1.10.3.1.</b>
+                    
+                    logback日志文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                        <b>1.11.</b>
+                    
+                    Xxl Job
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../xxl-job/xxl-job定时任务教程.html">
+            
+                <a href="../../xxl-job/xxl-job定时任务教程.html">
+            
+                    
+                        <b>1.11.1.</b>
+                    
+                    xxl-job定时任务教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                        <b>1.12.</b>
+                    
+                    中间件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" >
+            
+                <span>
+            
+                    
+                        <b>1.12.1.</b>
+                    
+                    Shardingsphere
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1.1" data-path="../../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
+            
+                <a href="../../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
+            
+                    
+                        <b>1.12.1.1.</b>
+                    
+                    sharding-jdbc实现读写分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                        <b>1.13.</b>
+                    
+                    前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" >
+            
+                <span>
+            
+                    
+                        <b>1.13.1.</b>
+                    
+                    Angular
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" >
+            
+                <span>
+            
+                    
+                        <b>1.13.1.1.</b>
+                    
+                    angular基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1.1" data-path="../../前端/angular/angular基础/angular-generate命令.html">
+            
+                <a href="../../前端/angular/angular基础/angular-generate命令.html">
+            
+                    
+                        <b>1.13.1.1.1.</b>
+                    
+                    angular-generate命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" >
+            
+                <span>
+            
+                    
+                        <b>1.13.2.</b>
+                    
+                    Node
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.2.1" data-path="../../前端/node/node学习.html">
+            
+                <a href="../../前端/node/node学习.html">
+            
+                    
+                        <b>1.13.2.1.</b>
+                    
+                    node学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" >
+            
+                <span>
+            
+                    
+                        <b>1.13.3.</b>
+                    
+                    Vue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.3.1" data-path="../../前端/vue/vue待学习.html">
+            
+                <a href="../../前端/vue/vue待学习.html">
+            
+                    
+                        <b>1.13.3.1.</b>
+                    
+                    vue待学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" >
+            
+                <span>
+            
+                    
+                        <b>1.13.4.</b>
+                    
+                    后台模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.4.1" data-path="../../前端/后台模板/ngx-admin后台模板学习.html">
+            
+                <a href="../../前端/后台模板/ngx-admin后台模板学习.html">
+            
+                    
+                        <b>1.13.4.1.</b>
+                    
+                    ngx-admin后台模板学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                        <b>1.14.</b>
+                    
+                    各种问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                        <b>1.14.1.</b>
+                    
+                    Java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1.1" data-path="../java/指针引用问题和List删除元素.html">
+            
+                <a href="../java/指针引用问题和List删除元素.html">
+            
+                    
+                        <b>1.14.1.1.</b>
+                    
+                    指针引用问题和List删除元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                        <b>1.14.2.</b>
+                    
+                    Springboot
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.14.2.1" data-path="springboot日志问题.html">
+            
+                <a href="springboot日志问题.html">
+            
+                    
+                        <b>1.14.2.1.</b>
+                    
+                    springboot日志问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.2" data-path="springboot配置属性DataSource问题.html">
+            
+                <a href="springboot配置属性DataSource问题.html">
+            
+                    
+                        <b>1.14.2.2.</b>
+                    
+                    springboot配置属性DataSource问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" >
+            
+                <span>
+            
+                    
+                        <b>1.14.3.</b>
+                    
+                    定时任务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.3.1" data-path="../定时任务/xxl-job打印日志问题.html">
+            
+                <a href="../定时任务/xxl-job打印日志问题.html">
+            
+                    
+                        <b>1.14.3.1.</b>
+                    
+                    xxl-job打印日志问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                        <b>1.15.</b>
+                    
+                    开发工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                        <b>1.15.1.</b>
+                    
+                    Excel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../../开发工具/excel/excel拼接字符串.html">
+            
+                <a href="../../开发工具/excel/excel拼接字符串.html">
+            
+                    
+                        <b>1.15.1.1.</b>
+                    
+                    excel拼接字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" >
+            
+                <span>
+            
+                    
+                        <b>1.15.2.</b>
+                    
+                    Idea
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.2.1" data-path="../../开发工具/idea/idea-git操作.html">
+            
+                <a href="../../开发工具/idea/idea-git操作.html">
+            
+                    
+                        <b>1.15.2.1.</b>
+                    
+                    idea-git操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.2" data-path="../../开发工具/idea/idea快捷键.html">
+            
+                <a href="../../开发工具/idea/idea快捷键.html">
+            
+                    
+                        <b>1.15.2.2.</b>
+                    
+                    idea快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.3" data-path="../../开发工具/idea/idea插件.html">
+            
+                <a href="../../开发工具/idea/idea插件.html">
+            
+                    
+                        <b>1.15.2.3.</b>
+                    
+                    idea插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../../开发工具/常见工具.html">
+            
+                <a href="../../开发工具/常见工具.html">
+            
+                    
+                        <b>1.15.3.</b>
+                    
+                    常见工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                        <b>1.16.</b>
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" >
+            
+                <span>
+            
+                    
+                        <b>1.16.1.</b>
+                    
+                    Postgres
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.1" data-path="../../数据库/postgres/postgres创建序列.html">
+            
+                <a href="../../数据库/postgres/postgres创建序列.html">
+            
+                    
+                        <b>1.16.1.1.</b>
+                    
+                    postgres创建序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" >
+            
+                <span>
+            
+                    
+                        <b>1.16.2.</b>
+                    
+                    导数据
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.1" data-path="../../数据库/导数据/导出数百万级别数据.html">
+            
+                <a href="../../数据库/导数据/导出数百万级别数据.html">
+            
+                    
+                        <b>1.16.2.1.</b>
+                    
+                    导出数百万级别数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                        <b>1.17.</b>
+                    
+                    数据源
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../../数据源/动态数据源.html">
+            
+                <a href="../../数据源/动态数据源.html">
+            
+                    
+                        <b>1.17.1.</b>
+                    
+                    动态数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                        <b>1.18.</b>
+                    
+                    缓存
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" >
+            
+                <span>
+            
+                    
+                        <b>1.18.1.</b>
+                    
+                    Guava
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1.1" data-path="../../缓存/guava/guava缓存简单使用三部曲.html">
+            
+                <a href="../../缓存/guava/guava缓存简单使用三部曲.html">
+            
+                    
+                        <b>1.18.1.1.</b>
+                    
+                    guava缓存简单使用三部曲
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >springboot日志问题</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><strong>  </strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
+<!-- more -->
+<h4 id="1&#x3001;springboot&#x542F;&#x52A8;&#x62A5;&#x65E5;&#x5FD7;&#x9519;&#x8BEF;&#x95EE;&#x9898;"><a name="1&#x3001;springboot&#x542F;&#x52A8;&#x62A5;&#x65E5;&#x5FD7;&#x9519;&#x8BEF;&#x95EE;&#x9898;" class="plugin-anchor" href="#1&#x3001;springboot&#x542F;&#x52A8;&#x62A5;&#x65E5;&#x5FD7;&#x9519;&#x8BEF;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;springboot&#x542F;&#x52A8;&#x62A5;&#x65E5;&#x5FD7;&#x9519;&#x8BEF;&#x95EE;&#x9898;</h4>
+<pre><code>&quot;D:\Program Files\Java8\jdk1.8.0_77\bin\java.exe&quot; -agentlib:jdwp=transport=dt_socket,address=127.0.0.1:58693,suspend=y,server=n -XX:TieredStopAtLevel=1 -noverify -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:C:\Users\Administrator\.IntelliJIdea2019.2\system\captureAgent\debugger-agent.jar -Dfile.encoding=UTF-8 -classpath &quot;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\charsets.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\deploy.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\access-bridge-64.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\cldrdata.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\dnsns.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\jaccess.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\jfxrt.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\localedata.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\nashorn.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\sunec.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\sunjce_provider.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\sunmscapi.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\sunpkcs11.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\ext\zipfs.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\javaws.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\jce.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\jfr.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\jfxswt.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\jsse.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\management-agent.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\plugin.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\resources.jar;D:\Program Files\Java8\jdk1.8.0_77\jre\lib\rt.jar;D:\2\lqx-project-demo\basic-server\target\classes;D:\2\lqx-project-demo\demo\search\elasticsearch-starter\target\classes;D:\maven\repository\org\springframework\boot\spring-boot-autoconfigure\2.1.6.RELEASE\spring-boot-autoconfigure-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot-configuration-processor\2.1.6.RELEASE\spring-boot-configuration-processor-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-json\2.1.6.RELEASE\spring-boot-starter-json-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\spring-web\5.1.8.RELEASE\spring-web-5.1.8.RELEASE.jar;D:\maven\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.9.9\jackson-datatype-jdk8-2.9.9.jar;D:\maven\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.9.9\jackson-datatype-jsr310-2.9.9.jar;D:\maven\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.9.9\jackson-module-parameter-names-2.9.9.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-data-jpa\2.1.6.RELEASE\spring-boot-starter-data-jpa-2.1.6.RELEASE.jar;D:\maven\repository\javax\transaction\javax.transaction-api\1.3\javax.transaction-api-1.3.jar;D:\maven\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;D:\maven\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;D:\maven\repository\org\hibernate\hibernate-core\5.3.10.Final\hibernate-core-5.3.10.Final.jar;D:\maven\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;D:\maven\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;D:\maven\repository\org\jboss\jandex\2.0.5.Final\jandex-2.0.5.Final.jar;D:\maven\repository\org\dom4j\dom4j\2.1.1\dom4j-2.1.1.jar;D:\maven\repository\org\hibernate\common\hibernate-commons-annotations\5.0.4.Final\hibernate-commons-annotations-5.0.4.Final.jar;D:\maven\repository\org\springframework\data\spring-data-jpa\2.1.9.RELEASE\spring-data-jpa-2.1.9.RELEASE.jar;D:\maven\repository\org\springframework\data\spring-data-commons\2.1.9.RELEASE\spring-data-commons-2.1.9.RELEASE.jar;D:\maven\repository\org\springframework\spring-orm\5.1.8.RELEASE\spring-orm-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\spring-aspects\5.1.8.RELEASE\spring-aspects-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-web\2.1.6.RELEASE\spring-boot-starter-web-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-tomcat\2.1.6.RELEASE\spring-boot-starter-tomcat-2.1.6.RELEASE.jar;D:\maven\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.21\tomcat-embed-core-9.0.21.jar;D:\maven\repository\org\apache\tomcat\embed\tomcat-embed-el\9.0.21\tomcat-embed-el-9.0.21.jar;D:\maven\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.21\tomcat-embed-websocket-9.0.21.jar;D:\maven\repository\org\hibernate\validator\hibernate-validator\6.0.17.Final\hibernate-validator-6.0.17.Final.jar;D:\maven\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;D:\maven\repository\org\springframework\spring-webmvc\5.1.8.RELEASE\spring-webmvc-5.1.8.RELEASE.jar;D:\maven\repository\commons-codec\commons-codec\1.12\commons-codec-1.12.jar;D:\maven\repository\io\springfox\springfox-swagger2\2.7.0\springfox-swagger2-2.7.0.jar;D:\maven\repository\io\swagger\swagger-annotations\1.5.13\swagger-annotations-1.5.13.jar;D:\maven\repository\io\swagger\swagger-models\1.5.13\swagger-models-1.5.13.jar;D:\maven\repository\io\springfox\springfox-spi\2.7.0\springfox-spi-2.7.0.jar;D:\maven\repository\io\springfox\springfox-core\2.7.0\springfox-core-2.7.0.jar;D:\maven\repository\io\springfox\springfox-schema\2.7.0\springfox-schema-2.7.0.jar;D:\maven\repository\io\springfox\springfox-swagger-common\2.7.0\springfox-swagger-common-2.7.0.jar;D:\maven\repository\io\springfox\springfox-spring-web\2.7.0\springfox-spring-web-2.7.0.jar;D:\maven\repository\org\reflections\reflections\0.9.11\reflections-0.9.11.jar;D:\maven\repository\com\google\guava\guava\18.0\guava-18.0.jar;D:\maven\repository\com\fasterxml\classmate\1.4.0\classmate-1.4.0.jar;D:\maven\repository\org\springframework\plugin\spring-plugin-core\1.2.0.RELEASE\spring-plugin-core-1.2.0.RELEASE.jar;D:\maven\repository\org\springframework\plugin\spring-plugin-metadata\1.2.0.RELEASE\spring-plugin-metadata-1.2.0.RELEASE.jar;D:\maven\repository\org\mapstruct\mapstruct\1.1.0.Final\mapstruct-1.1.0.Final.jar;D:\maven\repository\io\springfox\springfox-swagger-ui\2.7.0\springfox-swagger-ui-2.7.0.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-log4j\1.3.5.RELEASE\spring-boot-starter-log4j-1.3.5.RELEASE.jar;D:\maven\repository\org\slf4j\slf4j-log4j12\1.7.26\slf4j-log4j12-1.7.26.jar;D:\maven\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-data-redis\2.1.6.RELEASE\spring-boot-starter-data-redis-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\data\spring-data-redis\2.1.9.RELEASE\spring-data-redis-2.1.9.RELEASE.jar;D:\maven\repository\org\springframework\data\spring-data-keyvalue\2.1.9.RELEASE\spring-data-keyvalue-2.1.9.RELEASE.jar;D:\maven\repository\org\springframework\spring-oxm\5.1.8.RELEASE\spring-oxm-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\spring-context-support\5.1.8.RELEASE\spring-context-support-5.1.8.RELEASE.jar;D:\maven\repository\io\lettuce\lettuce-core\5.1.7.RELEASE\lettuce-core-5.1.7.RELEASE.jar;D:\maven\repository\com\alibaba\fastjson\1.2.44\fastjson-1.2.44.jar;D:\maven\repository\org\apache\httpcomponents\httpclient\4.4.1\httpclient-4.4.1.jar;D:\maven\repository\org\apache\httpcomponents\httpcore\4.4.11\httpcore-4.4.11.jar;D:\maven\repository\com\google\code\gson\gson\2.8.5\gson-2.8.5.jar;D:\maven\repository\org\elasticsearch\elasticsearch\6.4.3\elasticsearch-6.4.3.jar;D:\maven\repository\org\elasticsearch\elasticsearch-core\6.4.3\elasticsearch-core-6.4.3.jar;D:\maven\repository\org\elasticsearch\elasticsearch-secure-sm\6.4.3\elasticsearch-secure-sm-6.4.3.jar;D:\maven\repository\org\elasticsearch\elasticsearch-x-content\6.4.3\elasticsearch-x-content-6.4.3.jar;D:\maven\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-smile\2.9.9\jackson-dataformat-smile-2.9.9.jar;D:\maven\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-cbor\2.9.9\jackson-dataformat-cbor-2.9.9.jar;D:\maven\repository\org\apache\lucene\lucene-core\7.4.0\lucene-core-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-analyzers-common\7.4.0\lucene-analyzers-common-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-backward-codecs\7.4.0\lucene-backward-codecs-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-grouping\7.4.0\lucene-grouping-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-highlighter\7.4.0\lucene-highlighter-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-join\7.4.0\lucene-join-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-memory\7.4.0\lucene-memory-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-misc\7.4.0\lucene-misc-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-queries\7.4.0\lucene-queries-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-queryparser\7.4.0\lucene-queryparser-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-sandbox\7.4.0\lucene-sandbox-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-spatial\7.4.0\lucene-spatial-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-spatial-extras\7.4.0\lucene-spatial-extras-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-spatial3d\7.4.0\lucene-spatial3d-7.4.0.jar;D:\maven\repository\org\apache\lucene\lucene-suggest\7.4.0\lucene-suggest-7.4.0.jar;D:\maven\repository\org\elasticsearch\elasticsearch-cli\6.4.3\elasticsearch-cli-6.4.3.jar;D:\maven\repository\net\sf\jopt-simple\jopt-simple\5.0.2\jopt-simple-5.0.2.jar;D:\maven\repository\com\carrotsearch\hppc\0.7.1\hppc-0.7.1.jar;D:\maven\repository\joda-time\joda-time\2.10.2\joda-time-2.10.2.jar;D:\maven\repository\com\tdunning\t-digest\3.2\t-digest-3.2.jar;D:\maven\repository\org\hdrhistogram\HdrHistogram\2.1.9\HdrHistogram-2.1.9.jar;D:\maven\repository\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar;D:\maven\repository\org\elasticsearch\jna\4.5.1\jna-4.5.1.jar;D:\maven\repository\org\elasticsearch\client\rest\6.0.0-alpha1\rest-6.0.0-alpha1.jar;D:\maven\repository\org\apache\httpcomponents\httpasyncclient\4.1.4\httpasyncclient-4.1.4.jar;D:\maven\repository\org\apache\httpcomponents\httpcore-nio\4.4.11\httpcore-nio-4.4.11.jar;D:\maven\repository\org\elasticsearch\client\elasticsearch-rest-high-level-client\6.4.3\elasticsearch-rest-high-level-client-6.4.3.jar;D:\maven\repository\org\elasticsearch\client\elasticsearch-rest-client\6.4.3\elasticsearch-rest-client-6.4.3.jar;D:\maven\repository\org\elasticsearch\plugin\parent-join-client\6.4.3\parent-join-client-6.4.3.jar;D:\maven\repository\org\elasticsearch\plugin\aggs-matrix-stats-client\6.4.3\aggs-matrix-stats-client-6.4.3.jar;D:\maven\repository\org\elasticsearch\plugin\rank-eval-client\6.4.3\rank-eval-client-6.4.3.jar;D:\maven\repository\org\elasticsearch\plugin\lang-mustache-client\6.4.3\lang-mustache-client-6.4.3.jar;D:\maven\repository\com\github\spullara\mustache\java\compiler\0.9.3\compiler-0.9.3.jar;D:\maven\repository\org\elasticsearch\client\transport\6.4.3\transport-6.4.3.jar;D:\maven\repository\org\elasticsearch\plugin\reindex-client\6.4.3\reindex-client-6.4.3.jar;D:\maven\repository\org\elasticsearch\plugin\percolator-client\6.4.3\percolator-client-6.4.3.jar;D:\maven\repository\org\elasticsearch\plugin\transport-netty4-client\6.4.3\transport-netty4-client-6.4.3.jar;D:\maven\repository\io\netty\netty-codec-http\4.1.36.Final\netty-codec-http-4.1.36.Final.jar;D:\maven\repository\io\netty\netty-resolver\4.1.36.Final\netty-resolver-4.1.36.Final.jar;D:\maven\repository\org\ansj\ansj_seg\5.1.1\ansj_seg-5.1.1.jar;D:\maven\repository\org\nlpcn\nlp-lang\1.7.2\nlp-lang-1.7.2.jar;D:\maven\repository\org\apache\httpcomponents\httpmime\4.5.6\httpmime-4.5.6.jar;D:\maven\repository\org\jsoup\jsoup\1.11.2\jsoup-1.11.2.jar;D:\maven\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;D:\maven\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;D:\maven\repository\org\apache\shiro\shiro-core\1.4.0\shiro-core-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-lang\1.4.0\shiro-lang-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-cache\1.4.0\shiro-cache-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-crypto-hash\1.4.0\shiro-crypto-hash-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-crypto-core\1.4.0\shiro-crypto-core-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-crypto-cipher\1.4.0\shiro-crypto-cipher-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-config-core\1.4.0\shiro-config-core-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-config-ogdl\1.4.0\shiro-config-ogdl-1.4.0.jar;D:\maven\repository\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;D:\maven\repository\org\apache\shiro\shiro-event\1.4.0\shiro-event-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-web\1.4.0\shiro-web-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-spring\1.4.0\shiro-spring-1.4.0.jar;D:\maven\repository\org\apache\shiro\shiro-ehcache\1.4.0\shiro-ehcache-1.4.0.jar;D:\maven\repository\net\sf\ehcache\ehcache-core\2.6.11\ehcache-core-2.6.11.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-amqp\2.1.6.RELEASE\spring-boot-starter-amqp-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\spring-messaging\5.1.8.RELEASE\spring-messaging-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\spring-beans\5.1.8.RELEASE\spring-beans-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\amqp\spring-rabbit\2.1.7.RELEASE\spring-rabbit-2.1.7.RELEASE.jar;D:\maven\repository\org\springframework\amqp\spring-amqp\2.1.7.RELEASE\spring-amqp-2.1.7.RELEASE.jar;D:\maven\repository\org\springframework\retry\spring-retry\1.2.4.RELEASE\spring-retry-1.2.4.RELEASE.jar;D:\maven\repository\com\rabbitmq\amqp-client\5.4.3\amqp-client-5.4.3.jar;D:\maven\repository\org\springframework\spring-tx\5.1.8.RELEASE\spring-tx-5.1.8.RELEASE.jar;D:\maven\repository\org\projectlombok\lombok\1.16.10\lombok-1.16.10.jar;D:\maven\repository\org\redisson\redisson\3.11.2\redisson-3.11.2.jar;D:\maven\repository\io\netty\netty-common\4.1.36.Final\netty-common-4.1.36.Final.jar;D:\maven\repository\io\netty\netty-codec\4.1.36.Final\netty-codec-4.1.36.Final.jar;D:\maven\repository\io\netty\netty-buffer\4.1.36.Final\netty-buffer-4.1.36.Final.jar;D:\maven\repository\io\netty\netty-transport\4.1.36.Final\netty-transport-4.1.36.Final.jar;D:\maven\repository\io\netty\netty-resolver-dns\4.1.36.Final\netty-resolver-dns-4.1.36.Final.jar;D:\maven\repository\io\netty\netty-codec-dns\4.1.36.Final\netty-codec-dns-4.1.36.Final.jar;D:\maven\repository\io\netty\netty-handler\4.1.36.Final\netty-handler-4.1.36.Final.jar;D:\maven\repository\javax\cache\cache-api\1.1.1\cache-api-1.1.1.jar;D:\maven\repository\io\projectreactor\reactor-core\3.2.10.RELEASE\reactor-core-3.2.10.RELEASE.jar;D:\maven\repository\org\reactivestreams\reactive-streams\1.0.2\reactive-streams-1.0.2.jar;D:\maven\repository\io\reactivex\rxjava2\rxjava\2.2.9\rxjava-2.2.9.jar;D:\maven\repository\de\ruedigermoeller\fst\2.57\fst-2.57.jar;D:\maven\repository\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;D:\maven\repository\org\objenesis\objenesis\2.5.1\objenesis-2.5.1.jar;D:\maven\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.9.9\jackson-dataformat-yaml-2.9.9.jar;D:\maven\repository\com\fasterxml\jackson\core\jackson-core\2.9.9\jackson-core-2.9.9.jar;D:\maven\repository\com\fasterxml\jackson\core\jackson-databind\2.9.9\jackson-databind-2.9.9.jar;D:\maven\repository\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;D:\maven\repository\net\bytebuddy\byte-buddy\1.9.13\byte-buddy-1.9.13.jar;D:\maven\repository\org\jodd\jodd-bean\5.0.10\jodd-bean-5.0.10.jar;D:\maven\repository\org\jodd\jodd-core\5.0.10\jodd-core-5.0.10.jar;D:\maven\repository\org\redisson\redisson-spring-boot-starter\3.11.2\redisson-spring-boot-starter-3.11.2.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-actuator\2.1.6.RELEASE\spring-boot-starter-actuator-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\2.1.6.RELEASE\spring-boot-actuator-autoconfigure-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot-actuator\2.1.6.RELEASE\spring-boot-actuator-2.1.6.RELEASE.jar;D:\maven\repository\io\micrometer\micrometer-core\1.1.5\micrometer-core-1.1.5.jar;D:\maven\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;D:\maven\repository\org\redisson\redisson-spring-data-21\3.11.2\redisson-spring-data-21-3.11.2.jar;D:\maven\repository\org\apache\poi\poi\4.0.0\poi-4.0.0.jar;D:\maven\repository\org\apache\poi\poi-ooxml\4.0.0\poi-ooxml-4.0.0.jar;D:\maven\repository\org\apache\poi\poi-ooxml-schemas\4.0.0\poi-ooxml-schemas-4.0.0.jar;D:\maven\repository\org\apache\xmlbeans\xmlbeans\3.0.1\xmlbeans-3.0.1.jar;D:\maven\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;D:\maven\repository\com\github\virtuald\curvesapi\1.04\curvesapi-1.04.jar;D:\maven\repository\com\xuxueli\xxl-job-core\1.8.2\xxl-job-core-1.8.2.jar;D:\maven\repository\javax\servlet\jsp\jsp-api\2.2\jsp-api-2.2.jar;D:\maven\repository\org\eclipse\jetty\jetty-server\9.4.19.v20190610\jetty-server-9.4.19.v20190610.jar;D:\maven\repository\org\eclipse\jetty\jetty-http\9.4.19.v20190610\jetty-http-9.4.19.v20190610.jar;D:\maven\repository\org\eclipse\jetty\jetty-util\9.4.19.v20190610\jetty-util-9.4.19.v20190610.jar;D:\maven\repository\org\eclipse\jetty\jetty-io\9.4.19.v20190610\jetty-io-9.4.19.v20190610.jar;D:\maven\repository\com\caucho\hessian\4.0.38\hessian-4.0.38.jar;D:\maven\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.13\jackson-mapper-asl-1.9.13.jar;D:\maven\repository\org\codehaus\jackson\jackson-core-asl\1.9.13\jackson-core-asl-1.9.13.jar;D:\maven\repository\org\springframework\spring-context\5.1.8.RELEASE\spring-context-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\spring-aop\5.1.8.RELEASE\spring-aop-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\spring-expression\5.1.8.RELEASE\spring-expression-5.1.8.RELEASE.jar;D:\maven\repository\org\codehaus\groovy\groovy-all\2.4.5\groovy-all-2.4.5.jar;D:\maven\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;D:\maven\repository\com\belerweb\pinyin4j\2.5.0\pinyin4j-2.5.0.jar;D:\maven\repository\org\slf4j\slf4j-api\1.7.26\slf4j-api-1.7.26.jar;D:\maven\repository\org\slf4j\jcl-over-slf4j\1.7.26\jcl-over-slf4j-1.7.26.jar;D:\maven\repository\org\slf4j\jul-to-slf4j\1.7.26\jul-to-slf4j-1.7.26.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter\2.1.6.RELEASE\spring-boot-starter-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot\2.1.6.RELEASE\spring-boot-2.1.6.RELEASE.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-logging\2.1.6.RELEASE\spring-boot-starter-logging-2.1.6.RELEASE.jar;D:\maven\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;D:\maven\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;D:\maven\repository\org\apache\logging\log4j\log4j-to-slf4j\2.11.2\log4j-to-slf4j-2.11.2.jar;D:\maven\repository\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;D:\maven\repository\org\springframework\spring-core\5.1.8.RELEASE\spring-core-5.1.8.RELEASE.jar;D:\maven\repository\org\springframework\spring-jcl\5.1.8.RELEASE\spring-jcl-5.1.8.RELEASE.jar;D:\maven\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar;D:\maven\repository\redis\clients\jedis\3.0.1\jedis-3.0.1.jar;D:\maven\repository\org\apache\commons\commons-pool2\2.6.2\commons-pool2-2.6.2.jar;D:\maven\repository\com\baomidou\mybatis-plus-boot-starter\3.1.2\mybatis-plus-boot-starter-3.1.2.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-jdbc\2.1.6.RELEASE\spring-boot-starter-jdbc-2.1.6.RELEASE.jar;D:\maven\repository\com\zaxxer\HikariCP\3.2.0\HikariCP-3.2.0.jar;D:\maven\repository\org\springframework\spring-jdbc\5.1.8.RELEASE\spring-jdbc-5.1.8.RELEASE.jar;D:\maven\repository\com\baomidou\mybatis-plus\3.1.2\mybatis-plus-3.1.2.jar;D:\maven\repository\com\baomidou\mybatis-plus-generator\3.1.2\mybatis-plus-generator-3.1.2.jar;D:\maven\repository\com\alibaba\druid\1.1.18\druid-1.1.18.jar;D:\maven\repository\com\alibaba\druid-spring-boot-starter\1.1.18\druid-spring-boot-starter-1.1.18.jar;D:\maven\repository\org\json\json\20180130\json-20180130.jar;D:\maven\repository\org\apache\oltu\oauth2\org.apache.oltu.oauth2.client\0.31\org.apache.oltu.oauth2.client-0.31.jar;D:\maven\repository\org\apache\oltu\oauth2\org.apache.oltu.oauth2.common\0.31\org.apache.oltu.oauth2.common-0.31.jar;D:\maven\repository\org\codehaus\jettison\jettison\1.2\jettison-1.2.jar;D:\maven\repository\com\squareup\okhttp3\okhttp\3.8.1\okhttp-3.8.1.jar;D:\maven\repository\com\squareup\okio\okio\1.13.0\okio-1.13.0.jar;D:\maven\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;D:\maven\repository\org\apache\commons\commons-vfs2\2.1\commons-vfs2-2.1.jar;D:\maven\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\maven\repository\org\apache\commons\commons-lang3\3.4\commons-lang3-3.4.jar;D:\maven\repository\commons-collections\commons-collections\3.1\commons-collections-3.1.jar;D:\maven\repository\commons-fileupload\commons-fileupload\1.3.1\commons-fileupload-1.3.1.jar;D:\maven\repository\commons-io\commons-io\2.2\commons-io-2.2.jar;D:\maven\repository\com\baomidou\mybatis-plus-extension\3.1.2\mybatis-plus-extension-3.1.2.jar;D:\maven\repository\com\baomidou\mybatis-plus-core\3.1.2\mybatis-plus-core-3.1.2.jar;D:\maven\repository\com\baomidou\mybatis-plus-annotation\3.1.2\mybatis-plus-annotation-3.1.2.jar;D:\maven\repository\com\github\jsqlparser\jsqlparser\1.2\jsqlparser-1.2.jar;D:\maven\repository\org\mybatis\mybatis\3.5.1\mybatis-3.5.1.jar;D:\maven\repository\org\mybatis\mybatis-spring\2.0.1\mybatis-spring-2.0.1.jar;D:\maven\repository\com\baomidou\dynamic-datasource-spring-boot-starter\2.5.5\dynamic-datasource-spring-boot-starter-2.5.5.jar;D:\maven\repository\org\springframework\boot\spring-boot-starter-aop\2.1.6.RELEASE\spring-boot-starter-aop-2.1.6.RELEASE.jar;D:\maven\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;D:\IntelliJ IDEA 2019.2.1\lib\idea_rt.jar&quot; com.basic.BasicServerApplication
+Connected to the target VM, address: &apos;127.0.0.1:58693&apos;, transport: &apos;socket&apos;
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/D:/maven/repository/org/slf4j/slf4j-log4j12/1.7.26/slf4j-log4j12-1.7.26.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/D:/maven/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+Exception in thread &quot;main&quot; java.lang.IllegalArgumentException: LoggerFactory is not a Logback LoggerContext but Logback is on the classpath. Either remove Logback or the competing implementation (class org.slf4j.impl.Log4jLoggerFactory loaded from file:/D:/maven/repository/org/slf4j/slf4j-log4j12/1.7.26/slf4j-log4j12-1.7.26.jar). If you are using WebLogic you will need to add &apos;org.slf4j&apos; to prefer-application-packages in WEB-INF/weblogic.xml: org.slf4j.impl.Log4jLoggerFactory
+    at org.springframework.util.Assert.instanceCheckFailed(Assert.java:655)
+    at org.springframework.util.Assert.isInstanceOf(Assert.java:555)
+    at org.springframework.boot.logging.logback.LogbackLoggingSystem.getLoggerContext(LogbackLoggingSystem.java:279)
+    at org.springframework.boot.logging.logback.LogbackLoggingSystem.beforeInitialize(LogbackLoggingSystem.java:103)
+    at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationStartingEvent(LoggingApplicationListener.java:212)
+    at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:193)
+    at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+    at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+    at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+    at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+    at org.springframework.boot.context.event.EventPublishingRunListener.starting(EventPublishingRunListener.java:69)
+    at org.springframework.boot.SpringApplicationRunListeners.starting(SpringApplicationRunListeners.java:47)
+    at org.springframework.boot.SpringApplication.run(SpringApplication.java:301)
+    at com.basic.BasicServerApplication.main(BasicServerApplication.java:30)
+Disconnected from the target VM, address: &apos;127.0.0.1:58693&apos;, transport: &apos;socket&apos;
+
+Process finished with exit code 1
+</code></pre><h4 id="2&#x3001;&#x4EE3;&#x7801;&#x5206;&#x6790;"><a name="2&#x3001;&#x4EE3;&#x7801;&#x5206;&#x6790;" class="plugin-anchor" href="#2&#x3001;&#x4EE3;&#x7801;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x4EE3;&#x7801;&#x5206;&#x6790;</h4>
+<p>&#x901A;&#x8FC7;&#x70B9;&#x51FB;&#x62A5;&#x9519;&#x65E5;&#x5FD7;&#x91CC;&#x9762;&#x7684;&#x5177;&#x4F53;&#x62A5;&#x9519;&#x7C7B;&#xFF0C;&#x67E5;&#x627E;&#x5230;&#x5BF9;&#x5E94;LogbackLoggingSystem.java&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;                </p>
+<pre><code>    private LoggerContext getLoggerContext() {
+        ILoggerFactory factory = StaticLoggerBinder.getSingleton().getLoggerFactory();
+        Assert.isInstanceOf(LoggerContext.class, factory,
+                String.format(
+                        &quot;LoggerFactory is not a Logback LoggerContext but Logback is on &quot;
+                                + &quot;the classpath. Either remove Logback or the competing &quot;
+                                + &quot;implementation (%s loaded from %s). If you are using &quot;
+                                + &quot;WebLogic you will need to add &apos;org.slf4j&apos; to &quot;
+                                + &quot;prefer-application-packages in WEB-INF/weblogic.xml&quot;,
+                        factory.getClass(), getLocation(factory)));
+        return (LoggerContext) factory;
+    }
+
+private Object getLocation(ILoggerFactory factory) {
+        try {
+            ProtectionDomain protectionDomain = factory.getClass().getProtectionDomain();
+            CodeSource codeSource = protectionDomain.getCodeSource();
+            if (codeSource != null) {
+                return codeSource.getLocation();
+            }
+        }
+        catch (SecurityException ex) {
+            // Unable to determine location
+        }
+        return &quot;unknown location&quot;;
+    }
+</code></pre><pre><code>    public static void isInstanceOf(Class&lt;?&gt; type, @Nullable Object obj, String message) {
+        notNull(type, &quot;Type to check against must not be null&quot;);
+        if (!type.isInstance(obj)) {
+            instanceCheckFailed(type, obj, message);
+        }
+    }
+</code></pre><p>&#x4EE3;&#x7801;&#x5206;&#x6790;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>LoggerContext&#x8FD9;&#x4E2A;&#x901A;&#x8FC7;import&#x5BFC;&#x5165;&#x7684;&#x5305;&#x53D1;&#x73B0;&#x662F;logback&#x7684;&#xFF0C;&#x5C31;&#x662F;logback-classic:jar:1.2.3.jar&#x4E0B;&#x7684;</li>
+<li>factory&#x901A;&#x8FC7;getLocation&#x83B7;&#x53D6;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x662F;file:/D:/maven/repository/org/slf4j/slf4j-log4j12/1.7.26/slf4j-log4j12-1.7.26.jar&#x8DEF;&#x5F84;&#x4E0B;&#x7684;</li>
+<li>&#x901A;&#x8FC7;Assert.isInstanceOf(LoggerContext.class, factory&#x6BD4;&#x8F83;&#x53D1;&#x73B0;&#x8FD9;2&#x8005;&#x4E0D;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;
+&#x6240;&#x4EE5;&#x62A5;String.format(<pre><code>                    &quot;LoggerFactory is not a Logback LoggerContext but Logback is on &quot;
+                            + &quot;the classpath. Either remove Logback or the competing &quot;
+                            + &quot;implementation (%s loaded from %s). If you are using &quot;
+                            + &quot;WebLogic you will need to add &apos;org.slf4j&apos; to &quot;
+                            + &quot;prefer-application-packages in WEB-INF/weblogic.xml&quot;,
+                    factory.getClass(), getLocation(factory)))
+</code></pre>&#x8FD9;&#x6BB5;&#x9519;&#x8BEF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x65E5;&#x5FD7;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x9519;&#x8BEF;   </li>
+</ol>
+<p><img src="springboot&#x65E5;&#x5FD7;&#x95EE;&#x9898;/springboot&#x65E5;&#x5FD7;&#x95EE;&#x9898;-1.png" alt="jenkins"></p>
+<p>&#x770B;maven&#x4ED3;&#x5E93;&#x4E5F;&#x4F1A;&#x53D1;&#x73B0;&#x4E5F;&#x5B58;&#x5728;slf4j-log4j12&#x5BF9;&#x5E94;&#x7684;&#x5305;
+<img src="springboot&#x65E5;&#x5FD7;&#x95EE;&#x9898;/springboot&#x65E5;&#x5FD7;&#x95EE;&#x9898;-2.png" alt="jenkins"></p>
+<ol>
+<li></li>
+</ol>
+<h4 id="3&#x3001;&#x89E3;&#x51B3;"><a name="3&#x3001;&#x89E3;&#x51B3;" class="plugin-anchor" href="#3&#x3001;&#x89E3;&#x51B3;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x89E3;&#x51B3;</h4>
+<ol>
+<li>&#x53BB;&#x5230;&#x5BF9;&#x5E94;&#x9879;&#x76EE;&#x4E0B;&#xFF0C;&#x6267;&#x884C;mvn dependency:tree,&#x7ED3;&#x679C;&#x5982;&#x4E0B;</li>
+<li>&#x641C;&#x7D22;log4j&#x6216;&#x641C;&#x7D22;slf4j-log4j12&#xFF0C;&#x770B;&#x5230;&#x5B58;&#x5728;slf4j-log4j12-1.7.26.jar&#x8FD9;&#x4E2A;jar&#x5305;,&#x770B;&#x5230;&#x4ED6;&#x662F;&#x5728;elasitcsearch-starter&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x4E0B;&#x7684;<pre><code>[INFO] +- com.basic.search:elasitcsearch-starter:jar:1.0.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-log4j:jar:1.3.5.RELEASE:compile
+[INFO] |  |  +- org.slf4j:slf4j-log4j12:jar:1.7.26:compile
+</code></pre></li>
+<li><p>&#x67E5;&#x770B;elasitcsearch-starter&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x7684;pom.xml&#xFF0C;&#x770B;&#x5230;&#x5F15;&#x5165;&#x4E86;spring-boot-starter-log4j&#xFF0C;&#x95EE;&#x9898;&#x5C31;&#x5728;&#x8FD9;&#x91CC;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x4F1A;&#x4F9D;&#x8D56;slf4j-log4j12</p>
+<pre><code>     &lt;dependency&gt;
+         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+         &lt;artifactId&gt;spring-boot-starter-log4j&lt;/artifactId&gt;
+         &lt;version&gt;${spring-log4j.version}&lt;/version&gt;
+     &lt;/dependency&gt;
+</code></pre></li>
+<li><p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5F15;&#x7528;elasitcsearch-starter&#x65F6;&#x6392;&#x9664;&#x6389;slf4j-log4j12&#x5373;&#x53EF;</p>
+<pre><code>     &lt;dependency&gt;
+         &lt;groupId&gt;com.basic.search&lt;/groupId&gt;
+         &lt;artifactId&gt;elasitcsearch-starter&lt;/artifactId&gt;
+         &lt;version&gt;1.0.0&lt;/version&gt;
+         &lt;exclusions&gt;
+             &lt;exclusion&gt;
+                 &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+                 &lt;artifactId&gt;slf4j-log4j12&lt;/artifactId&gt;
+             &lt;/exclusion&gt;
+         &lt;/exclusions&gt;
+     &lt;/dependency&gt;
+</code></pre></li>
+<li><p>&#x9644;&#x6CE8;&#xFF1A;&#x672A;&#x89E3;&#x51B3;&#x4E4B;&#x524D;&#x9879;&#x76EE;&#x4F9D;&#x8D56;&#x5982;&#x4E0B;&#xFF1A;</p>
+</li>
+</ol>
+<pre><code>&#x3BB; mvn dependency:tree
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building basic-server 2.0.2
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- maven-dependency-plugin:3.1.1:tree (default-cli) @ basic-server ---
+[INFO] com.basic:basic-server:jar:2.0.2
+[INFO] +- com.basic.search:elasitcsearch-starter:jar:1.0.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-autoconfigure:jar:2.1.6.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-configuration-processor:jar:2.1.6.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:2.1.6.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-web:jar:5.1.8.RELEASE:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.9.9:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.9.9:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.9.9:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-data-jpa:jar:2.1.6.RELEASE:compile
+[INFO] |  |  +- javax.transaction:javax.transaction-api:jar:1.3:compile
+[INFO] |  |  +- javax.xml.bind:jaxb-api:jar:2.3.1:compile
+[INFO] |  |  |  \- javax.activation:javax.activation-api:jar:1.2.0:compile
+[INFO] |  |  +- org.hibernate:hibernate-core:jar:5.3.10.Final:compile
+[INFO] |  |  |  +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile
+[INFO] |  |  |  +- antlr:antlr:jar:2.7.7:compile
+[INFO] |  |  |  +- org.jboss:jandex:jar:2.0.5.Final:compile
+[INFO] |  |  |  +- org.dom4j:dom4j:jar:2.1.1:compile
+[INFO] |  |  |  \- org.hibernate.common:hibernate-commons-annotations:jar:5.0.4.Final:compile
+[INFO] |  |  +- org.springframework.data:spring-data-jpa:jar:2.1.9.RELEASE:compile
+[INFO] |  |  |  +- org.springframework.data:spring-data-commons:jar:2.1.9.RELEASE:compile
+[INFO] |  |  |  \- org.springframework:spring-orm:jar:5.1.8.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-aspects:jar:5.1.8.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-web:jar:2.1.6.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:2.1.6.RELEASE:compile
+[INFO] |  |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.21:compile
+[INFO] |  |  |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.21:compile
+[INFO] |  |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.21:compile
+[INFO] |  |  +- org.hibernate.validator:hibernate-validator:jar:6.0.17.Final:compile
+[INFO] |  |  |  \- javax.validation:validation-api:jar:2.0.1.Final:compile
+[INFO] |  |  \- org.springframework:spring-webmvc:jar:5.1.8.RELEASE:compile
+[INFO] |  +- commons-codec:commons-codec:jar:1.12:compile
+[INFO] |  +- io.springfox:springfox-swagger2:jar:2.7.0:compile
+[INFO] |  |  +- io.swagger:swagger-annotations:jar:1.5.13:compile
+[INFO] |  |  +- io.swagger:swagger-models:jar:1.5.13:compile
+[INFO] |  |  +- io.springfox:springfox-spi:jar:2.7.0:compile
+[INFO] |  |  |  \- io.springfox:springfox-core:jar:2.7.0:compile
+[INFO] |  |  +- io.springfox:springfox-schema:jar:2.7.0:compile
+[INFO] |  |  +- io.springfox:springfox-swagger-common:jar:2.7.0:compile
+[INFO] |  |  +- io.springfox:springfox-spring-web:jar:2.7.0:compile
+[INFO] |  |  |  \- org.reflections:reflections:jar:0.9.11:compile
+[INFO] |  |  +- com.google.guava:guava:jar:18.0:compile
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.4.0:compile
+[INFO] |  |  +- org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE:compile
+[INFO] |  |  +- org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE:compile
+[INFO] |  |  \- org.mapstruct:mapstruct:jar:1.1.0.Final:compile
+[INFO] |  +- io.springfox:springfox-swagger-ui:jar:2.7.0:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-log4j:jar:1.3.5.RELEASE:compile
+[INFO] |  |  +- org.slf4j:slf4j-log4j12:jar:1.7.26:compile
+[INFO] |  |  \- log4j:log4j:jar:1.2.17:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-data-redis:jar:2.1.6.RELEASE:compile
+[INFO] |  |  +- org.springframework.data:spring-data-redis:jar:2.1.9.RELEASE:compile
+[INFO] |  |  |  +- org.springframework.data:spring-data-keyvalue:jar:2.1.9.RELEASE:compile
+[INFO] |  |  |  +- org.springframework:spring-oxm:jar:5.1.8.RELEASE:compile
+[INFO] |  |  |  \- org.springframework:spring-context-support:jar:5.1.8.RELEASE:compile
+[INFO] |  |  \- io.lettuce:lettuce-core:jar:5.1.7.RELEASE:compile
+[INFO] |  +- com.alibaba:fastjson:jar:1.2.44:compile
+[INFO] |  +- org.apache.httpcomponents:httpclient:jar:4.4.1:compile
+[INFO] |  |  \- org.apache.httpcomponents:httpcore:jar:4.4.11:compile
+[INFO] |  +- com.google.code.gson:gson:jar:2.8.5:compile
+[INFO] |  +- org.elasticsearch:elasticsearch:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch:elasticsearch-core:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch:elasticsearch-secure-sm:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch:elasticsearch-x-content:jar:6.4.3:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-smile:jar:2.9.9:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:jar:2.9.9:compile
+[INFO] |  |  +- org.apache.lucene:lucene-core:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-analyzers-common:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-backward-codecs:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-grouping:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-highlighter:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-join:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-memory:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-misc:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-queries:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-queryparser:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-sandbox:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-spatial:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-spatial-extras:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-spatial3d:jar:7.4.0:compile
+[INFO] |  |  +- org.apache.lucene:lucene-suggest:jar:7.4.0:compile
+[INFO] |  |  +- org.elasticsearch:elasticsearch-cli:jar:6.4.3:compile
+[INFO] |  |  |  \- net.sf.jopt-simple:jopt-simple:jar:5.0.2:compile
+[INFO] |  |  +- com.carrotsearch:hppc:jar:0.7.1:compile
+[INFO] |  |  +- joda-time:joda-time:jar:2.10.2:compile
+[INFO] |  |  +- com.tdunning:t-digest:jar:3.2:compile
+[INFO] |  |  +- org.hdrhistogram:HdrHistogram:jar:2.1.9:compile
+[INFO] |  |  +- org.apache.logging.log4j:log4j-api:jar:2.11.2:compile
+[INFO] |  |  \- org.elasticsearch:jna:jar:4.5.1:compile
+[INFO] |  +- org.elasticsearch.client:rest:jar:6.0.0-alpha1:compile
+[INFO] |  |  +- org.apache.httpcomponents:httpasyncclient:jar:4.1.4:compile
+[INFO] |  |  \- org.apache.httpcomponents:httpcore-nio:jar:4.4.11:compile
+[INFO] |  +- org.elasticsearch.client:elasticsearch-rest-high-level-client:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch.client:elasticsearch-rest-client:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch.plugin:parent-join-client:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch.plugin:aggs-matrix-stats-client:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch.plugin:rank-eval-client:jar:6.4.3:compile
+[INFO] |  |  \- org.elasticsearch.plugin:lang-mustache-client:jar:6.4.3:compile
+[INFO] |  |     \- com.github.spullara.mustache.java:compiler:jar:0.9.3:compile
+[INFO] |  +- org.elasticsearch.client:transport:jar:6.4.3:compile
+[INFO] |  |  +- org.elasticsearch.plugin:reindex-client:jar:6.4.3:compile
+[INFO] |  |  \- org.elasticsearch.plugin:percolator-client:jar:6.4.3:compile
+[INFO] |  +- org.elasticsearch.plugin:transport-netty4-client:jar:6.4.3:compile
+[INFO] |  |  +- io.netty:netty-codec-http:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-resolver:jar:4.1.36.Final:compile
+[INFO] |  +- org.ansj:ansj_seg:jar:5.1.1:compile
+[INFO] |  |  \- org.nlpcn:nlp-lang:jar:1.7.2:compile
+[INFO] |  +- org.apache.httpcomponents:httpmime:jar:4.5.6:compile
+[INFO] |  +- org.jsoup:jsoup:jar:1.11.2:compile
+[INFO] |  +- javax.servlet:javax.servlet-api:jar:4.0.1:compile
+[INFO] |  \- javax.persistence:javax.persistence-api:jar:2.2:compile
+[INFO] +- org.postgresql:postgresql:jar:42.2.2:compile
+[INFO] +- org.apache.shiro:shiro-core:jar:1.4.0:compile
+[INFO] |  +- org.apache.shiro:shiro-lang:jar:1.4.0:compile
+[INFO] |  +- org.apache.shiro:shiro-cache:jar:1.4.0:compile
+[INFO] |  +- org.apache.shiro:shiro-crypto-hash:jar:1.4.0:compile
+[INFO] |  |  \- org.apache.shiro:shiro-crypto-core:jar:1.4.0:compile
+[INFO] |  +- org.apache.shiro:shiro-crypto-cipher:jar:1.4.0:compile
+[INFO] |  +- org.apache.shiro:shiro-config-core:jar:1.4.0:compile
+[INFO] |  +- org.apache.shiro:shiro-config-ogdl:jar:1.4.0:compile
+[INFO] |  |  \- commons-beanutils:commons-beanutils:jar:1.9.3:compile
+[INFO] |  \- org.apache.shiro:shiro-event:jar:1.4.0:compile
+[INFO] +- org.apache.shiro:shiro-web:jar:1.4.0:compile
+[INFO] +- org.apache.shiro:shiro-spring:jar:1.4.0:compile
+[INFO] +- org.apache.shiro:shiro-ehcache:jar:1.4.0:compile
+[INFO] |  \- net.sf.ehcache:ehcache-core:jar:2.6.11:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-amqp:jar:2.1.6.RELEASE:compile
+[INFO] |  +- org.springframework:spring-messaging:jar:5.1.8.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-beans:jar:5.1.8.RELEASE:compile
+[INFO] |  \- org.springframework.amqp:spring-rabbit:jar:2.1.7.RELEASE:compile
+[INFO] |     +- org.springframework.amqp:spring-amqp:jar:2.1.7.RELEASE:compile
+[INFO] |     |  \- org.springframework.retry:spring-retry:jar:1.2.4.RELEASE:compile
+[INFO] |     +- com.rabbitmq:amqp-client:jar:5.4.3:compile
+[INFO] |     \- org.springframework:spring-tx:jar:5.1.8.RELEASE:compile
+[INFO] +- org.projectlombok:lombok:jar:1.16.10:compile
+[INFO] +- org.redisson:redisson:jar:3.11.2:compile
+[INFO] |  +- io.netty:netty-common:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-codec:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-buffer:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-transport:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-resolver-dns:jar:4.1.36.Final:compile
+[INFO] |  |  \- io.netty:netty-codec-dns:jar:4.1.36.Final:compile
+[INFO] |  +- io.netty:netty-handler:jar:4.1.36.Final:compile
+[INFO] |  +- javax.cache:cache-api:jar:1.1.1:compile
+[INFO] |  +- io.projectreactor:reactor-core:jar:3.2.10.RELEASE:compile
+[INFO] |  |  \- org.reactivestreams:reactive-streams:jar:1.0.2:compile
+[INFO] |  +- io.reactivex.rxjava2:rxjava:jar:2.2.9:compile
+[INFO] |  +- de.ruedigermoeller:fst:jar:2.57:compile
+[INFO] |  |  +- org.javassist:javassist:jar:3.21.0-GA:compile
+[INFO] |  |  \- org.objenesis:objenesis:jar:2.5.1:compile
+[INFO] |  +- com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.9.9:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-core:jar:2.9.9:compile
+[INFO] |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.9.9:compile
+[INFO] |  |  \- com.fasterxml.jackson.core:jackson-annotations:jar:2.9.0:compile
+[INFO] |  +- net.bytebuddy:byte-buddy:jar:1.9.13:compile
+[INFO] |  \- org.jodd:jodd-bean:jar:5.0.10:compile
+[INFO] |     \- org.jodd:jodd-core:jar:5.0.10:compile
+[INFO] +- org.redisson:redisson-spring-boot-starter:jar:3.11.2:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-actuator:jar:2.1.6.RELEASE:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-actuator-autoconfigure:jar:2.1.6.RELEASE:compile
+[INFO] |  |  |  \- org.springframework.boot:spring-boot-actuator:jar:2.1.6.RELEASE:compile
+[INFO] |  |  \- io.micrometer:micrometer-core:jar:1.1.5:compile
+[INFO] |  |     \- org.latencyutils:LatencyUtils:jar:2.0.3:compile
+[INFO] |  \- org.redisson:redisson-spring-data-21:jar:3.11.2:compile
+[INFO] +- org.apache.poi:poi:jar:4.0.0:compile
+[INFO] +- org.apache.poi:poi-ooxml:jar:4.0.0:compile
+[INFO] |  +- org.apache.poi:poi-ooxml-schemas:jar:4.0.0:compile
+[INFO] |  |  \- org.apache.xmlbeans:xmlbeans:jar:3.0.1:compile
+[INFO] |  +- org.apache.commons:commons-compress:jar:1.18:compile
+[INFO] |  \- com.github.virtuald:curvesapi:jar:1.04:compile
+[INFO] +- com.xuxueli:xxl-job-core:jar:1.8.2:compile
+[INFO] |  +- javax.servlet.jsp:jsp-api:jar:2.2:compile
+[INFO] |  +- org.eclipse.jetty:jetty-server:jar:9.4.19.v20190610:compile
+[INFO] |  |  +- org.eclipse.jetty:jetty-http:jar:9.4.19.v20190610:compile
+[INFO] |  |  |  \- org.eclipse.jetty:jetty-util:jar:9.4.19.v20190610:compile
+[INFO] |  |  \- org.eclipse.jetty:jetty-io:jar:9.4.19.v20190610:compile
+[INFO] |  +- com.caucho:hessian:jar:4.0.38:compile
+[INFO] |  +- org.codehaus.jackson:jackson-mapper-asl:jar:1.9.13:compile
+[INFO] |  |  \- org.codehaus.jackson:jackson-core-asl:jar:1.9.13:compile
+[INFO] |  +- org.springframework:spring-context:jar:5.1.8.RELEASE:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:5.1.8.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-expression:jar:5.1.8.RELEASE:compile
+[INFO] |  +- org.codehaus.groovy:groovy-all:jar:2.4.5:compile
+[INFO] |  \- org.apache.commons:commons-exec:jar:1.3:compile
+[INFO] +- com.belerweb:pinyin4j:jar:2.5.0:compile
+[INFO] +- junit:junit:jar:4.12:test
+[INFO] |  \- org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] +- org.slf4j:slf4j-api:jar:1.7.26:compile
+[INFO] +- org.slf4j:jcl-over-slf4j:jar:1.7.26:compile
+[INFO] +- org.slf4j:jul-to-slf4j:jar:1.7.26:compile
+[INFO] +- org.springframework.boot:spring-boot-starter:jar:2.1.6.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot:jar:2.1.6.RELEASE:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-logging:jar:2.1.6.RELEASE:compile
+[INFO] |  |  +- ch.qos.logback:logback-classic:jar:1.2.3:compile
+[INFO] |  |  |  \- ch.qos.logback:logback-core:jar:1.2.3:compile
+[INFO] |  |  \- org.apache.logging.log4j:log4j-to-slf4j:jar:2.11.2:compile
+[INFO] |  +- javax.annotation:javax.annotation-api:jar:1.3.2:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.1.8.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.1.8.RELEASE:compile
+[INFO] |  \- org.yaml:snakeyaml:jar:1.23:compile
+[INFO] +- redis.clients:jedis:jar:3.0.1:compile
+[INFO] |  \- org.apache.commons:commons-pool2:jar:2.6.2:compile
+[INFO] +- com.baomidou:mybatis-plus-boot-starter:jar:3.1.2:compile
+[INFO] |  \- org.springframework.boot:spring-boot-starter-jdbc:jar:2.1.6.RELEASE:compile
+[INFO] |     +- com.zaxxer:HikariCP:jar:3.2.0:compile
+[INFO] |     \- org.springframework:spring-jdbc:jar:5.1.8.RELEASE:compile
+[INFO] +- com.baomidou:mybatis-plus:jar:3.1.2:compile
+[INFO] +- com.baomidou:mybatis-plus-generator:jar:3.1.2:compile (optional)
+[INFO] +- com.alibaba:druid:jar:1.1.18:compile
+[INFO] +- com.alibaba:druid-spring-boot-starter:jar:1.1.18:compile
+[INFO] +- org.json:json:jar:20180130:compile
+[INFO] +- org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:jar:0.31:compile
+[INFO] |  +- org.apache.oltu.oauth2:org.apache.oltu.oauth2.common:jar:0.31:compile
+[INFO] |  \- org.codehaus.jettison:jettison:jar:1.2:compile
+[INFO] +- com.squareup.okhttp3:okhttp:jar:3.8.1:compile
+[INFO] |  \- com.squareup.okio:okio:jar:1.13.0:compile
+[INFO] +- org.apache.commons:commons-collections4:jar:4.4:compile
+[INFO] +- org.apache.commons:commons-vfs2:jar:2.1:compile
+[INFO] |  \- commons-logging:commons-logging:jar:1.2:compile
+[INFO] +- org.apache.commons:commons-lang3:jar:3.4:compile
+[INFO] +- commons-collections:commons-collections:jar:3.1:compile
+[INFO] +- commons-fileupload:commons-fileupload:jar:1.3.1:compile
+[INFO] |  \- commons-io:commons-io:jar:2.2:compile
+[INFO] +- com.baomidou:mybatis-plus-extension:jar:3.1.2:compile
+[INFO] |  +- com.baomidou:mybatis-plus-core:jar:3.1.2:compile
+[INFO] |  |  +- com.baomidou:mybatis-plus-annotation:jar:3.1.2:compile
+[INFO] |  |  +- com.github.jsqlparser:jsqlparser:jar:1.2:compile
+[INFO] |  |  \- org.mybatis:mybatis:jar:3.5.1:compile
+[INFO] |  \- org.mybatis:mybatis-spring:jar:2.0.1:compile
+[INFO] +- com.baomidou:dynamic-datasource-spring-boot-starter:jar:2.5.5:compile
+[INFO] |  \- org.springframework.boot:spring-boot-starter-aop:jar:2.1.6.RELEASE:compile
+[INFO] |     \- org.aspectj:aspectjweaver:jar:1.9.4:compile
+[INFO] \- org.springframework.boot:spring-boot-starter-test:jar:2.1.6.RELEASE:test
+[INFO]    +- org.springframework.boot:spring-boot-test:jar:2.1.6.RELEASE:test
+[INFO]    +- org.springframework.boot:spring-boot-test-autoconfigure:jar:2.1.6.RELEASE:test
+[INFO]    +- com.jayway.jsonpath:json-path:jar:2.4.0:test
+[INFO]    |  \- net.minidev:json-smart:jar:2.3:test
+[INFO]    |     \- net.minidev:accessors-smart:jar:1.2:test
+[INFO]    |        \- org.ow2.asm:asm:jar:5.0.4:test
+[INFO]    +- org.assertj:assertj-core:jar:3.11.1:test
+[INFO]    +- org.mockito:mockito-core:jar:2.23.4:test
+[INFO]    |  \- net.bytebuddy:byte-buddy-agent:jar:1.9.13:test
+[INFO]    +- org.hamcrest:hamcrest-library:jar:1.3:test
+[INFO]    +- org.skyscreamer:jsonassert:jar:1.5.0:test
+[INFO]    |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO]    +- org.springframework:spring-test:jar:5.1.8.RELEASE:test
+[INFO]    \- org.xmlunit:xmlunit-core:jar:2.6.2:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.200 s
+[INFO] Finished at: 2019-10-11T16:00:25+08:00
+[INFO] Final Memory: 43M/449M
+[INFO] ------------------------------------------------------------------------
+
+D:\2\lqx-project-demo\basic-server (v2.0.3)
+&#x3BB;
+</code></pre>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="springboot配置属性DataSource问题.html" class="navigation navigation-next navigation-unique" aria-label="Next page: springboot配置属性DataSource问题">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"springboot日志问题","tags":["springboot","日志","问题"],"date":"2019-10-11T09:58:17.000Z","categories":"各种问题","level":"1.14.2.1","depth":3,"next":{"title":"springboot配置属性DataSource问题","level":"1.14.2.2","depth":3,"path":"各种问题/springboot/springboot配置属性DataSource问题.md","ref":"各种问题/springboot/springboot配置属性DataSource问题.md","articles":[]},"previous":{"title":"Springboot","level":"1.14.2","depth":2,"ref":"","articles":[{"title":"springboot日志问题","level":"1.14.2.1","depth":3,"path":"各种问题/springboot/springboot日志问题.md","ref":"各种问题/springboot/springboot日志问题.md","articles":[]},{"title":"springboot配置属性DataSource问题","level":"1.14.2.2","depth":3,"path":"各种问题/springboot/springboot配置属性DataSource问题.md","ref":"各种问题/springboot/springboot配置属性DataSource问题.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"各种问题/springboot/springboot日志问题.md","mtime":"2020-05-03T09:54:25.721Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-03T09:54:43.663Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-nocache/nocache.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+

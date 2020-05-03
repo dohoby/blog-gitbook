@@ -1,0 +1,1921 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>python小牛试刀-获取微信关注用户信息 · java实用笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://liangqingxiang.top" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                        <b>1.2.</b>
+                    
+                    Devops
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    Docker
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../devops/docker/docker-install.html">
+            
+                <a href="../devops/docker/docker-install.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../devops/docker/docker实战1.html">
+            
+                <a href="../devops/docker/docker实战1.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    docker实战1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../devops/docker/docker实战3-运行和查看.html">
+            
+                <a href="../devops/docker/docker实战3-运行和查看.html">
+            
+                    
+                        <b>1.2.1.3.</b>
+                    
+                    docker实战3-运行和查看
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../devops/docker/docker实战4-挂载目录.html">
+            
+                <a href="../devops/docker/docker实战4-挂载目录.html">
+            
+                    
+                        <b>1.2.1.4.</b>
+                    
+                    docker实战4-挂载目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../devops/docker/docker实战5-曲线拉取国外镜像.html">
+            
+                <a href="../devops/docker/docker实战5-曲线拉取国外镜像.html">
+            
+                    
+                        <b>1.2.1.5.</b>
+                    
+                    docker实战5-曲线拉取国外镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    Jenkins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../devops/jenkins/Jenkins全局工具配置.html">
+            
+                <a href="../devops/jenkins/Jenkins全局工具配置.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    Jenkins全局工具配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    Kettle
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../devops/kettle/kettle数据同步技术攻克.html">
+            
+                <a href="../devops/kettle/kettle数据同步技术攻克.html">
+            
+                    
+                        <b>1.2.3.1.</b>
+                    
+                    kettle数据同步技术攻克
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                        <b>1.3.</b>
+                    
+                    Elasticsearch
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    es实战
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../elasticsearch/es实战/es实战1-常见命令.html">
+            
+                <a href="../elasticsearch/es实战/es实战1-常见命令.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    es实战1-常见命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../elasticsearch/es实战/es实战2-查询命令.html">
+            
+                <a href="../elasticsearch/es实战/es实战2-查询命令.html">
+            
+                    
+                        <b>1.3.1.2.</b>
+                    
+                    es实战2-查询命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../elasticsearch/es实战/es实战3-综合查询案例.html">
+            
+                <a href="../elasticsearch/es实战/es实战3-综合查询案例.html">
+            
+                    
+                        <b>1.3.1.3.</b>
+                    
+                    es实战3-综合查询案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../elasticsearch/es实战/es实战4-java常见查询实例.html">
+            
+                <a href="../elasticsearch/es实战/es实战4-java常见查询实例.html">
+            
+                    
+                        <b>1.3.1.4.</b>
+                    
+                    es实战4-java常见查询实例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
+            
+                <a href="../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
+            
+                    
+                        <b>1.3.1.5.</b>
+                    
+                    es实战5-聚合分组查询案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
+            
+                <a href="../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
+            
+                    
+                        <b>1.3.1.6.</b>
+                    
+                    es实战6-springboot2.0集成elasticsearch6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
+            
+                <a href="../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
+            
+                    
+                        <b>1.3.1.7.</b>
+                    
+                    es实战7-elasticsearch实现springboot自动配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    es知识点
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../elasticsearch/es知识点/和Elasticsearch交互.html">
+            
+                <a href="../elasticsearch/es知识点/和Elasticsearch交互.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    和Elasticsearch交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../gitbook/gitbook教程.html">
+            
+                <a href="../gitbook/gitbook教程.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    gitbook教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                        <b>1.5.</b>
+                    
+                    Java 8
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../java8/java8新特性.html">
+            
+                <a href="../java8/java8新特性.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    java8新特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                        <b>1.6.</b>
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.6.1" data-path="python小牛试刀-获取微信关注用户信息.html">
+            
+                <a href="python小牛试刀-获取微信关注用户信息.html">
+            
+                    
+                        <b>1.6.1.</b>
+                    
+                    python小牛试刀-获取微信关注用户信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                        <b>1.7.</b>
+                    
+                    Spring
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../spring/spring事件.html">
+            
+                <a href="../spring/spring事件.html">
+            
+                    
+                        <b>1.7.1.</b>
+                    
+                    spring事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                        <b>1.8.</b>
+                    
+                    Swagger
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../swagger/更改swagger上下文.html">
+            
+                <a href="../swagger/更改swagger上下文.html">
+            
+                    
+                        <b>1.8.1.</b>
+                    
+                    更改swagger上下文
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                        <b>1.9.</b>
+                    
+                    Uml
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../uml/建模工具plantuml介绍.html">
+            
+                <a href="../uml/建模工具plantuml介绍.html">
+            
+                    
+                        <b>1.9.1.</b>
+                    
+                    建模工具plantuml介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                        <b>1.10.</b>
+                    
+                    Util
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" >
+            
+                <span>
+            
+                    
+                        <b>1.10.1.</b>
+                    
+                    Http
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../util/http/RestTemplate用法.html">
+            
+                <a href="../util/http/RestTemplate用法.html">
+            
+                    
+                        <b>1.10.1.1.</b>
+                    
+                    RestTemplate用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" >
+            
+                <span>
+            
+                    
+                        <b>1.10.2.</b>
+                    
+                    Json
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.2.1" data-path="../util/json/json序列化和反序列化工具.html">
+            
+                <a href="../util/json/json序列化和反序列化工具.html">
+            
+                    
+                        <b>1.10.2.1.</b>
+                    
+                    json序列化和反序列化工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" >
+            
+                <span>
+            
+                    
+                        <b>1.10.3.</b>
+                    
+                    日志
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.3.1" data-path="../util/日志/logback日志文件配置.html">
+            
+                <a href="../util/日志/logback日志文件配置.html">
+            
+                    
+                        <b>1.10.3.1.</b>
+                    
+                    logback日志文件配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                        <b>1.11.</b>
+                    
+                    Xxl Job
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../xxl-job/xxl-job定时任务教程.html">
+            
+                <a href="../xxl-job/xxl-job定时任务教程.html">
+            
+                    
+                        <b>1.11.1.</b>
+                    
+                    xxl-job定时任务教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                        <b>1.12.</b>
+                    
+                    中间件
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" >
+            
+                <span>
+            
+                    
+                        <b>1.12.1.</b>
+                    
+                    Shardingsphere
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1.1" data-path="../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
+            
+                <a href="../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
+            
+                    
+                        <b>1.12.1.1.</b>
+                    
+                    sharding-jdbc实现读写分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                        <b>1.13.</b>
+                    
+                    前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" >
+            
+                <span>
+            
+                    
+                        <b>1.13.1.</b>
+                    
+                    Angular
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" >
+            
+                <span>
+            
+                    
+                        <b>1.13.1.1.</b>
+                    
+                    angular基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1.1" data-path="../前端/angular/angular基础/angular-generate命令.html">
+            
+                <a href="../前端/angular/angular基础/angular-generate命令.html">
+            
+                    
+                        <b>1.13.1.1.1.</b>
+                    
+                    angular-generate命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" >
+            
+                <span>
+            
+                    
+                        <b>1.13.2.</b>
+                    
+                    Node
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.2.1" data-path="../前端/node/node学习.html">
+            
+                <a href="../前端/node/node学习.html">
+            
+                    
+                        <b>1.13.2.1.</b>
+                    
+                    node学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" >
+            
+                <span>
+            
+                    
+                        <b>1.13.3.</b>
+                    
+                    Vue
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.3.1" data-path="../前端/vue/vue待学习.html">
+            
+                <a href="../前端/vue/vue待学习.html">
+            
+                    
+                        <b>1.13.3.1.</b>
+                    
+                    vue待学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" >
+            
+                <span>
+            
+                    
+                        <b>1.13.4.</b>
+                    
+                    后台模板
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.4.1" data-path="../前端/后台模板/ngx-admin后台模板学习.html">
+            
+                <a href="../前端/后台模板/ngx-admin后台模板学习.html">
+            
+                    
+                        <b>1.13.4.1.</b>
+                    
+                    ngx-admin后台模板学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                        <b>1.14.</b>
+                    
+                    各种问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" >
+            
+                <span>
+            
+                    
+                        <b>1.14.1.</b>
+                    
+                    Java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1.1" data-path="../各种问题/java/指针引用问题和List删除元素.html">
+            
+                <a href="../各种问题/java/指针引用问题和List删除元素.html">
+            
+                    
+                        <b>1.14.1.1.</b>
+                    
+                    指针引用问题和List删除元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" >
+            
+                <span>
+            
+                    
+                        <b>1.14.2.</b>
+                    
+                    Springboot
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.2.1" data-path="../各种问题/springboot/springboot日志问题.html">
+            
+                <a href="../各种问题/springboot/springboot日志问题.html">
+            
+                    
+                        <b>1.14.2.1.</b>
+                    
+                    springboot日志问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2.2" data-path="../各种问题/springboot/springboot配置属性DataSource问题.html">
+            
+                <a href="../各种问题/springboot/springboot配置属性DataSource问题.html">
+            
+                    
+                        <b>1.14.2.2.</b>
+                    
+                    springboot配置属性DataSource问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" >
+            
+                <span>
+            
+                    
+                        <b>1.14.3.</b>
+                    
+                    定时任务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.3.1" data-path="../各种问题/定时任务/xxl-job打印日志问题.html">
+            
+                <a href="../各种问题/定时任务/xxl-job打印日志问题.html">
+            
+                    
+                        <b>1.14.3.1.</b>
+                    
+                    xxl-job打印日志问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                        <b>1.15.</b>
+                    
+                    开发工具
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" >
+            
+                <span>
+            
+                    
+                        <b>1.15.1.</b>
+                    
+                    Excel
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../开发工具/excel/excel拼接字符串.html">
+            
+                <a href="../开发工具/excel/excel拼接字符串.html">
+            
+                    
+                        <b>1.15.1.1.</b>
+                    
+                    excel拼接字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" >
+            
+                <span>
+            
+                    
+                        <b>1.15.2.</b>
+                    
+                    Idea
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.2.1" data-path="../开发工具/idea/idea-git操作.html">
+            
+                <a href="../开发工具/idea/idea-git操作.html">
+            
+                    
+                        <b>1.15.2.1.</b>
+                    
+                    idea-git操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.2" data-path="../开发工具/idea/idea快捷键.html">
+            
+                <a href="../开发工具/idea/idea快捷键.html">
+            
+                    
+                        <b>1.15.2.2.</b>
+                    
+                    idea快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2.3" data-path="../开发工具/idea/idea插件.html">
+            
+                <a href="../开发工具/idea/idea插件.html">
+            
+                    
+                        <b>1.15.2.3.</b>
+                    
+                    idea插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../开发工具/常见工具.html">
+            
+                <a href="../开发工具/常见工具.html">
+            
+                    
+                        <b>1.15.3.</b>
+                    
+                    常见工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                        <b>1.16.</b>
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" >
+            
+                <span>
+            
+                    
+                        <b>1.16.1.</b>
+                    
+                    Postgres
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1.1" data-path="../数据库/postgres/postgres创建序列.html">
+            
+                <a href="../数据库/postgres/postgres创建序列.html">
+            
+                    
+                        <b>1.16.1.1.</b>
+                    
+                    postgres创建序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" >
+            
+                <span>
+            
+                    
+                        <b>1.16.2.</b>
+                    
+                    导数据
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.2.1" data-path="../数据库/导数据/导出数百万级别数据.html">
+            
+                <a href="../数据库/导数据/导出数百万级别数据.html">
+            
+                    
+                        <b>1.16.2.1.</b>
+                    
+                    导出数百万级别数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                        <b>1.17.</b>
+                    
+                    数据源
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../数据源/动态数据源.html">
+            
+                <a href="../数据源/动态数据源.html">
+            
+                    
+                        <b>1.17.1.</b>
+                    
+                    动态数据源
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                        <b>1.18.</b>
+                    
+                    缓存
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" >
+            
+                <span>
+            
+                    
+                        <b>1.18.1.</b>
+                    
+                    Guava
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1.1" data-path="../缓存/guava/guava缓存简单使用三部曲.html">
+            
+                <a href="../缓存/guava/guava缓存简单使用三部曲.html">
+            
+                    
+                        <b>1.18.1.1.</b>
+                    
+                    guava缓存简单使用三部曲
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >python小牛试刀-获取微信关注用户信息</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><strong>  </strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
+<blockquote>
+<p>&#x672C;&#x6587;&#x5185;&#x5BB9;&#x4ECB;&#x7ECD;&#xFF1A;<br>1&#x3001;&#x80CC;&#x666F;&#x548C;&#x9700;&#x6C42;<br>2&#x3001;&#x89E3;&#x51B3;&#x601D;&#x8DEF;<br>3&#x3001;&#x89E3;&#x51B3;&#x8BED;&#x8A00;<br>4&#x3001;python-requests&#x548C;python-redis<br>5&#x3001;&#x83B7;&#x53D6;&#x5173;&#x6CE8;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;openid<br>6&#x3001;&#x6839;&#x636E;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;<br>7&#x3001;&#x603B;&#x7ED3;<br><!-- more --></p>
+</blockquote>
+<h2 id="1&#x3001;&#x80CC;&#x666F;&#x548C;&#x9700;&#x6C42;"><a name="1&#x3001;&#x80CC;&#x666F;&#x548C;&#x9700;&#x6C42;" class="plugin-anchor" href="#1&#x3001;&#x80CC;&#x666F;&#x548C;&#x9700;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x80CC;&#x666F;&#x548C;&#x9700;&#x6C42;</h2>
+<p>&#x2003;&#x2003;&#x73B0;&#x5728;&#x8981;&#x7EDF;&#x8BA1;&#x8FD8;&#x6709;&#x591A;&#x5C11;&#x7528;&#x6237;&#x5173;&#x6CE8;&#x6A59;&#x533B;&#x751F;,&#x5BFC;&#x51FA;&#x5FAE;&#x4FE1;&#x4E0A;&#x7528;&#x6237;&#x7684;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x548C;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x662F;&#x5B58;&#x5728;&#x4EE5;&#x4E0B;&#x95EE;&#x9898;&#xFF1A;<br>1&#x3001;&#x6570;&#x636E;&#x5E93;&#x73B0;&#x5728;&#x53EA;&#x8BB0;&#x5F55;&#x7528;&#x6237;&#x5173;&#x6CE8;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x6CA1;&#x6709;&#x8BB0;&#x5F55;&#x7528;&#x6237;&#x53D6;&#x6D88;&#x5173;&#x6CE8;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;<br>2&#x3001;&#x7528;&#x6237;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#x6BD4;&#x5982;&#x6240;&#x5728;&#x5730;&#x533A;&#x548C;&#x7528;&#x6237;&#x5E74;&#x9F84;&#x6CA1;&#x6709;&#x8BB0;&#x5F55;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;api&#x53BB;&#x91CD;&#x65B0;&#x83B7;&#x53D6;<br>3&#x3001;&#x5BFC;&#x51FA;&#x5173;&#x6CE8;&#x8BB0;&#x5F55;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x5BFC;&#x51FA;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x57FA;&#x672C;&#x6CE8;&#x518C;&#x4FE1;&#x606F;</p>
+<h2 id="2&#x3001;&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><a name="2&#x3001;&#x89E3;&#x51B3;&#x601D;&#x8DEF;" class="plugin-anchor" href="#2&#x3001;&#x89E3;&#x51B3;&#x601D;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x89E3;&#x51B3;&#x601D;&#x8DEF;</h2>
+<p>1&#x3001;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x5BFC;&#x51FA;&#x73B0;&#x5728;&#x6240;&#x6709;&#x5173;&#x6CE8;&#x8FC7;&#x7684;&#x8BB0;&#x5F55;(openid),&#x73B0;&#x5728;&#x7EDF;&#x8BA1;&#x5230;&#x6709;80&#x591A;&#x4E07;&#x8BB0;&#x5F55;<br>2&#x3001;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;api&#x83B7;&#x53D6;&#x73B0;&#x5728;&#x6240;&#x6709;&#x5173;&#x6CE8;&#x7684;&#x8BB0;&#x5F55;(openid)&#xFF0C;&#x7EDF;&#x8BA1;&#x5230;&#x6709;50&#x4E07;&#x6761;&#x8BB0;&#x5F55;<br>3&#x3001;&#x5C06;&#x6B65;&#x9AA4;2&#x4E2D;&#x83B7;&#x53D6;&#x5230;openid&#xFF0C;&#x5148;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;api&#x53BB;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7528;&#x6237;&#x5177;&#x4F53;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6237;&#x4FE1;&#x606F;<br>4&#x3001;&#x5BF9;&#x6BD4;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;openid&#x548C;&#x6B65;&#x9AA4;3&#x83B7;&#x53D6;&#x5230;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x4E2D;&#x7684;openid&#xFF0C;&#x7136;&#x540E;&#x67E5;&#x8BE2;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x51FA;&#x8BE5;&#x7528;&#x6237;&#x7684;&#x6CE8;&#x518C;&#x4FE1;&#x606F;,&#x5BFC;&#x51FA;&#x5230;excel&#xFF0C;&#x5B8C;&#x3002;</p>
+<h2 id="3&#x3001;&#x89E3;&#x51B3;&#x8BED;&#x8A00;"><a name="3&#x3001;&#x89E3;&#x51B3;&#x8BED;&#x8A00;" class="plugin-anchor" href="#3&#x3001;&#x89E3;&#x51B3;&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x89E3;&#x51B3;&#x8BED;&#x8A00;</h2>
+<p>&#x6253;&#x7B97;&#x7528;python&#xFF0C;&#x56E0;&#x4E3A;python&#x662F;&#x811A;&#x672C;&#x8BED;&#x8A00;&#xFF0C;&#x65B9;&#x4FBF;&#x5BF9;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x7531;&#x4E8E;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;api&#x9700;&#x8981;access_token&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;token&#x5728;&#x6211;&#x4EEC;&#x670D;&#x52A1;&#x5668;&#x7531;&#x5176;&#x4ED6;java&#x9879;&#x76EE;&#x751F;&#x6210;&#x7684;&#xFF0C;&#x653E;&#x5728;redis&#x91CC;&#x9762;&#x3002;</p>
+<h2 id="4&#x3001;python-requests&#x548C;python-redis&#x57FA;&#x7840;&#x6A21;&#x5757;&#x77E5;&#x8BC6;"><a name="4&#x3001;python-requests&#x548C;python-redis&#x57FA;&#x7840;&#x6A21;&#x5757;&#x77E5;&#x8BC6;" class="plugin-anchor" href="#4&#x3001;python-requests&#x548C;python-redis&#x57FA;&#x7840;&#x6A21;&#x5757;&#x77E5;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;python-requests&#x548C;python-redis&#x57FA;&#x7840;&#x6A21;&#x5757;&#x77E5;&#x8BC6;</h2>
+<h5 id="python-requests&#x6A21;&#x5757;"><a name="python-requests&#x6A21;&#x5757;" class="plugin-anchor" href="#python-requests&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>python-requests&#x6A21;&#x5757;</h5>
+<p>&#x5148;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;</p>
+<pre><code class="lang-python">git clone git://github.com/kennethreitz/requests.git    
+
+python setup.py install
+</code></pre>
+<p>&#x5BFC;&#x5165;Requests&#x6A21;&#x5757;,&#x53D1;&#x8D77;get&#x8BF7;&#x6C42;,&#x54CD;&#x5E94;&#x6587;&#x672C;&#x5185;&#x5BB9;&#x7528;r.text&#x83B7;&#x53D6;,&#x82E5;&#x8981;&#x53D8;&#x6210;json&#xFF0C;&#x76F4;&#x63A5; r.json()&#x5373;&#x53EF;</p>
+<pre><code class="lang-python">import requests  
+
+r = requests.get(&apos;https://github.com/timeline.json&apos;)  
+d=r.json()
+</code></pre>
+<h5 id="python-redis&#x6A21;&#x5757;"><a name="python-redis&#x6A21;&#x5757;" class="plugin-anchor" href="#python-redis&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>python-redis&#x6A21;&#x5757;</h5>
+<p>&#x7F16;&#x8BD1;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code class="lang-python">wget https://pypi.python.org/packages/source/r/redis/redis-2.9.1.tar.gz  
+tar xvzf redis-2.9.1.tar.gz  
+cd redis-2.9.1  
+python setup.py install
+</code></pre>
+<p>&#x7528;&#x6CD5;&#xFF1A;  </p>
+<pre><code class="lang-python">import redis
+r=redis.Redis(host=&apos;localhost&apos;,port=6379,db=0,password=&apos;&#x5BC6;&#x7801;&apos;)  
+token=r.get(&apos;wxtoken:PATIENT_TOKEN&apos;)
+</code></pre>
+<h2 id="5&#x3001;&#x83B7;&#x53D6;&#x5173;&#x6CE8;&#x6211;&#x4EEC;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;openid"><a name="5&#x3001;&#x83B7;&#x53D6;&#x5173;&#x6CE8;&#x6211;&#x4EEC;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;openid" class="plugin-anchor" href="#5&#x3001;&#x83B7;&#x53D6;&#x5173;&#x6CE8;&#x6211;&#x4EEC;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;openid"><i class="fa fa-link" aria-hidden="true"></i></a>5&#x3001;&#x83B7;&#x53D6;&#x5173;&#x6CE8;&#x6211;&#x4EEC;&#x516C;&#x4F17;&#x53F7;&#x7684;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;openid</h2>
+<p>&#x8BE6;&#x7EC6;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;&#x6D89;&#x53CA;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;api&#xFF0C;&#x8FD8;&#x6709;&#x4ECE;redis&#x91CC;&#x9762;&#x83B7;&#x53D6;token&#x7B49;&#x77E5;&#x8BC6;</p>
+<pre><code class="lang-python">#! /usr/bin/python      
+# encoding=utf-8    
+import requests  
+import demjson  
+import json  
+import sys  
+reload(sys)  
+sys.setdefaultencoding( &quot;utf-8&quot; )  
+import time  
+import socket  
+import redis  
+import traceback  
+
+token=&apos;your token&apos;    
+baseurl=&apos;http://api.weixin.qq.com/cgi-bin/user/get?access_token=&apos;   
+redis_host=&apos;your redis_host&apos;    
+redis_password=&apos;your redis_password&apos;    
+
+#&#x8C03;&#x7528;&#x5FAE;&#x4FE1;api&#x83B7;&#x53D6;&#x5173;&#x6CE8;&#x7684;&#x6240;&#x6709;openid&#x51FD;&#x6570;  
+def getFollowOpenids( baseurl , token   ,nextopenid):  
+   if nextopenid:  
+      geturl=baseurl + token +   &apos;&amp;next_openid=&apos;+nextopenid  
+   else:  
+      geturl=baseurl + token  
+   print &quot;geturl=%s&quot;%(geturl)  
+   r=requests.get(geturl,timeout=10)  
+   d=r.json()  
+   return d  
+
+#&#x83B7;&#x53D6;redis&#x91CC;&#x9762;&#x7684;&#x5FAE;&#x4FE1;access_token  
+def getToken():  
+  r=redis.Redis(host=redis_host,port=6379,db=0,password=redis_password)  
+  token=r.get(&apos;wxtoken:PATIENT_TOKEN&apos;)  
+  while not token:  
+    print &quot;&#x518D;&#x6B21;&#x53D6;&#x5230;&#x7684;token&#x662F;&#x7A7A;&#x7684;token=%s&quot;%token
+    time.sleep(30)  
+    token=getToken()  
+  return token  
+
+fo=open(&quot;wx-openid.csv&quot;,&quot;a+&quot;);
+
+def writeToCsv( d ):
+  for x in d[&apos;data&apos;][&apos;openid&apos;]:
+    fo.write(&quot;%s\n&quot;%x)
+
+token=getToken()
+nextopenid=&apos;&apos;
+d=getFollowOpenids( baseurl , token ,nextopenid )
+
+#&#x5C06;&#x7B2C;&#x4E00;&#x6B21;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x6240;&#x6709;&#x5173;&#x6CE8;&#x8BB0;&#x5F55;&#x5199;&#x5165;wx-openid.csv&#x6587;&#x4EF6;&#x4E2D;
+writeToCsv( d )
+
+#&#x83B7;&#x53D6;&#x4E0B;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x9700;&#x8981;&#x5F00;&#x59CB;&#x7684;nextopenid
+nextopenid=d[&apos;next_openid&apos;]
+print &quot;&#x7B2C;&#x4E00;&#x6B21;&#x83B7;&#x53D6;&#x5230;&#x7684;nextopenid=%s&quot;%nextopenid
+
+#&#x7EDF;&#x8BA1;&#x9700;&#x8981;&#x8C03;&#x7528;&#x591A;&#x5C11;&#x6B21;&#x5FAE;&#x4FE1;api&#xFF0C;&#x6253;&#x5370;&#x6240;&#x6709;&#x7684;&#x8BB0;&#x5F55;&#x6570;
+total_time=d[&apos;total&apos;]/10000
+print &quot;total_time=%s,total=%d&quot;%(total_time,d[&apos;total&apos;])
+
+#&#x5FAA;&#x73AF;&#x8C03;&#x7528;&#x5FAE;&#x4FE1;api&#x53BB;&#x83B7;&#x53D6;&#x5173;&#x6CE8;&#x7684;openid
+while total_time &gt; 0:
+   d=getFollowOpenids( baseurl , token ,nextopenid )
+   writeToCsv( d )
+   nextopenid=d[&apos;next_openid&apos;]
+   print &quot;&#x83B7;&#x53D6;&#x5230;&#x4E0B;&#x6B21;next_openid=%s&quot;%nextopenid
+   total_time=total_time-1
+   print &quot;\n&quot;
+
+
+fo.close();
+</code></pre>
+<h2 id="6&#x3001;&#x6839;&#x636E;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;"><a name="6&#x3001;&#x6839;&#x636E;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;" class="plugin-anchor" href="#6&#x3001;&#x6839;&#x636E;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>6&#x3001;&#x6839;&#x636E;openid&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8BE6;&#x7EC6;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;</h2>
+<pre><code class="lang-python">#! /usr/bin/python
+# encoding=utf-8
+import requests
+import demjson
+import json
+import sys
+reload(sys)
+sys.setdefaultencoding( &quot;utf-8&quot; )
+import time
+import socket
+import redis
+import traceback
+
+token=&apos;your token&apos;
+baseurl=&apos;http://api.weixin.qq.com/cgi-bin/user/info?access_token=&apos;
+redis_host=&apos;your redis_host&apos;
+redis_password=&apos;your redis_password&apos;
+
+def getUserInfo( baseurl , token ,openid ):
+   geturl=baseurl + token+&apos;&amp;openid=&apos;+openid
+   r=requests.get(geturl,timeout=10)
+   d=r.json()
+   print r.text
+   return d
+
+def getToken():
+  r=redis.Redis(host=redis_host,port=6379,db=0,password=redis_password)
+  token=r.get(&apos;wxtoken:PATIENT_TOKEN&apos;)
+  while not token:
+    print &quot;&#x518D;&#x6B21;&#x53D6;&#x5230;&#x7684;token&#x662F;&#x7A7A;&#x7684;token=%s&quot;%token
+    time.sleep(30)
+    token=getToken()
+  return token
+
+
+fo=open(&quot;common-userinfo.csv&quot;,&quot;wb&quot;);
+
+with open(&quot;wx-openid.csv&quot;,&quot;r&quot;) as wxf:
+          for strs in wxf.readlines():
+                try:
+                  d=getUserInfo(baseurl,token,strs.strip())
+                  if &apos;errcode&apos; in d and d[&apos;errcode&apos;]==42001:
+                     print &quot;token=%s&#x8FC7;&#x671F;&#x4E86;&quot;%token
+                     token=getToken()
+                     print &quot;&#x65B0;token=%s&quot;%token
+                     d=getUserInfo(baseurl,token,strs.strip())
+                  if d[&apos;subscribe&apos;]==1:
+                     subtime=d[&apos;subscribe_time&apos;]
+                     timeArray=time.localtime(subtime)
+                     otherStyleTime=time.strftime(&quot;%Y-%m-%d %H:%M-%S&quot;,timeArray)
+                     info=d[&apos;openid&apos;]+&quot;,&quot;+d[&apos;nickname&apos;]+&quot;,&quot;+otherStyleTime+&quot;,&quot;+d[&apos;city&apos;]+&quot;,&quot;+str(d[&apos;sex&apos;])+&quot;\n&quot;
+                  else:
+                     info=strs.strip()+&quot;,,,,&quot;
+                  fo.write(info)
+                except:
+                   info=sys.exc_info()
+                   print info[0],&quot;:&quot;,info[1]
+                   traceback.print_exc(file=sys.stdout)  
+                   print &quot;&#x5F02;&#x5E38;json:%s&quot;%strs
+                   #pass  
+
+fo.close();
+</code></pre>
+<h2 id="7&#x3001;&#x603B;&#x7ED3;"><a name="7&#x3001;&#x603B;&#x7ED3;" class="plugin-anchor" href="#7&#x3001;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>7&#x3001;&#x603B;&#x7ED3;</h2>
+<p>&#x2003;&#x2003;&#x4E0A;&#x9762;&#x7684;python&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x521A;&#x5B66;&#x521A;&#x7528;&#x7684;&#xFF0C;&#x7531;&#x4E8E;&#x65F6;&#x95F4;&#x6BD4;&#x8F83;&#x5306;&#x5FD9;&#xFF0C;&#x9700;&#x8981;&#x53CA;&#x65F6;&#x5B8C;&#x6210;&#x9700;&#x6C42;&#xFF0C;&#x6240;&#x4EE5;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x8FD8;&#x6CA1;&#x8FDB;&#x884C;&#x5F88;&#x597D;&#x5C01;&#x88C5;&#xFF0C;&#x540E;&#x9762;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#x67E5;&#x8BE2;&#x6CE8;&#x518C;&#x4FE1;&#x606F;&#x65B9;&#x9762;&#x7684;&#x4E5F;&#x6CA1;&#x5199;&#x3002;&#x672C;&#x6587;&#x53EA;&#x63D0;&#x4F9B;&#x83B7;&#x53D6;&#x5FAE;&#x4FE1;&#x5173;&#x6CE8;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x4F8B;&#x5B50;&#x53C2;&#x8003;&#xFF0C;&#x5982;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x8054;&#x7CFB;&#x6211;&#x3002;<br>&#x53EF;&#x53C2;&#x8003;&#x7684;&#x77E5;&#x8BC6;&#x94FE;&#x63A5;&#xFF1A;<br>1&#x3001;python&#x8FDE;&#x63A5;redis<br><a href="http://debugo.com/python-redis/" target="_blank">http://debugo.com/python-redis/</a><br>2&#x3001;http&#x8BF7;&#x6C42;&#x6846;&#x67B6;python-requests<br><a href="http://docs.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank">http://docs.python-requests.org/zh_CN/latest/user/quickstart.html</a></p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"python小牛试刀-获取微信关注用户信息","date":"2017-02-16T10:35:37.000Z","tags":["python","微信公众号"],"categories":"python","level":"1.6.1","depth":2,"next":{"title":"Spring","level":"1.7","depth":1,"ref":"","articles":[{"title":"spring事件","level":"1.7.1","depth":2,"path":"spring/spring事件.md","ref":"spring/spring事件.md","articles":[]}]},"previous":{"title":"Python","level":"1.6","depth":1,"ref":"","articles":[{"title":"python小牛试刀-获取微信关注用户信息","level":"1.6.1","depth":2,"path":"python/python小牛试刀-获取微信关注用户信息.md","ref":"python/python小牛试刀-获取微信关注用户信息.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"python/python小牛试刀-获取微信关注用户信息.md","mtime":"2020-05-03T09:54:25.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-03T09:54:43.663Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-nocache/nocache.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
