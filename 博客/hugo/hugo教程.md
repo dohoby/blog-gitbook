@@ -1,7 +1,7 @@
 ---
-title: oracle学习
+title: hugo教程
 tags: []
-date: 2020-09-08 09:42:20
+date: 2020-09-09 08:54:22
 categories:
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
@@ -11,15 +11,22 @@ categories:
 
 ### 1、
 
+
+[https://www.gohugo.org/](https://www.gohugo.org/)
+
 ```
 
 ```
+
+![]()
 
 #### 2、
 
 ```
 
 ```
+
+![]()
 1. 
 2. 
 3. 
@@ -33,3 +40,4 @@ categories:
 ```
 
 ```
+![]()

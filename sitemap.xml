@@ -19,7 +19,6 @@
 <url> <loc>http://zhaoda.net/elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/elasticsearch/es知识点/Elasticsearch学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/elasticsearch/es知识点/和Elasticsearch交互.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://zhaoda.net/gitbook/gitbook教程.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/java8/java8新特性.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/apollo学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/python/python小牛试刀-获取微信关注用户信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -35,6 +34,8 @@
 <url> <loc>http://zhaoda.net/前端/node/node学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/前端/vue/vue待学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/前端/后台模板/ngx-admin后台模板学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/博客/gitbook/gitbook教程.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/博客/hugo/hugo教程.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/java/指针引用问题和List删除元素.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/springboot/springboot日志问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/springboot/springboot配置属性DataSource问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -45,7 +46,7 @@
 <url> <loc>http://zhaoda.net/开发工具/idea/idea快捷键.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/idea/idea插件.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/常见工具.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://zhaoda.net/数据库/oracle/oracle学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/数据库/oracle/oracle常见查询语句.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/数据库/postgres/postgres创建序列.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/数据库/导数据/导出数百万级别数据.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/数据源/动态数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
