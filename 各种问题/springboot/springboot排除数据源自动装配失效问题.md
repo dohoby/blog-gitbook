@@ -123,6 +123,14 @@ public class FzsIotCardApplication {
     }
 }
 ```
+或者把pom中的druid-spring-boot-starter去掉，DruidDataSourceAutoConfigure是存在这个包里的
+```
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.starter.version}</version>
+        </dependency>
+```
 
 参考：
 [https://blog.csdn.net/superyu1992/article/details/80336928](https://blog.csdn.net/superyu1992/article/details/80336928)
