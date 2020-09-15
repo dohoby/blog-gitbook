@@ -60,7 +60,7 @@ Process finished with exit code 1
 
 ```
 
-#### 2、问题分析
+### 2、问题分析
  
 参考了网上把下面DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class  
 进行了排除
@@ -109,7 +109,7 @@ class DruidDataSourceWrapper extends DruidDataSource implements InitializingBean
 
 
 
-#### 3、问题解决
+### 3、问题解决
 同时把DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class, DruidDataSourceAutoConfigure.class 这3个排除掉即可
 
 ```
