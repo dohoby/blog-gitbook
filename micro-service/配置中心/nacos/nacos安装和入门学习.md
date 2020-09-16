@@ -1,8 +1,8 @@
 ---
 title: nacos安装和入门学习
-tags: []
+tags: [nacos,配置中心]
 date: 2020-09-15 11:49:43
-categories:
+categories: nacos,配置中心
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
 

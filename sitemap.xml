@@ -21,6 +21,7 @@
 <url> <loc>http://zhaoda.net/elasticsearch/es知识点/和Elasticsearch交互.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/java8/java8新特性.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/appollo/apollo客户端配置使用.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos-spring-cloud学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos安装和入门学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/python/python小牛试刀-获取微信关注用户信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/spring/spring事件.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -43,6 +44,7 @@
 <url> <loc>http://zhaoda.net/各种问题/springboot/springboot配置属性DataSource问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/定时任务/xxl-job打印日志问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/excel/excel拼接字符串.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/开发工具/git/git常见操作.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/idea/idea-git操作.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/idea/idea中文乱码.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/idea/idea快捷键.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
