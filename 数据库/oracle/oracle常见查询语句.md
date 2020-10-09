@@ -24,6 +24,12 @@ select * from user_tab_comments
 //获取字段注释：
 select * from user_col_comments where table_name='T_IOT_CARD' 
 
+//查看序列
+select * from user_sequences;
+
+//查看某个特定的序列
+select * from user_sequences where  sequence_name like '%SEQ_IOT_INTERFACE_DICT%'
+
 
 ```
 
@@ -47,6 +53,25 @@ select * from dba_tables where table_name ='T_IOT_CARD'
 3. 
 
 #### 3、
+
+oracle 查看当前用户名
+show user
+select user from dual
+
+oracle 查看所有用户名
+select * from all_users
+
+
+
+[https://www.cnblogs.com/tdskee/p/5848334.html](https://www.cnblogs.com/tdskee/p/5848334.html)
+
+
+
+plsql选择 command window ,不是sql window ,
+然后输入命令 start D:\aa.sql
+
+
+
 
 1. 
 2. 
