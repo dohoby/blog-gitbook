@@ -16,6 +16,9 @@ categories: idea
 ```
 
 #### 
+[IDEA编写快捷生成代码](https://www.cnblogs.com/elvin-j-x/p/12759947.html)
+
+[idea 快速打出for循环](https://jingyan.baidu.com/article/86f4a73ead486437d7526947.html)
 
 1. 
 2. 
