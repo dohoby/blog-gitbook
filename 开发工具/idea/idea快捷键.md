@@ -27,8 +27,11 @@ debug调试： shift+F9
 停止调试: ctrl+F2
 修改js或jsp后更新: ctrl+F10
 
+
+##### 打开窗口
 打开services日志窗口： alt+8
 打开terminal窗口： alt+F12
+打开左边窗口： alt+1
 
 ##### 代码窗口
 重新方法(或实现): ctrl+o
