@@ -51,6 +51,7 @@
 <url> <loc>http://zhaoda.net/各种问题/springboot/springboot排除数据源自动装配失效问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/springboot/springboot日志问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/springboot/springboot配置属性DataSource问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/各种问题/前端/form表单序列化后中文乱码问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/定时任务/xxl-job打印日志问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/excel/excel拼接字符串.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/git/git打tag.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
