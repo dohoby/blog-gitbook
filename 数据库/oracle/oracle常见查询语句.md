@@ -70,8 +70,8 @@ select * from all_users
 plsql选择 command window ,不是sql window ,
 然后输入命令 start D:\aa.sql
 
-
-
+### Oracle trunc()函数的用法
+[https://www.cnblogs.com/zhangxiaoxia/p/10270840.html](https://www.cnblogs.com/zhangxiaoxia/p/10270840.html)
 
 1. 
 2. 
