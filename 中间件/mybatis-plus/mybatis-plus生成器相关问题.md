@@ -66,10 +66,6 @@ public class User extends Model<User> {
 
 #### 代码生成器自定义数据库表字段类型转换
 
-```java
-
-```
-
 mybatis-plus提供的oracle转换类如下：
 com.baomidou.mybatisplus.generator.config.converts.OracleTypeConvert
 
