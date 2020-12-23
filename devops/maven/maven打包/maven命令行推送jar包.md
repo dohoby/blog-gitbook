@@ -1,5 +1,5 @@
 ---
-title: maven推送jar包
+title: maven命令行推送jar包
 tags: [maven]
 date: 2020-09-08 10:37:43
 categories: maven
@@ -36,9 +36,6 @@ mvn deploy:deploy-file -Dfile=<path-to-file> -DgroupId=<group-id> -DartifactId=<
  报下面错，不能从本地的版本库位置deploy，必须像上面那样将jar包和pom包复制到其他目录下
 ![](source/_posts/devops/maven/maven打包/maven推送jar包/maven-2.png)
 
-1. 
-2. 
-3. 
 
 #### 4、未授权错误分析
 
@@ -64,16 +61,16 @@ mvn deploy:deploy-file -Dfile=<path-to-file> -DgroupId=<group-id> -DartifactId=<
 ```
 
 
-
-
-
-
 参考：
 
-http://www.trinea.cn/dev-tools/maven-sonatype-nexus-return-401-which-settings-xml-maven-is-using/
+http://www.trinea.cn/dev-tools/maven-sonatype-nexus-return-401-which-settings-xml-maven-is-using/  
 
-https://blog.csdn.net/zzb5682119/article/details/54137986
+https://blog.csdn.net/zzb5682119/article/details/54137986    
+```
 mvn deploy:deploy-file -Dfile=C:/Users/zhangzubin/Desktop/EisAPIForHA-2.1.jar -DgroupId=cn.evun -DartifactId=EisAPIForHA -Dversion=2.0 -Durl=http://218.75.72.114:8081/nexus/content/repositories/releases -DrepositoryId=nexus-release 关于安装第三方jar到Artifact, 从Artifact的官方上看到其实有很多种方法(请看这里),最简单的就是从Archiva的web 页面上找到Upload Artifact这个功能. 我使用的方法是maven的 deploy:deploy-file 命令,这种方法时要注意的是如果你要安装的jar和pom是位于本地repository的目录下,这个命令就会出错 (Cannot deploy artifact from the local repository…), 解决方法:将要安装的jar和pom copy到其它目录再安装,只要不在本地仓库目录都应该可以.
+```
+
+https://www.jianshu.com/p/515fdbf92656    
 
 
-https://www.jianshu.com/p/515fdbf92656
+

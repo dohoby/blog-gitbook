@@ -1,5 +1,5 @@
 ---
-title: maven引入lib文件夹下jar包
+title: maven引入lib文件夹下jar包并且打包
 tags: [maven]
 date: 2020-09-08 11:57:18
 categories: maven
@@ -39,6 +39,8 @@ springboot下
 </plugins>
 ```
 [https://www.cnblogs.com/xiang--liu/p/11451521.html](https://www.cnblogs.com/xiang--liu/p/11451521.html)
+
+[https://www.cnblogs.com/musarona/p/11204179.html](https://www.cnblogs.com/musarona/p/11204179.html)
 
 旧的打war包情况下
 

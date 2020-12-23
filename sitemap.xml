@@ -8,9 +8,10 @@
 <url> <loc>http://zhaoda.net/devops/docker/docker实战5-曲线拉取国外镜像.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/jenkins/Jenkins全局工具配置.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/kettle/kettle数据同步技术攻克.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/devops/maven/maven打包/maven命令行推送jar包.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/maven/maven打包/maven引入lib文件夹下jar包.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://zhaoda.net/devops/maven/maven打包/maven推送jar包.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/maven/maven打包/maven更改版本号.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/devops/maven/maven打包/maven私服配置并且推送jar包.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/redis/redis在windows下安装.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/uml/建模工具plantuml介绍.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/elasticsearch/es实战/es实战1-常见命令.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -31,9 +32,13 @@
 <url> <loc>http://zhaoda.net/java/xxl-job/xxl-job定时任务教程.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/java/数据源/动态数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/java/缓存/guava/guava缓存简单使用三部曲.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合hikari数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合redisTemplate.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/appollo/apollo客户端配置使用.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos-spring-cloud学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos安装和入门学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/限流/sentinel/SentinelResource注解源码分析.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/sentinel命名空间namespace分析.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/sentinel学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/sentinel控制台.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>

@@ -10,15 +10,6 @@ categories: sentinel
 <!-- more -->
 
 #### 1、
-
-```java
-
-```
-
-```java
-
-```
-
 [Sentinel初始化之InitFunc实现类加载](https://blog.csdn.net/admin1973/article/details/85764525)
 
 
