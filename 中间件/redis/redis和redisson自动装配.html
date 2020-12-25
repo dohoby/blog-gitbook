@@ -2901,32 +2901,49 @@ public class RedisAutoConfiguration {
 }
 </code></pre>
 <p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x4E0D;&#x914D;&#x7F6E;RedisTemplate&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;RedisProperties&#x91CC;&#x7684;&#x5C5E;&#x6027;&#x5373;&#x53EF;<br>&#x4F46;&#x662F;&#x4ED6;&#x8FD9;&#x4E2A;&#x4FDD;&#x5B58;&#x5230;redis&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x5E8F;&#x5217;&#x5316;&#x7684;,&#x5728;redis&#x91CC;&#x770B;&#x53EF;&#x80FD;&#x4F1A;&#x4E71;&#x7801;</p>
-<pre><code class="lang-java">
+<h4 id="redissonautoconfiguration"><a name="redissonautoconfiguration" class="plugin-anchor" href="#redissonautoconfiguration"><i class="fa fa-link" aria-hidden="true"></i></a>RedissonAutoConfiguration</h4>
+<p>&#x770B;redisson-spring-boot-starter&#x4E0B;&#x7684;RedissonAutoConfiguration</p>
+<p>org.redisson.spring.starter.RedissonAutoConfiguration</p>
+<p>&#x4E0B;&#x9762;&#x4E5F;&#x4F1A;&#x521B;&#x5EFA;redissonConnectionFactory&#x3001;RedisTemplate&#x7B49;&#xFF0C;&#x540C;&#x65F6;RedissonAutoConfiguration&#x7528;&#x4E86;AutoConfigureBefore&#xFF0C;&#x4F1A;&#x6BD4;<br>RedisAutoConfiguration&#x5148;&#x88C5;&#x914D;</p>
+<pre><code class="lang-java">@Configuration
+@ConditionalOnClass({Redisson.class, RedisOperations.class})
+@AutoConfigureBefore({RedisAutoConfiguration.class})
+@EnableConfigurationProperties({RedissonProperties.class, RedisProperties.class})
+public class RedissonAutoConfiguration {
+    @Autowired
+    private RedissonProperties redissonProperties;
+    @Autowired
+    private RedisProperties redisProperties;
+    @Autowired
+    private ApplicationContext ctx;
 
-</code></pre>
-<p><img src="." alt=""></p>
-<h4 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h4>
-<pre><code class="lang-java">
+    public RedissonAutoConfiguration() {
+    }
 
-</code></pre>
-<pre><code class="lang-java">
+    @Bean
+    @ConditionalOnMissingBean(
+        name = {&quot;redisTemplate&quot;}
+    )
+    public RedisTemplate&lt;Object, Object&gt; redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate&lt;Object, Object&gt; template = new RedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+        return template;
+    }
 
-</code></pre>
-<p><img src="." alt=""></p>
-<h4 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h4>
-<pre><code class="lang-java">
+    @Bean
+    @ConditionalOnMissingBean({StringRedisTemplate.class})
+    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        StringRedisTemplate template = new StringRedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+        return template;
+    }
 
+    @Bean
+    @ConditionalOnMissingBean({RedisConnectionFactory.class})
+    public RedissonConnectionFactory redissonConnectionFactory(RedissonClient redisson) {
+        return new RedissonConnectionFactory(redisson);
+    }
 </code></pre>
-<pre><code class="lang-java">
-
-</code></pre>
-<p><img src="." alt="">
-```</p>
-<ol>
-<li></li>
-<li></li>
-<li><img src="." alt=""></li>
-</ol>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -2963,7 +2980,7 @@ public class RedisAutoConfiguration {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"redis和redisson自动装配","tags":[],"date":"2020-12-25T10:50:20.000Z","categories":null,"level":"1.7.2.1","depth":3,"next":{"title":"Shardingsphere","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"sharding-jdbc实现读写分离","level":"1.7.3.1","depth":3,"path":"中间件/shardingsphere/sharding-jdbc实现读写分离.md","ref":"中间件/shardingsphere/sharding-jdbc实现读写分离.md","articles":[]}]},"previous":{"title":"Redis","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"redis和redisson自动装配","level":"1.7.2.1","depth":3,"path":"中间件/redis/redis和redisson自动装配.md","ref":"中间件/redis/redis和redisson自动装配.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"中间件/redis/redis和redisson自动装配.md","mtime":"2020-12-25T07:13:07.952Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-25T07:13:37.947Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"redis和redisson自动装配","tags":[],"date":"2020-12-25T10:50:20.000Z","categories":null,"level":"1.7.2.1","depth":3,"next":{"title":"Shardingsphere","level":"1.7.3","depth":2,"ref":"","articles":[{"title":"sharding-jdbc实现读写分离","level":"1.7.3.1","depth":3,"path":"中间件/shardingsphere/sharding-jdbc实现读写分离.md","ref":"中间件/shardingsphere/sharding-jdbc实现读写分离.md","articles":[]}]},"previous":{"title":"Redis","level":"1.7.2","depth":2,"ref":"","articles":[{"title":"redis和redisson自动装配","level":"1.7.2.1","depth":3,"path":"中间件/redis/redis和redisson自动装配.md","ref":"中间件/redis/redis和redisson自动装配.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"中间件/redis/redis和redisson自动装配.md","mtime":"2020-12-25T07:15:36.185Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-25T07:15:42.484Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

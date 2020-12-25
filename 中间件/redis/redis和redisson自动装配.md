@@ -65,38 +65,53 @@ public class RedisAutoConfiguration {
 
 
 
-```java
+#### RedissonAutoConfiguration
 
-```
-![]()
+看redisson-spring-boot-starter下的RedissonAutoConfiguration
 
-#### 
-```java
+org.redisson.spring.starter.RedissonAutoConfiguration
 
-```
-
-```java
-
-```
-![]()
-
-#### 
-
+下面也会创建redissonConnectionFactory、RedisTemplate等，同时RedissonAutoConfiguration用了AutoConfigureBefore，会比  
+RedisAutoConfiguration先装配
 
 ```java
+@Configuration
+@ConditionalOnClass({Redisson.class, RedisOperations.class})
+@AutoConfigureBefore({RedisAutoConfiguration.class})
+@EnableConfigurationProperties({RedissonProperties.class, RedisProperties.class})
+public class RedissonAutoConfiguration {
+    @Autowired
+    private RedissonProperties redissonProperties;
+    @Autowired
+    private RedisProperties redisProperties;
+    @Autowired
+    private ApplicationContext ctx;
+
+    public RedissonAutoConfiguration() {
+    }
+
+    @Bean
+    @ConditionalOnMissingBean(
+        name = {"redisTemplate"}
+    )
+    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate<Object, Object> template = new RedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+        return template;
+    }
+
+    @Bean
+    @ConditionalOnMissingBean({StringRedisTemplate.class})
+    public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        StringRedisTemplate template = new StringRedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+        return template;
+    }
+
+    @Bean
+    @ConditionalOnMissingBean({RedisConnectionFactory.class})
+    public RedissonConnectionFactory redissonConnectionFactory(RedissonClient redisson) {
+        return new RedissonConnectionFactory(redisson);
+    }
 
 ```
-
-```java
-
-```
-![]()
-```
-
-
-
-
-1. 
-2. 
-3. 
-![]()
