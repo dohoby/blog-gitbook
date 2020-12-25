@@ -14,6 +14,7 @@
 <url> <loc>http://zhaoda.net/devops/maven/maven打包/maven私服配置并且推送jar包.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/redis/redis在windows下安装.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/devops/uml/建模工具plantuml介绍.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/devops/运维/window端口占用查询.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/elasticsearch/es实战/es实战1-常见命令.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/elasticsearch/es实战/es实战2-查询命令.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/elasticsearch/es实战/es实战3-综合查询案例.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -34,6 +35,7 @@
 <url> <loc>http://zhaoda.net/java/缓存/guava/guava缓存简单使用三部曲.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合hikari数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合log4j打印mybatis的sql日志.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合redisTemplate.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/appollo/apollo客户端配置使用.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos-spring-cloud学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -46,7 +48,9 @@
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/sentinel集群流控.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/python/python小牛试刀-获取微信关注用户信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/中间件/mybatis-plus/mybatis-plus生成器相关问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/中间件/redis/redis和redisson自动装配.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/中间件/shardingsphere/sharding-jdbc实现读写分离.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/中间件/spring/spring-core工具包.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/前端/angular/angular基础/angular-generate命令.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/前端/jquery基础/jquery按钮用法.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/前端/json/前端json字符串和js对象转换.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -64,6 +68,7 @@
 <url> <loc>http://zhaoda.net/各种问题/springboot/springboot配置属性DataSource问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/前端/form表单序列化后中文乱码问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/各种问题/定时任务/xxl-job打印日志问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/各种问题/配置/redisTemplate配置问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/excel/excel拼接字符串.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/git/git打tag.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/开发工具/git/git提交注释规范.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
