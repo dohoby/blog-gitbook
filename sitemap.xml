@@ -37,6 +37,7 @@
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合hikari数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合log4j打印mybatis的sql日志.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合redisTemplate.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/文档管理/japidoc文档管理.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/appollo/apollo客户端配置使用.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos-spring-cloud学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos安装和入门学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
