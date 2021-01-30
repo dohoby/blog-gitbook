@@ -33,8 +33,8 @@ com.alibaba.csp.sentinel.config.SentinelConfig#resolveAppName
 ```
 上面由于设置了-Dcsp.sentinel.app.name=SYS_IOT.flow-sync-sentinel
 所以在sentinel-dashbord控制台上左边菜单栏看到的是SYS_IOT.flow-sync-sentinel  
-![](sentinel命名空间namespace分析/sentinel-namespace-1.png)
-![](sentinel命名空间namespace分析/sentinel-namespace-2.png)
+![](source/_posts/micro-service/限流/sentinel/入门/sentinel命名空间namespace分析vice/限流/sentinel/入门/sentinel命名空间namespace分析/sentinel-namespace-1.png)
+![](source/_posts/micro-service/限流/sentinel/入门/sentinel命名空间namespace分析vice/限流/sentinel/入门/sentinel命名空间namespace分析/sentinel-namespace-2.png)
 
 
 另外启动参数配置的，参考类SentinelConfig

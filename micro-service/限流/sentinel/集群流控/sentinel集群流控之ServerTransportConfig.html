@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>sentinel命名空间namespace分析 · java实用笔记</title>
+        <title>sentinel集群流控-ServerTransportConfig · java实用笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -12,40 +12,40 @@
         
         
     
-    <link rel="stylesheet" href="../../../gitbook/style.css">
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
 
     
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-splitter/splitter.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-splitter/splitter.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-code/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search-pro/search.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search-pro/search.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-anchors/plugin.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-anchors/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-theme-comscore/test.css">
                 
             
         
@@ -77,14 +77,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
-    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="sentinel学习.html" />
+    <link rel="next" href="sentinel集群流控之TransportConfig.html" />
     
     
-    <link rel="prev" href="SentinelResource注解源码分析.html" />
+    <link rel="prev" href="sentinel集群流控之ClusterClientAssignConfig.html" />
     
 
 
@@ -123,9 +123,9 @@
         
         
     
-        <li class="chapter " data-level="1.1" data-path="../../../">
+        <li class="chapter " data-level="1.1" data-path="../../../../">
             
-                <a href="../../../">
+                <a href="../../../../">
             
                     
                         <b>1.1.</b>
@@ -170,9 +170,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1.1" data-path="../../../devops/docker/docker-install.html">
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../../devops/docker/docker-install.html">
             
-                <a href="../../../devops/docker/docker-install.html">
+                <a href="../../../../devops/docker/docker-install.html">
             
                     
                         <b>1.2.1.1.</b>
@@ -185,9 +185,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.2" data-path="../../../devops/docker/docker实战1.html">
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../../devops/docker/docker实战1.html">
             
-                <a href="../../../devops/docker/docker实战1.html">
+                <a href="../../../../devops/docker/docker实战1.html">
             
                     
                         <b>1.2.1.2.</b>
@@ -200,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.3" data-path="../../../devops/docker/docker实战3-运行和查看.html">
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../../devops/docker/docker实战3-运行和查看.html">
             
-                <a href="../../../devops/docker/docker实战3-运行和查看.html">
+                <a href="../../../../devops/docker/docker实战3-运行和查看.html">
             
                     
                         <b>1.2.1.3.</b>
@@ -215,9 +215,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.4" data-path="../../../devops/docker/docker实战4-挂载目录.html">
+        <li class="chapter " data-level="1.2.1.4" data-path="../../../../devops/docker/docker实战4-挂载目录.html">
             
-                <a href="../../../devops/docker/docker实战4-挂载目录.html">
+                <a href="../../../../devops/docker/docker实战4-挂载目录.html">
             
                     
                         <b>1.2.1.4.</b>
@@ -230,9 +230,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.1.5" data-path="../../../devops/docker/docker实战5-曲线拉取国外镜像.html">
+        <li class="chapter " data-level="1.2.1.5" data-path="../../../../devops/docker/docker实战5-曲线拉取国外镜像.html">
             
-                <a href="../../../devops/docker/docker实战5-曲线拉取国外镜像.html">
+                <a href="../../../../devops/docker/docker实战5-曲线拉取国外镜像.html">
             
                     
                         <b>1.2.1.5.</b>
@@ -266,9 +266,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.2.1" data-path="../../../devops/jenkins/Jenkins全局工具配置.html">
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../../devops/jenkins/Jenkins全局工具配置.html">
             
-                <a href="../../../devops/jenkins/Jenkins全局工具配置.html">
+                <a href="../../../../devops/jenkins/Jenkins全局工具配置.html">
             
                     
                         <b>1.2.2.1.</b>
@@ -302,9 +302,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.3.1" data-path="../../../devops/kettle/kettle数据同步技术攻克.html">
+        <li class="chapter " data-level="1.2.3.1" data-path="../../../../devops/kettle/kettle数据同步技术攻克.html">
             
-                <a href="../../../devops/kettle/kettle数据同步技术攻克.html">
+                <a href="../../../../devops/kettle/kettle数据同步技术攻克.html">
             
                     
                         <b>1.2.3.1.</b>
@@ -354,9 +354,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.4.1.1" data-path="../../../devops/maven/maven打包/maven命令行推送jar包.html">
+        <li class="chapter " data-level="1.2.4.1.1" data-path="../../../../devops/maven/maven打包/maven命令行推送jar包.html">
             
-                <a href="../../../devops/maven/maven打包/maven命令行推送jar包.html">
+                <a href="../../../../devops/maven/maven打包/maven命令行推送jar包.html">
             
                     
                         <b>1.2.4.1.1.</b>
@@ -369,9 +369,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.1.2" data-path="../../../devops/maven/maven打包/maven引入lib文件夹下jar包.html">
+        <li class="chapter " data-level="1.2.4.1.2" data-path="../../../../devops/maven/maven打包/maven引入lib文件夹下jar包.html">
             
-                <a href="../../../devops/maven/maven打包/maven引入lib文件夹下jar包.html">
+                <a href="../../../../devops/maven/maven打包/maven引入lib文件夹下jar包.html">
             
                     
                         <b>1.2.4.1.2.</b>
@@ -384,9 +384,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.1.3" data-path="../../../devops/maven/maven打包/maven更改版本号.html">
+        <li class="chapter " data-level="1.2.4.1.3" data-path="../../../../devops/maven/maven打包/maven更改版本号.html">
             
-                <a href="../../../devops/maven/maven打包/maven更改版本号.html">
+                <a href="../../../../devops/maven/maven打包/maven更改版本号.html">
             
                     
                         <b>1.2.4.1.3.</b>
@@ -399,9 +399,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4.1.4" data-path="../../../devops/maven/maven打包/maven私服配置并且推送jar包.html">
+        <li class="chapter " data-level="1.2.4.1.4" data-path="../../../../devops/maven/maven打包/maven私服配置并且推送jar包.html">
             
-                <a href="../../../devops/maven/maven打包/maven私服配置并且推送jar包.html">
+                <a href="../../../../devops/maven/maven打包/maven私服配置并且推送jar包.html">
             
                     
                         <b>1.2.4.1.4.</b>
@@ -440,9 +440,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.5.1" data-path="../../../devops/redis/redis在windows下安装.html">
+        <li class="chapter " data-level="1.2.5.1" data-path="../../../../devops/redis/redis在windows下安装.html">
             
-                <a href="../../../devops/redis/redis在windows下安装.html">
+                <a href="../../../../devops/redis/redis在windows下安装.html">
             
                     
                         <b>1.2.5.1.</b>
@@ -476,9 +476,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.6.1" data-path="../../../devops/uml/建模工具plantuml介绍.html">
+        <li class="chapter " data-level="1.2.6.1" data-path="../../../../devops/uml/建模工具plantuml介绍.html">
             
-                <a href="../../../devops/uml/建模工具plantuml介绍.html">
+                <a href="../../../../devops/uml/建模工具plantuml介绍.html">
             
                     
                         <b>1.2.6.1.</b>
@@ -512,9 +512,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.7.1" data-path="../../../devops/运维/window端口占用查询.html">
+        <li class="chapter " data-level="1.2.7.1" data-path="../../../../devops/运维/window端口占用查询.html">
             
-                <a href="../../../devops/运维/window端口占用查询.html">
+                <a href="../../../../devops/运维/window端口占用查询.html">
             
                     
                         <b>1.2.7.1.</b>
@@ -569,9 +569,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1.1" data-path="../../../elasticsearch/es实战/es实战1-常见命令.html">
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../../elasticsearch/es实战/es实战1-常见命令.html">
             
-                <a href="../../../elasticsearch/es实战/es实战1-常见命令.html">
+                <a href="../../../../elasticsearch/es实战/es实战1-常见命令.html">
             
                     
                         <b>1.3.1.1.</b>
@@ -584,9 +584,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.2" data-path="../../../elasticsearch/es实战/es实战2-查询命令.html">
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../../elasticsearch/es实战/es实战2-查询命令.html">
             
-                <a href="../../../elasticsearch/es实战/es实战2-查询命令.html">
+                <a href="../../../../elasticsearch/es实战/es实战2-查询命令.html">
             
                     
                         <b>1.3.1.2.</b>
@@ -599,9 +599,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.3" data-path="../../../elasticsearch/es实战/es实战3-综合查询案例.html">
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../../elasticsearch/es实战/es实战3-综合查询案例.html">
             
-                <a href="../../../elasticsearch/es实战/es实战3-综合查询案例.html">
+                <a href="../../../../elasticsearch/es实战/es实战3-综合查询案例.html">
             
                     
                         <b>1.3.1.3.</b>
@@ -614,9 +614,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.4" data-path="../../../elasticsearch/es实战/es实战4-java常见查询实例.html">
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../../elasticsearch/es实战/es实战4-java常见查询实例.html">
             
-                <a href="../../../elasticsearch/es实战/es实战4-java常见查询实例.html">
+                <a href="../../../../elasticsearch/es实战/es实战4-java常见查询实例.html">
             
                     
                         <b>1.3.1.4.</b>
@@ -629,9 +629,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.5" data-path="../../../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
             
-                <a href="../../../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
+                <a href="../../../../elasticsearch/es实战/es实战5-聚合分组查询案例.html">
             
                     
                         <b>1.3.1.5.</b>
@@ -644,9 +644,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.6" data-path="../../../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
             
-                <a href="../../../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
+                <a href="../../../../elasticsearch/es实战/es实战6-springboot2.0集成elasticsearch6.html">
             
                     
                         <b>1.3.1.6.</b>
@@ -659,9 +659,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.7" data-path="../../../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
             
-                <a href="../../../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
+                <a href="../../../../elasticsearch/es实战/es实战7-elasticsearch实现springboot自动配置.html">
             
                     
                         <b>1.3.1.7.</b>
@@ -695,9 +695,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.2.1" data-path="../../../elasticsearch/es知识点/Elasticsearch学习.html">
+        <li class="chapter " data-level="1.3.2.1" data-path="../../../../elasticsearch/es知识点/Elasticsearch学习.html">
             
-                <a href="../../../elasticsearch/es知识点/Elasticsearch学习.html">
+                <a href="../../../../elasticsearch/es知识点/Elasticsearch学习.html">
             
                     
                         <b>1.3.2.1.</b>
@@ -710,9 +710,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.2" data-path="../../../elasticsearch/es知识点/和Elasticsearch交互.html">
+        <li class="chapter " data-level="1.3.2.2" data-path="../../../../elasticsearch/es知识点/和Elasticsearch交互.html">
             
-                <a href="../../../elasticsearch/es知识点/和Elasticsearch交互.html">
+                <a href="../../../../elasticsearch/es知识点/和Elasticsearch交互.html">
             
                     
                         <b>1.3.2.2.</b>
@@ -767,9 +767,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1.1" data-path="../../../java/java8/java8新特性.html">
+        <li class="chapter " data-level="1.4.1.1" data-path="../../../../java/java8/java8新特性.html">
             
-                <a href="../../../java/java8/java8新特性.html">
+                <a href="../../../../java/java8/java8新特性.html">
             
                     
                         <b>1.4.1.1.</b>
@@ -803,9 +803,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.2.1" data-path="../../../java/spring/spring事件.html">
+        <li class="chapter " data-level="1.4.2.1" data-path="../../../../java/spring/spring事件.html">
             
-                <a href="../../../java/spring/spring事件.html">
+                <a href="../../../../java/spring/spring事件.html">
             
                     
                         <b>1.4.2.1.</b>
@@ -839,9 +839,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.3.1" data-path="../../../java/swagger/更改swagger上下文.html">
+        <li class="chapter " data-level="1.4.3.1" data-path="../../../../java/swagger/更改swagger上下文.html">
             
-                <a href="../../../java/swagger/更改swagger上下文.html">
+                <a href="../../../../java/swagger/更改swagger上下文.html">
             
                     
                         <b>1.4.3.1.</b>
@@ -891,9 +891,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.4.1.1" data-path="../../../java/util/http/RestTemplate用法.html">
+        <li class="chapter " data-level="1.4.4.1.1" data-path="../../../../java/util/http/RestTemplate用法.html">
             
-                <a href="../../../java/util/http/RestTemplate用法.html">
+                <a href="../../../../java/util/http/RestTemplate用法.html">
             
                     
                         <b>1.4.4.1.1.</b>
@@ -927,9 +927,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.4.2.1" data-path="../../../java/util/json/json序列化和反序列化工具.html">
+        <li class="chapter " data-level="1.4.4.2.1" data-path="../../../../java/util/json/json序列化和反序列化工具.html">
             
-                <a href="../../../java/util/json/json序列化和反序列化工具.html">
+                <a href="../../../../java/util/json/json序列化和反序列化工具.html">
             
                     
                         <b>1.4.4.2.1.</b>
@@ -963,9 +963,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.4.3.1" data-path="../../../java/util/日志/logback日志文件配置.html">
+        <li class="chapter " data-level="1.4.4.3.1" data-path="../../../../java/util/日志/logback日志文件配置.html">
             
-                <a href="../../../java/util/日志/logback日志文件配置.html">
+                <a href="../../../../java/util/日志/logback日志文件配置.html">
             
                     
                         <b>1.4.4.3.1.</b>
@@ -1004,9 +1004,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.5.1" data-path="../../../java/xxl-job/xxl-job定时任务教程.html">
+        <li class="chapter " data-level="1.4.5.1" data-path="../../../../java/xxl-job/xxl-job定时任务教程.html">
             
-                <a href="../../../java/xxl-job/xxl-job定时任务教程.html">
+                <a href="../../../../java/xxl-job/xxl-job定时任务教程.html">
             
                     
                         <b>1.4.5.1.</b>
@@ -1040,9 +1040,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.6.1" data-path="../../../java/数据源/动态数据源.html">
+        <li class="chapter " data-level="1.4.6.1" data-path="../../../../java/数据源/动态数据源.html">
             
-                <a href="../../../java/数据源/动态数据源.html">
+                <a href="../../../../java/数据源/动态数据源.html">
             
                     
                         <b>1.4.6.1.</b>
@@ -1092,9 +1092,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.7.1.1" data-path="../../../java/缓存/guava/guava缓存简单使用三部曲.html">
+        <li class="chapter " data-level="1.4.7.1.1" data-path="../../../../java/缓存/guava/guava缓存简单使用三部曲.html">
             
-                <a href="../../../java/缓存/guava/guava缓存简单使用三部曲.html">
+                <a href="../../../../java/缓存/guava/guava缓存简单使用三部曲.html">
             
                     
                         <b>1.4.7.1.1.</b>
@@ -1154,9 +1154,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="../../rabbitmq/rabbitmq学习.html">
+        <li class="chapter " data-level="1.5.1.1" data-path="../../../rabbitmq/rabbitmq学习.html">
             
-                <a href="../../rabbitmq/rabbitmq学习.html">
+                <a href="../../../rabbitmq/rabbitmq学习.html">
             
                     
                         <b>1.5.1.1.</b>
@@ -1190,9 +1190,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.2.1" data-path="../../springboot/springboot整合hikari数据源.html">
+        <li class="chapter " data-level="1.5.2.1" data-path="../../../springboot/springboot整合hikari数据源.html">
             
-                <a href="../../springboot/springboot整合hikari数据源.html">
+                <a href="../../../springboot/springboot整合hikari数据源.html">
             
                     
                         <b>1.5.2.1.</b>
@@ -1205,9 +1205,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.2" data-path="../../springboot/springboot整合log4j打印mybatis的sql日志.html">
+        <li class="chapter " data-level="1.5.2.2" data-path="../../../springboot/springboot整合log4j打印mybatis的sql日志.html">
             
-                <a href="../../springboot/springboot整合log4j打印mybatis的sql日志.html">
+                <a href="../../../springboot/springboot整合log4j打印mybatis的sql日志.html">
             
                     
                         <b>1.5.2.2.</b>
@@ -1220,9 +1220,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2.3" data-path="../../springboot/springboot整合redisTemplate.html">
+        <li class="chapter " data-level="1.5.2.3" data-path="../../../springboot/springboot整合redisTemplate.html">
             
-                <a href="../../springboot/springboot整合redisTemplate.html">
+                <a href="../../../springboot/springboot整合redisTemplate.html">
             
                     
                         <b>1.5.2.3.</b>
@@ -1256,9 +1256,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.3.1" data-path="../../文档管理/japidoc文档管理.html">
+        <li class="chapter " data-level="1.5.3.1" data-path="../../../文档管理/japidoc文档管理.html">
             
-                <a href="../../文档管理/japidoc文档管理.html">
+                <a href="../../../文档管理/japidoc文档管理.html">
             
                     
                         <b>1.5.3.1.</b>
@@ -1308,9 +1308,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.4.1.1" data-path="../../配置中心/appollo/apollo客户端配置使用.html">
+        <li class="chapter " data-level="1.5.4.1.1" data-path="../../../配置中心/appollo/apollo客户端配置使用.html">
             
-                <a href="../../配置中心/appollo/apollo客户端配置使用.html">
+                <a href="../../../配置中心/appollo/apollo客户端配置使用.html">
             
                     
                         <b>1.5.4.1.1.</b>
@@ -1344,9 +1344,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.4.2.1" data-path="../../配置中心/nacos/nacos-spring-cloud学习.html">
+        <li class="chapter " data-level="1.5.4.2.1" data-path="../../../配置中心/nacos/nacos-spring-cloud学习.html">
             
-                <a href="../../配置中心/nacos/nacos-spring-cloud学习.html">
+                <a href="../../../配置中心/nacos/nacos-spring-cloud学习.html">
             
                     
                         <b>1.5.4.2.1.</b>
@@ -1359,9 +1359,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.2.2" data-path="../../配置中心/nacos/nacos安装和入门学习.html">
+        <li class="chapter " data-level="1.5.4.2.2" data-path="../../../配置中心/nacos/nacos安装和入门学习.html">
             
-                <a href="../../配置中心/nacos/nacos安装和入门学习.html">
+                <a href="../../../配置中心/nacos/nacos安装和入门学习.html">
             
                     
                         <b>1.5.4.2.2.</b>
@@ -1416,27 +1416,28 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.5.1.1" data-path="SentinelResource注解源码分析.html">
+        <li class="chapter " data-level="1.5.5.1.1" >
             
-                <a href="SentinelResource注解源码分析.html">
+                <span>
             
                     
                         <b>1.5.5.1.1.</b>
                     
-                    SentinelResource注解源码分析
+                    基础
             
-                </a>
+                </span>
             
 
             
-        </li>
+            <ul class="articles">
+                
     
-        <li class="chapter active" data-level="1.5.5.1.2" data-path="sentinel命名空间namespace分析.html">
+        <li class="chapter " data-level="1.5.5.1.1.1" data-path="../基础/sentinel命名空间namespace分析.html">
             
-                <a href="sentinel命名空间namespace分析.html">
+                <a href="../基础/sentinel命名空间namespace分析.html">
             
                     
-                        <b>1.5.5.1.2.</b>
+                        <b>1.5.5.1.1.1.</b>
                     
                     sentinel命名空间namespace分析
             
@@ -1446,12 +1447,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5.1.3" data-path="sentinel学习.html">
+        <li class="chapter " data-level="1.5.5.1.1.2" data-path="../基础/sentinel学习.html">
             
-                <a href="sentinel学习.html">
+                <a href="../基础/sentinel学习.html">
             
                     
-                        <b>1.5.5.1.3.</b>
+                        <b>1.5.5.1.1.2.</b>
                     
                     sentinel学习
             
@@ -1461,27 +1462,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5.1.4" data-path="sentinel控制台.html">
+        <li class="chapter " data-level="1.5.5.1.1.3" data-path="../基础/sentinel通过spi方式注册数据源.html">
             
-                <a href="sentinel控制台.html">
-            
-                    
-                        <b>1.5.5.1.4.</b>
-                    
-                    sentinel控制台
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.5.1.5" data-path="sentinel通过spi方式注册数据源.html">
-            
-                <a href="sentinel通过spi方式注册数据源.html">
+                <a href="../基础/sentinel通过spi方式注册数据源.html">
             
                     
-                        <b>1.5.5.1.5.</b>
+                        <b>1.5.5.1.1.3.</b>
                     
                     sentinel通过spi方式注册数据源
             
@@ -1491,18 +1477,191 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5.1.6" data-path="sentinel集群流控.html">
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.2" >
+            
+                <span>
+            
+                    
+                        <b>1.5.5.1.2.</b>
+                    
+                    控制台
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1.2.1" data-path="../控制台/sentinel控制台.html">
+            
+                <a href="../控制台/sentinel控制台.html">
+            
+                    
+                        <b>1.5.5.1.2.1.</b>
+                    
+                    sentinel控制台
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.3" >
+            
+                <span>
+            
+                    
+                        <b>1.5.5.1.3.</b>
+                    
+                    源码分析
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1.3.1" data-path="../源码分析/SentinelResource注解源码分析.html">
+            
+                <a href="../源码分析/SentinelResource注解源码分析.html">
+            
+                    
+                        <b>1.5.5.1.3.1.</b>
+                    
+                    SentinelResource注解源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.4" >
+            
+                <span>
+            
+                    
+                        <b>1.5.5.1.4.</b>
+                    
+                    集群流控
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.5.1.4.1" data-path="sentinel集群流控.html">
             
                 <a href="sentinel集群流控.html">
             
                     
-                        <b>1.5.5.1.6.</b>
+                        <b>1.5.5.1.4.1.</b>
                     
                     sentinel集群流控
             
                 </a>
             
 
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.4.2" data-path="sentinel集群流控之ClusterClientAssignConfig.html">
+            
+                <a href="sentinel集群流控之ClusterClientAssignConfig.html">
+            
+                    
+                        <b>1.5.5.1.4.2.</b>
+                    
+                    sentinel集群流控-ClusterClientAssignConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5.1.4.3" data-path="sentinel集群流控之ServerTransportConfig.html">
+            
+                <a href="sentinel集群流控之ServerTransportConfig.html">
+            
+                    
+                        <b>1.5.5.1.4.3.</b>
+                    
+                    sentinel集群流控-ServerTransportConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.4.4" data-path="sentinel集群流控之TransportConfig.html">
+            
+                <a href="sentinel集群流控之TransportConfig.html">
+            
+                    
+                        <b>1.5.5.1.4.4.</b>
+                    
+                    sentinel集群流控之TransportConfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.4.5" data-path="sentinel集群流控之心跳检测.html">
+            
+                <a href="sentinel集群流控之心跳检测.html">
+            
+                    
+                        <b>1.5.5.1.4.5.</b>
+                    
+                    sentinel集群流控之心跳检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.4.6" data-path="sentinel集群流控之配置说明.html">
+            
+                <a href="sentinel集群流控之配置说明.html">
+            
+                    
+                        <b>1.5.5.1.4.6.</b>
+                    
+                    sentinel集群流控之配置说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
             
         </li>
     
@@ -1537,12 +1696,27 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../../../python/python小牛试刀-获取微信关注用户信息.html">
+        <li class="chapter " data-level="1.6.1" data-path="../../../../python/python入门.html">
             
-                <a href="../../../python/python小牛试刀-获取微信关注用户信息.html">
+                <a href="../../../../python/python入门.html">
             
                     
                         <b>1.6.1.</b>
+                    
+                    python入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../../../python/python小牛试刀-获取微信关注用户信息.html">
+            
+                <a href="../../../../python/python小牛试刀-获取微信关注用户信息.html">
+            
+                    
+                        <b>1.6.2.</b>
                     
                     python小牛试刀-获取微信关注用户信息
             
@@ -1589,9 +1763,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1.1" data-path="../../../中间件/mybatis-plus/mybatis-plus生成器相关问题.html">
+        <li class="chapter " data-level="1.7.1.1" data-path="../../../../中间件/mybatis-plus/mybatis-plus生成器相关问题.html">
             
-                <a href="../../../中间件/mybatis-plus/mybatis-plus生成器相关问题.html">
+                <a href="../../../../中间件/mybatis-plus/mybatis-plus生成器相关问题.html">
             
                     
                         <b>1.7.1.1.</b>
@@ -1625,9 +1799,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.2.1" data-path="../../../中间件/redis/redis和redisson自动装配.html">
+        <li class="chapter " data-level="1.7.2.1" data-path="../../../../中间件/redis/redis和redisson自动装配.html">
             
-                <a href="../../../中间件/redis/redis和redisson自动装配.html">
+                <a href="../../../../中间件/redis/redis和redisson自动装配.html">
             
                     
                         <b>1.7.2.1.</b>
@@ -1661,9 +1835,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.3.1" data-path="../../../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
+        <li class="chapter " data-level="1.7.3.1" data-path="../../../../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
             
-                <a href="../../../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
+                <a href="../../../../中间件/shardingsphere/sharding-jdbc实现读写分离.html">
             
                     
                         <b>1.7.3.1.</b>
@@ -1697,9 +1871,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.4.1" data-path="../../../中间件/spring/spring-core工具包.html">
+        <li class="chapter " data-level="1.7.4.1" data-path="../../../../中间件/spring/spring-core工具包.html">
             
-                <a href="../../../中间件/spring/spring-core工具包.html">
+                <a href="../../../../中间件/spring/spring-core工具包.html">
             
                     
                         <b>1.7.4.1.</b>
@@ -1770,9 +1944,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1.1.1" data-path="../../../前端/angular/angular基础/angular-generate命令.html">
+        <li class="chapter " data-level="1.8.1.1.1" data-path="../../../../前端/angular/angular基础/angular-generate命令.html">
             
-                <a href="../../../前端/angular/angular基础/angular-generate命令.html">
+                <a href="../../../../前端/angular/angular基础/angular-generate命令.html">
             
                     
                         <b>1.8.1.1.1.</b>
@@ -1811,9 +1985,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.2.1" data-path="../../../前端/jquery基础/jquery按钮用法.html">
+        <li class="chapter " data-level="1.8.2.1" data-path="../../../../前端/jquery基础/jquery按钮用法.html">
             
-                <a href="../../../前端/jquery基础/jquery按钮用法.html">
+                <a href="../../../../前端/jquery基础/jquery按钮用法.html">
             
                     
                         <b>1.8.2.1.</b>
@@ -1847,9 +2021,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.3.1" data-path="../../../前端/json/前端json字符串和js对象转换.html">
+        <li class="chapter " data-level="1.8.3.1" data-path="../../../../前端/json/前端json字符串和js对象转换.html">
             
-                <a href="../../../前端/json/前端json字符串和js对象转换.html">
+                <a href="../../../../前端/json/前端json字符串和js对象转换.html">
             
                     
                         <b>1.8.3.1.</b>
@@ -1883,9 +2057,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.4.1" data-path="../../../前端/node/node学习.html">
+        <li class="chapter " data-level="1.8.4.1" data-path="../../../../前端/node/node学习.html">
             
-                <a href="../../../前端/node/node学习.html">
+                <a href="../../../../前端/node/node学习.html">
             
                     
                         <b>1.8.4.1.</b>
@@ -1919,9 +2093,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.5.1" data-path="../../../前端/vue/vue待学习.html">
+        <li class="chapter " data-level="1.8.5.1" data-path="../../../../前端/vue/vue待学习.html">
             
-                <a href="../../../前端/vue/vue待学习.html">
+                <a href="../../../../前端/vue/vue待学习.html">
             
                     
                         <b>1.8.5.1.</b>
@@ -1955,9 +2129,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.6.1" data-path="../../../前端/后台模板/ngx-admin后台模板学习.html">
+        <li class="chapter " data-level="1.8.6.1" data-path="../../../../前端/后台模板/ngx-admin后台模板学习.html">
             
-                <a href="../../../前端/后台模板/ngx-admin后台模板学习.html">
+                <a href="../../../../前端/后台模板/ngx-admin后台模板学习.html">
             
                     
                         <b>1.8.6.1.</b>
@@ -2007,9 +2181,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.7.1.1" data-path="../../../前端/弹窗/layer/layer弹窗.html">
+        <li class="chapter " data-level="1.8.7.1.1" data-path="../../../../前端/弹窗/layer/layer弹窗.html">
             
-                <a href="../../../前端/弹窗/layer/layer弹窗.html">
+                <a href="../../../../前端/弹窗/layer/layer弹窗.html">
             
                     
                         <b>1.8.7.1.1.</b>
@@ -2069,9 +2243,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1.1" data-path="../../../博客/gitbook/gitbook教程.html">
+        <li class="chapter " data-level="1.9.1.1" data-path="../../../../博客/gitbook/gitbook教程.html">
             
-                <a href="../../../博客/gitbook/gitbook教程.html">
+                <a href="../../../../博客/gitbook/gitbook教程.html">
             
                     
                         <b>1.9.1.1.</b>
@@ -2105,9 +2279,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.2.1" data-path="../../../博客/hugo/hugo教程.html">
+        <li class="chapter " data-level="1.9.2.1" data-path="../../../../博客/hugo/hugo教程.html">
             
-                <a href="../../../博客/hugo/hugo教程.html">
+                <a href="../../../../博客/hugo/hugo教程.html">
             
                     
                         <b>1.9.2.1.</b>
@@ -2162,9 +2336,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.1.1" data-path="../../../各种问题/http/http400问题.html">
+        <li class="chapter " data-level="1.10.1.1" data-path="../../../../各种问题/http/http400问题.html">
             
-                <a href="../../../各种问题/http/http400问题.html">
+                <a href="../../../../各种问题/http/http400问题.html">
             
                     
                         <b>1.10.1.1.</b>
@@ -2177,9 +2351,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.1.2" data-path="../../../各种问题/http/http415问题.html">
+        <li class="chapter " data-level="1.10.1.2" data-path="../../../../各种问题/http/http415问题.html">
             
-                <a href="../../../各种问题/http/http415问题.html">
+                <a href="../../../../各种问题/http/http415问题.html">
             
                     
                         <b>1.10.1.2.</b>
@@ -2213,9 +2387,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.2.1" data-path="../../../各种问题/java/指针引用问题和List删除元素.html">
+        <li class="chapter " data-level="1.10.2.1" data-path="../../../../各种问题/java/指针引用问题和List删除元素.html">
             
-                <a href="../../../各种问题/java/指针引用问题和List删除元素.html">
+                <a href="../../../../各种问题/java/指针引用问题和List删除元素.html">
             
                     
                         <b>1.10.2.1.</b>
@@ -2249,9 +2423,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.3.1" data-path="../../../各种问题/springboot/springboot排除数据源自动装配失效问题.html">
+        <li class="chapter " data-level="1.10.3.1" data-path="../../../../各种问题/springboot/springboot排除数据源自动装配失效问题.html">
             
-                <a href="../../../各种问题/springboot/springboot排除数据源自动装配失效问题.html">
+                <a href="../../../../各种问题/springboot/springboot排除数据源自动装配失效问题.html">
             
                     
                         <b>1.10.3.1.</b>
@@ -2264,9 +2438,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3.2" data-path="../../../各种问题/springboot/springboot日志问题.html">
+        <li class="chapter " data-level="1.10.3.2" data-path="../../../../各种问题/springboot/springboot日志问题.html">
             
-                <a href="../../../各种问题/springboot/springboot日志问题.html">
+                <a href="../../../../各种问题/springboot/springboot日志问题.html">
             
                     
                         <b>1.10.3.2.</b>
@@ -2279,9 +2453,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3.3" data-path="../../../各种问题/springboot/springboot配置属性DataSource问题.html">
+        <li class="chapter " data-level="1.10.3.3" data-path="../../../../各种问题/springboot/springboot配置属性DataSource问题.html">
             
-                <a href="../../../各种问题/springboot/springboot配置属性DataSource问题.html">
+                <a href="../../../../各种问题/springboot/springboot配置属性DataSource问题.html">
             
                     
                         <b>1.10.3.3.</b>
@@ -2315,9 +2489,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.4.1" data-path="../../../各种问题/前端/form表单序列化后中文乱码问题.html">
+        <li class="chapter " data-level="1.10.4.1" data-path="../../../../各种问题/前端/form表单序列化后中文乱码问题.html">
             
-                <a href="../../../各种问题/前端/form表单序列化后中文乱码问题.html">
+                <a href="../../../../各种问题/前端/form表单序列化后中文乱码问题.html">
             
                     
                         <b>1.10.4.1.</b>
@@ -2342,7 +2516,7 @@
                     
                         <b>1.10.5.</b>
                     
-                    定时任务
+                    单元测试
             
                 </span>
             
@@ -2351,14 +2525,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.5.1" data-path="../../../各种问题/定时任务/xxl-job打印日志问题.html">
+        <li class="chapter " data-level="1.10.5.1" data-path="../../../../各种问题/单元测试/单元测试获取不到数据库连接问题.html">
             
-                <a href="../../../各种问题/定时任务/xxl-job打印日志问题.html">
+                <a href="../../../../各种问题/单元测试/单元测试获取不到数据库连接问题.html">
             
                     
                         <b>1.10.5.1.</b>
                     
-                    xxl-job打印日志问题
+                    单元测试获取不到数据库连接问题
             
                 </a>
             
@@ -2378,6 +2552,42 @@
                     
                         <b>1.10.6.</b>
                     
+                    定时任务
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.6.1" data-path="../../../../各种问题/定时任务/xxl-job打印日志问题.html">
+            
+                <a href="../../../../各种问题/定时任务/xxl-job打印日志问题.html">
+            
+                    
+                        <b>1.10.6.1.</b>
+                    
+                    xxl-job打印日志问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" >
+            
+                <span>
+            
+                    
+                        <b>1.10.7.</b>
+                    
                     配置
             
                 </span>
@@ -2387,12 +2597,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.10.6.1" data-path="../../../各种问题/配置/redisTemplate配置问题.html">
+        <li class="chapter " data-level="1.10.7.1" data-path="../../../../各种问题/配置/redisTemplate配置问题.html">
             
-                <a href="../../../各种问题/配置/redisTemplate配置问题.html">
+                <a href="../../../../各种问题/配置/redisTemplate配置问题.html">
             
                     
-                        <b>1.10.6.1.</b>
+                        <b>1.10.7.1.</b>
                     
                     redisTemplate配置问题
             
@@ -2444,9 +2654,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.1.1" data-path="../../../开发工具/excel/excel拼接字符串.html">
+        <li class="chapter " data-level="1.11.1.1" data-path="../../../../开发工具/excel/excel拼接字符串.html">
             
-                <a href="../../../开发工具/excel/excel拼接字符串.html">
+                <a href="../../../../开发工具/excel/excel拼接字符串.html">
             
                     
                         <b>1.11.1.1.</b>
@@ -2480,9 +2690,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.2.1" data-path="../../../开发工具/git/git打tag.html">
+        <li class="chapter " data-level="1.11.2.1" data-path="../../../../开发工具/git/git打tag.html">
             
-                <a href="../../../开发工具/git/git打tag.html">
+                <a href="../../../../开发工具/git/git打tag.html">
             
                     
                         <b>1.11.2.1.</b>
@@ -2495,9 +2705,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.2" data-path="../../../开发工具/git/git提交注释规范.html">
+        <li class="chapter " data-level="1.11.2.2" data-path="../../../../开发工具/git/git提交注释规范.html">
             
-                <a href="../../../开发工具/git/git提交注释规范.html">
+                <a href="../../../../开发工具/git/git提交注释规范.html">
             
                     
                         <b>1.11.2.2.</b>
@@ -2510,9 +2720,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.3" data-path="../../../开发工具/git/git新建项目常见操作.html">
+        <li class="chapter " data-level="1.11.2.3" data-path="../../../../开发工具/git/git新建项目常见操作.html">
             
-                <a href="../../../开发工具/git/git新建项目常见操作.html">
+                <a href="../../../../开发工具/git/git新建项目常见操作.html">
             
                     
                         <b>1.11.2.3.</b>
@@ -2546,9 +2756,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.3.1" data-path="../../../开发工具/idea/idea-git操作.html">
+        <li class="chapter " data-level="1.11.3.1" data-path="../../../../开发工具/idea/idea-git操作.html">
             
-                <a href="../../../开发工具/idea/idea-git操作.html">
+                <a href="../../../../开发工具/idea/idea-git操作.html">
             
                     
                         <b>1.11.3.1.</b>
@@ -2561,9 +2771,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3.2" data-path="../../../开发工具/idea/idea中文乱码.html">
+        <li class="chapter " data-level="1.11.3.2" data-path="../../../../开发工具/idea/idea中文乱码.html">
             
-                <a href="../../../开发工具/idea/idea中文乱码.html">
+                <a href="../../../../开发工具/idea/idea中文乱码.html">
             
                     
                         <b>1.11.3.2.</b>
@@ -2576,9 +2786,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3.3" data-path="../../../开发工具/idea/idea快捷键.html">
+        <li class="chapter " data-level="1.11.3.3" data-path="../../../../开发工具/idea/idea快捷键.html">
             
-                <a href="../../../开发工具/idea/idea快捷键.html">
+                <a href="../../../../开发工具/idea/idea快捷键.html">
             
                     
                         <b>1.11.3.3.</b>
@@ -2591,9 +2801,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3.4" data-path="../../../开发工具/idea/idea插件.html">
+        <li class="chapter " data-level="1.11.3.4" data-path="../../../../开发工具/idea/idea插件.html">
             
-                <a href="../../../开发工具/idea/idea插件.html">
+                <a href="../../../../开发工具/idea/idea插件.html">
             
                     
                         <b>1.11.3.4.</b>
@@ -2606,9 +2816,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.3.5" data-path="../../../开发工具/idea/ieda快捷生成代码.html">
+        <li class="chapter " data-level="1.11.3.5" data-path="../../../../开发工具/idea/ieda快捷生成代码.html">
             
-                <a href="../../../开发工具/idea/ieda快捷生成代码.html">
+                <a href="../../../../开发工具/idea/ieda快捷生成代码.html">
             
                     
                         <b>1.11.3.5.</b>
@@ -2642,9 +2852,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.4.1" data-path="../../../开发工具/模板引擎/freemarker模板语法.html">
+        <li class="chapter " data-level="1.11.4.1" data-path="../../../../开发工具/模板引擎/freemarker模板语法.html">
             
-                <a href="../../../开发工具/模板引擎/freemarker模板语法.html">
+                <a href="../../../../开发工具/模板引擎/freemarker模板语法.html">
             
                     
                         <b>1.11.4.1.</b>
@@ -2662,9 +2872,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.5" data-path="../../../开发工具/常见工具.html">
+        <li class="chapter " data-level="1.11.5" data-path="../../../../开发工具/常见工具.html">
             
-                <a href="../../../开发工具/常见工具.html">
+                <a href="../../../../开发工具/常见工具.html">
             
                     
                         <b>1.11.5.</b>
@@ -2714,9 +2924,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1.1" data-path="../../../数据库/mysql/mysql版本升级.html">
+        <li class="chapter " data-level="1.12.1.1" data-path="../../../../数据库/mysql/mysql版本升级.html">
             
-                <a href="../../../数据库/mysql/mysql版本升级.html">
+                <a href="../../../../数据库/mysql/mysql版本升级.html">
             
                     
                         <b>1.12.1.1.</b>
@@ -2750,9 +2960,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.2.1" data-path="../../../数据库/oracle/oracle常见查询语句.html">
+        <li class="chapter " data-level="1.12.2.1" data-path="../../../../数据库/oracle/oracle常见查询语句.html">
             
-                <a href="../../../数据库/oracle/oracle常见查询语句.html">
+                <a href="../../../../数据库/oracle/oracle常见查询语句.html">
             
                     
                         <b>1.12.2.1.</b>
@@ -2786,9 +2996,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.3.1" data-path="../../../数据库/postgres/postgres创建序列.html">
+        <li class="chapter " data-level="1.12.3.1" data-path="../../../../数据库/postgres/postgres创建序列.html">
             
-                <a href="../../../数据库/postgres/postgres创建序列.html">
+                <a href="../../../../数据库/postgres/postgres创建序列.html">
             
                     
                         <b>1.12.3.1.</b>
@@ -2822,9 +3032,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.4.1" data-path="../../../数据库/导数据/导出数百万级别数据.html">
+        <li class="chapter " data-level="1.12.4.1" data-path="../../../../数据库/导数据/导出数百万级别数据.html">
             
-                <a href="../../../数据库/导数据/导出数百万级别数据.html">
+                <a href="../../../../数据库/导数据/导出数百万级别数据.html">
             
                     
                         <b>1.12.4.1.</b>
@@ -2877,7 +3087,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >sentinel命名空间namespace分析</a>
+        <a href="../../../.." >sentinel集群流控-ServerTransportConfig</a>
     </h1>
 </div>
 
@@ -2894,98 +3104,46 @@
                                 
                                 <p><strong>  </strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <!-- more -->
-<h4 id="namespace&#x6CE8;&#x518C;&#x548C;&#x83B7;&#x53D6;&#x4EE5;&#x53CA;&#x8BBE;&#x503C;"><a name="namespace&#x6CE8;&#x518C;&#x548C;&#x83B7;&#x53D6;&#x4EE5;&#x53CA;&#x8BBE;&#x503C;" class="plugin-anchor" href="#namespace&#x6CE8;&#x518C;&#x548C;&#x83B7;&#x53D6;&#x4EE5;&#x53CA;&#x8BBE;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>Namespace&#x6CE8;&#x518C;&#x548C;&#x83B7;&#x53D6;&#x4EE5;&#x53CA;&#x8BBE;&#x503C;</h4>
-<h6 id="appname&#x53D6;&#x503C;"><a name="appname&#x53D6;&#x503C;" class="plugin-anchor" href="#appname&#x53D6;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>appName&#x53D6;&#x503C;</h6>
-<p>&#x8BBE;&#x503C;&#x5165;&#x53E3;<br>com.alibaba.csp.sentinel.config.SentinelConfig#resolveAppName  </p>
-<p>&#x53D6;&#x503C;&#x987A;&#x5E8F;&#x903B;&#x8F91;&#x5982;&#x4E0B;&#xFF1A;  </p>
-<ul>
-<li>&#x73AF;&#x5883;&#x53D8;&#x91CF;system env&#x4E2D;&#x53D6;csp.sentinel.app.name</li>
-<li>property&#x4E2D;&#x53D6;csp.sentinel.app.name</li>
-<li>property&#x4E2D;&#x53D6;project.name</li>
-<li>&#x4ECE;property&#x4E2D;&#x53D6;sun.java.command(&#x6B63;&#x5728;&#x6267;&#x884C;&#x7684;&#x7C7B;)</li>
-</ul>
-<p>&#x6839;&#x636E;&#x4E0A;&#x9762;&#x7684;&#x53D6;&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#x542F;&#x52A8;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F1A;&#x5F71;&#x54CD;sentinel&#x7684;namespace
-&#x4F8B;&#x5982;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF1A;</p>
-<pre><code class="lang-java">-Dserver.port=19988  -Dproject.name=ClusterDemoApplication -Dcsp.sentinel.log.use.pid=true -Dcsp.sentinel.app.name=SYS_IOT.flow-sync-sentinel
--Dserver.port=19989  -Dproject.name=ClusterDemoApplication2 -Dcsp.sentinel.log.use.pid=true -Dcsp.sentinel.app.name=SYS_IOT.flow-sync-sentinel
--Dserver.port=19990  -Dproject.name=ClusterDemoApplication3 -Dcsp.sentinel.log.use.pid=true -Dcsp.sentinel.app.name=SYS_IOT.flow-sync-sentinel
+<h4 id="servertransportconfig&#x914D;&#x7F6E;transportport&#x7528;&#x9014;"><a name="servertransportconfig&#x914D;&#x7F6E;transportport&#x7528;&#x9014;" class="plugin-anchor" href="#servertransportconfig&#x914D;&#x7F6E;transportport&#x7528;&#x9014;"><i class="fa fa-link" aria-hidden="true"></i></a>ServerTransportConfig\&#x914D;&#x7F6E;transport.port&#x7528;&#x9014;</h4>
+<p>8719&#x7AEF;&#x53E3;&#x914D;&#x7F6E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java">iotcard.cloud.sentinel.transport.port=8719
 </code></pre>
-<p>&#x4E0A;&#x9762;&#x7531;&#x4E8E;&#x8BBE;&#x7F6E;&#x4E86;-Dcsp.sentinel.app.name=SYS_IOT.flow-sync-sentinel
-&#x6240;&#x4EE5;&#x5728;sentinel-dashbord&#x63A7;&#x5236;&#x53F0;&#x4E0A;&#x5DE6;&#x8FB9;&#x83DC;&#x5355;&#x680F;&#x770B;&#x5230;&#x7684;&#x662F;SYS_IOT.flow-sync-sentinel<br><img src="sentinel&#x547D;&#x540D;&#x7A7A;&#x95F4;namespace&#x5206;&#x6790;/sentinel-namespace-1.png" alt="">
-<img src="sentinel&#x547D;&#x540D;&#x7A7A;&#x95F4;namespace&#x5206;&#x6790;/sentinel-namespace-2.png" alt=""></p>
-<p>&#x53E6;&#x5916;&#x542F;&#x52A8;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x53C2;&#x8003;&#x7C7B;SentinelConfig</p>
-<h6 id="appname&#x7528;&#x9014;"><a name="appname&#x7528;&#x9014;" class="plugin-anchor" href="#appname&#x7528;&#x9014;"><i class="fa fa-link" aria-hidden="true"></i></a>appName&#x7528;&#x9014;</h6>
-<p>&#x5165;&#x53E3;&#xFF1A;com.alibaba.csp.sentinel.cluster.server.SentinelDefaultTokenServer#handleEmbeddedStart</p>
-<ul>
-<li>&#x5D4C;&#x5165;&#x5F0F;&#x96C6;&#x7FA4;&#x542F;&#x52A8;
-com.alibaba.csp.sentinel.cluster.server.SentinelDefaultTokenServer#handleEmbeddedStart</li>
-<li>&#x914D;&#x7F6E;&#x4F9B;&#x5E94;&#x8005;&#x6CE8;&#x518C;&#x5668;&#x83B7;&#x53D6;Namespace
-com.alibaba.csp.sentinel.cluster.registry.ConfigSupplierRegistry#getNamespaceSupplier</li>
-<li>&#x914D;&#x7F6E;&#x4F9B;&#x5E94;&#x8005;&#x6CE8;&#x518C;&#x5668;&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;Namespace
-com.alibaba.csp.sentinel.cluster.registry.ConfigSupplierRegistry#DEFAULT_APP_NAME_SUPPLIER</li>
-<li>&#x914D;&#x7F6E;&#x4F9B;&#x5E94;&#x8005;&#x6CE8;&#x518C;&#x5668;&#x5B9E;&#x9645;&#x4E0A;&#x8FD4;&#x56DE;AppNameUtil.getAppName()
-com.alibaba.csp.sentinel.util.AppNameUtil#getAppName</li>
-<li>AppNameUtil.getAppName()&#x91CC;&#x8FD4;&#x56DE;&#x7684;&#x662F;SentinelConfig#getAppName
-com.alibaba.csp.sentinel.config.SentinelConfig#getAppName</li>
-</ul>
-<h4 id="namespace&#x52A0;&#x8F7D;&#x5206;&#x6790;"><a name="namespace&#x52A0;&#x8F7D;&#x5206;&#x6790;" class="plugin-anchor" href="#namespace&#x52A0;&#x8F7D;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>namespace&#x52A0;&#x8F7D;&#x5206;&#x6790;</h4>
-<p>namespace</p>
-<p>&#x5165;&#x53E3;&#xFF1A;com.alibaba.csp.sentinel.cluster.server.SentinelDefaultTokenServer#handleEmbeddedStart</p>
-<pre><code class="lang-java"> private void handleEmbeddedStart() {
-        //&#x5148;&#x4ECE;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x53C2;&#x6570;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x91CC;&#xFF0C;&#x6216;&#x8005;&#x542F;&#x52A8;&#x7684;&#x7C7B;&#x4E2D;&#x83B7;&#x53D6;namespace
-        String namespace = ConfigSupplierRegistry.getNamespaceSupplier().get();//(1)
-        if (StringUtil.isNotEmpty(namespace)) {
-            // Mark server global mode as embedded.
-            ClusterServerConfigManager.setEmbedded(true);//(2)
-            if (!ClusterServerConfigManager.getNamespaceSet().contains(namespace)) {//(3)
-                Set&lt;String&gt; namespaceSet = new HashSet&lt;&gt;(ClusterServerConfigManager.getNamespaceSet());
-                namespaceSet.add(namespace);
-                ClusterServerConfigManager.loadServerNamespaceSet(namespaceSet);//(4) 
-            }
+<p>&#x5BF9;&#x5E94;&#x914D;&#x7F6E;&#x7C7B;&#x4E3A;com.alibaba.csp.sentinel.cluster.server.config.ServerTransportConfig</p>
+<pre><code class="lang-java">public class ServerTransportConfig {
+    public static final int DEFAULT_IDLE_SECONDS = 600;
+    private int port;
+    private int idleSeconds;
+</code></pre>
+<p>&#x8C03;&#x8BD5;&#x53D1;&#x73B0;&#x5F53;&#x70B9;&#x51FB;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x96C6;&#x7FA4;&#x6D41;&#x63A7;&#xFF0C;&#x5C31;&#x8DF3;&#x5230;</p>
+<p><img src="source/_posts/micro-service/&#x9650;&#x6D41;/sentinel/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/sentinel&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;-1.png" alt=""></p>
+<p>com.alibaba.csp.sentinel.cluster.server.command.handler.FetchClusterServerInfoCommandHandler#handle</p>
+<pre><code class="lang-java">    public CommandResponse&lt;String&gt; handle(CommandRequest request) {
+        JSONObject info = new JSONObject();
+        JSONArray connectionGroups = new JSONArray();
+        Set&lt;String&gt; namespaceSet = ClusterServerConfigManager.getNamespaceSet();
+        Iterator var5 = namespaceSet.iterator();
 
-            // Register self to connection group.
-            ConnectionManager.addConnection(namespace, HostNameUtil.getIp());
+        while(var5.hasNext()) {
+            String namespace = (String)var5.next();
+            ConnectionGroup group = ConnectionManager.getOrCreateConnectionGroup(namespace);
+            if (group != null) {
+                connectionGroups.add(group);
+            }
         }
+
+        ServerTransportConfig transportConfig = (new ServerTransportConfig()).setPort(ClusterServerConfigManager.getPort()).setIdleSeconds(ClusterServerConfigManager.getIdleSeconds());
+        ServerFlowConfig flowConfig = (new ServerFlowConfig()).setExceedCount(ClusterServerConfigManager.getExceedCount()).setMaxOccupyRatio(ClusterServerConfigManager.getMaxOccupyRatio()).setIntervalMs(ClusterServerConfigManager.getIntervalMs()).setSampleCount(ClusterServerConfigManager.getSampleCount()).setMaxAllowedQps(ClusterServerConfigManager.getMaxAllowedQps());
+        JSONArray requestLimitData = this.buildRequestLimitData(namespaceSet);
+        info.fluentPut(&quot;port&quot;, ClusterServerConfigManager.getPort()).fluentPut(&quot;connection&quot;, connectionGroups).fluentPut(&quot;requestLimitData&quot;, requestLimitData).fluentPut(&quot;transport&quot;, transportConfig).fluentPut(&quot;flow&quot;, flowConfig).fluentPut(&quot;namespaceSet&quot;, namespaceSet).fluentPut(&quot;embedded&quot;, ClusterServerConfigManager.isEmbedded());
+        info.put(&quot;appName&quot;, AppNameUtil.getAppName());
+        return CommandResponse.ofSuccess(info.toJSONString());
     }
 </code></pre>
-<p>&#x5206;&#x6790;&#xFF1A;</p>
-<ul>
-<li>(1)&#x5148;&#x4ECE;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x53C2;&#x6570;&#xFF0C;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5C5E;&#x6027;&#x91CC;&#xFF0C;&#x6216;&#x8005;&#x542F;&#x52A8;&#x7684;&#x7C7B;&#x4E2D;&#x83B7;&#x53D6;namespace</li>
-<li>(2)&#x82E5;&#x83B7;&#x53D6;&#x5230;namespace&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x96C6;&#x7FA4;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x5668;ClusterServerConfigManager&#x8BBE;&#x7F6E;&#x4E3A;&#x5D4C;&#x5165;&#x5F0F;</li>
-<li>(3)&#x82E5;ClusterServerConfigManager&#x4E2D;&#x7684;namespaceSet&#x547D;&#x540D;&#x96C6;&#x5408;&#x4E0D;&#x5305;&#x542B;namespace&#xFF0C;&#x5219;&#x65B0;&#x5EFA;namespaceSet&#x96C6;&#x5408;&#xFF0C;
-   &#x65B0;&#x5EFA;&#x5B9E;&#x4F8B;&#x5316;&#x65F6;&#x6DFB;&#x52A0;&#x9ED8;&#x8BA4;namespace&#x4E3A;default</li>
-<li>(4)&#x8C03;&#x7528;loadServerNamespaceSet&#x52A0;&#x8F7D;&#x6B65;&#x9AA4;(1)&#x7684;namespace<br>   &#x8FD9;&#x4E2A;&#x4F1A;&#x4ECE;Apollo&#x83B7;&#x53D6;&#x8BE5;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x6700;&#x65B0;&#x7684;&#x914D;&#x7F6E;&#x7684;  </li>
-</ul>
-<h4 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h4>
-<pre><code class="lang-java">
-
-</code></pre>
-<pre><code class="lang-java">
-
-</code></pre>
-<p><a href=""></a></p>
-<h4 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h4>
-<pre><code class="lang-java">
-
-</code></pre>
-<pre><code class="lang-java">
-
-</code></pre>
-<p><a href=""></a></p>
-<h4 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a> </h4>
-<pre><code class="lang-java">
-
-</code></pre>
-<pre><code class="lang-java">
-
-</code></pre>
-<p><a href=""></a>
-```</p>
-<ol>
-<li></li>
-<li></li>
-<li><img src="." alt=""></li>
-</ol>
+<p>&#x5206;&#x6790;&#xFF1A;&#x7531;&#x4E8E;&#x63A7;&#x5236;&#x53F0;&#x8981;&#x63A8;&#x9001;&#x89C4;&#x5219;&#x5230;&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;&#x6216;&#x8005;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x8981;&#x8FDE;&#x63A5;&#x5230;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x6240;&#x4EE5;&#x5BA2;&#x6237;&#x7AEF;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x4E2A;&#x7AEF;&#x53E3;
+&#x624D;&#x80FD;&#x5EFA;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x9ED8;&#x8BA4;&#x4E2A;18730&#x7AEF;&#x53E3;,&#x6240;&#x4EE5;ServerTransportConfig&#x4E2D;&#x7684;port&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x7AEF;&#x53E3;</p>
+<p><img src="source/_posts/micro-service/&#x9650;&#x6D41;/sentinel/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/sentinel&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;-2.png" alt=""></p>
+<p>&#x670D;&#x52A1;&#x7AEF;&#x914D;&#x7F6E;&#x7C7B;&#xFF1A;
+<img src="source/_posts/micro-service/&#x9650;&#x6D41;/sentinel/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/sentinel&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;-3.png" alt=""></p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -3014,12 +3172,12 @@ com.alibaba.csp.sentinel.config.SentinelConfig#getAppName</li>
 
             
                 
-                <a href="SentinelResource注解源码分析.html" class="navigation navigation-prev " aria-label="Previous page: SentinelResource注解源码分析">
+                <a href="sentinel集群流控之ClusterClientAssignConfig.html" class="navigation navigation-prev " aria-label="Previous page: sentinel集群流控-ClusterClientAssignConfig">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="sentinel学习.html" class="navigation navigation-next " aria-label="Next page: sentinel学习">
+                <a href="sentinel集群流控之TransportConfig.html" class="navigation navigation-next " aria-label="Next page: sentinel集群流控之TransportConfig">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -3030,65 +3188,65 @@ com.alibaba.csp.sentinel.config.SentinelConfig#getAppName</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sentinel命名空间namespace分析","tags":[],"date":"2020-11-25T16:37:30.000Z","categories":null,"level":"1.5.5.1.2","depth":4,"next":{"title":"sentinel学习","level":"1.5.5.1.3","depth":4,"path":"micro-service/限流/sentinel/sentinel学习.md","ref":"micro-service/限流/sentinel/sentinel学习.md","articles":[]},"previous":{"title":"SentinelResource注解源码分析","level":"1.5.5.1.1","depth":4,"path":"micro-service/限流/sentinel/SentinelResource注解源码分析.md","ref":"micro-service/限流/sentinel/SentinelResource注解源码分析.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"micro-service/限流/sentinel/sentinel命名空间namespace分析.md","mtime":"2021-01-04T11:21:29.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-04T11:21:47.506Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"sentinel集群流控-ServerTransportConfig","tags":[],"date":"2020-11-25T16:42:37.000Z","categories":null,"level":"1.5.5.1.4.3","depth":5,"next":{"title":"sentinel集群流控之TransportConfig","level":"1.5.5.1.4.4","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之TransportConfig.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控之TransportConfig.md","articles":[]},"previous":{"title":"sentinel集群流控-ClusterClientAssignConfig","level":"1.5.5.1.4.2","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之ClusterClientAssignConfig.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控之ClusterClientAssignConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之ServerTransportConfig.md","mtime":"2021-01-30T08:54:02.362Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-30T08:54:29.803Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    <script src="../../../gitbook/gitbook.js"></script>
-    <script src="../../../gitbook/theme.js"></script>
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
     
         
-        <script src="../../../gitbook/gitbook-plugin-github/plugin.js"></script>
-        
-    
-        
-        <script src="../../../gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-github/plugin.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-baidu/plugin.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-code/plugin.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-search-pro/search.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-nocache/nocache.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-nocache/nocache.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
         
     
         
-        <script src="../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        <script src="../../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
 
