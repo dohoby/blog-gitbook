@@ -1,8 +1,8 @@
 ---
 title: sentinel控制台
-tags: []
+tags: [sentinel]
 date: 2020-11-25 16:40:00
-categories:
+categories: sentinel
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
 

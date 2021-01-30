@@ -1,8 +1,8 @@
 ---
 title: sentinel集群流控之TransportConfig
-tags: []
+tags: [sentinel]
 date: 2020-11-30 20:42:37
-categories:
+categories: sentinel
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
 

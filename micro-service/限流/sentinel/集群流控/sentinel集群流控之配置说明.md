@@ -1,8 +1,8 @@
 ---
 title: sentinel集群流控之配置说明
-tags: []
+tags: [sentinel]
 date: 2020-11-25 16:42:37
-categories:
+categories: sentinel
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
 

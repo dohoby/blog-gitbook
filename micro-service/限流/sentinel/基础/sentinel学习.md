@@ -1,8 +1,8 @@
 ---
 title: sentinel学习
-tags: []
+tags: [sentinel]
 date: 2020-11-16 16:23:47
-categories:
+categories: sentinel
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
 

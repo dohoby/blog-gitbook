@@ -1,8 +1,8 @@
 ---
 title: sentinel命名空间namespace分析
-tags: []
+tags: [sentinel]
 date: 2020-11-25 16:37:30
-categories:
+categories: sentinel
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
 
