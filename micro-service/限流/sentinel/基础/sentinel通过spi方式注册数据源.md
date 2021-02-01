@@ -1,7 +1,7 @@
 ---
 title: sentinel通过spi方式注册数据源
 tags: [sentinel,限流]
-date: 2020-11-23 10:55:57
+date: 2021-1-30 21:23:47
 categories: sentinel
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>

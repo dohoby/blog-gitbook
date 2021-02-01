@@ -1432,27 +1432,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.5.1.1.1" data-path="../基础/sentinel命名空间namespace分析.html">
-            
-                <a href="../基础/sentinel命名空间namespace分析.html">
-            
-                    
-                        <b>1.5.5.1.1.1.</b>
-                    
-                    sentinel命名空间namespace分析
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.5.1.1.2" data-path="../基础/sentinel学习.html">
+        <li class="chapter " data-level="1.5.5.1.1.1" data-path="../基础/sentinel学习.html">
             
                 <a href="../基础/sentinel学习.html">
             
                     
-                        <b>1.5.5.1.1.2.</b>
+                        <b>1.5.5.1.1.1.</b>
                     
                     sentinel学习
             
@@ -1462,12 +1447,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5.1.1.3" data-path="../基础/sentinel通过spi方式注册数据源.html">
+        <li class="chapter " data-level="1.5.5.1.1.2" data-path="../基础/sentinel通过spi方式注册数据源.html">
             
                 <a href="../基础/sentinel通过spi方式注册数据源.html">
             
                     
-                        <b>1.5.5.1.1.3.</b>
+                        <b>1.5.5.1.1.2.</b>
                     
                     sentinel通过spi方式注册数据源
             
@@ -1542,6 +1527,21 @@
                         <b>1.5.5.1.3.1.</b>
                     
                     SentinelResource注解源码分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5.1.3.2" data-path="../源码分析/sentinel命名空间namespace分析.html">
+            
+                <a href="../源码分析/sentinel命名空间namespace分析.html">
+            
+                    
+                        <b>1.5.5.1.3.2.</b>
+                    
+                    sentinel命名空间namespace分析
             
                 </a>
             
@@ -3184,6 +3184,28 @@
 
     }
 </code></pre>
+<pre><code class="lang-java">   private static ServerSocket getServerSocketFromBasePort(int basePort) {
+        int tryCount = 0;
+
+        while(true) {
+            try {
+                ServerSocket server = new ServerSocket(basePort + tryCount / 3, 100);
+                server.setReuseAddress(true);
+                return server;
+            } catch (IOException var5) {
+                ++tryCount;
+
+                try {
+                    TimeUnit.MILLISECONDS.sleep(30L);
+                } catch (InterruptedException var4) {
+                    return null;
+                }
+            }
+        }
+    }
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x7684;ServerSocket&#x5982;&#x4E0B;&#xFF1A;
+ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8720]</p>
 <p><img src="source/_posts/micro-service/&#x9650;&#x6D41;/sentinel/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/sentinel&#x96C6;&#x7FA4;&#x6D41;&#x63A7;/&#x96C6;&#x7FA4;&#x6D41;&#x63A7;-5.png" alt=""></p>
 <p>&#x5206;&#x6790;&#xFF1A;
 1&#x3001;&#x8FD9;&#x91CC;&#x4E5F;&#x662F;&#x5C1D;&#x8BD5;&#x6839;&#x636E;port&#x5EFA;&#x7ACB;ServerSocket
@@ -3193,6 +3215,48 @@
 3&#x3001;&#x5C06;&#x7AEF;&#x53E3;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x56DE;TransportConfig
    TransportConfig.setRuntimePort(this.port);</p>
 <p>&#x8C03;&#x7528;&#x94FE;&#xFF1A;</p>
+<pre><code class="lang-java">start:75, SimpleHttpCommandCenter (com.alibaba.csp.sentinel.transport.command)
+init:40, CommandCenterInitFunc (com.alibaba.csp.sentinel.transport.init)
+doInit:53, InitExecutor (com.alibaba.csp.sentinel.init)
+&lt;clinit&gt;:51, ClusterStateManager (com.alibaba.csp.sentinel.cluster)
+initStateProperty:323, RedisClusterInitFunc (com.fzs.iotcard.sentinel.cluster.redis)
+init:155, RedisClusterInitFunc (com.fzs.iotcard.sentinel.cluster.redis)
+</code></pre>
+<p>&#x4ECE;&#x4E0B;&#x5F80;&#x4E0A;&#x770B;&#xFF1A;</p>
+<p>&#x89E6;&#x53D1;&#x70B9;&#x662F;&#x5728;&#x8FD9;&#xFF1A;</p>
+<pre><code class="lang-java">com.fzs.iotcard.sentinel.cluster.redis.RedisClusterInitFunc#initStateProperty{
+        ClusterStateManager.registerProperty(clusterModeDs.getProperty());
+}
+
+ClusterStateManager
+    static {
+        InitExecutor.doInit();
+        stateProperty.addListener(PROPERTY_LISTENER);
+    }
+
+@InitOrder(-1)
+public class CommandCenterInitFunc implements InitFunc {
+    public CommandCenterInitFunc() {
+    }
+
+    public void init() throws Exception {
+        CommandCenter commandCenter = CommandCenterProvider.getCommandCenter();
+        if (commandCenter == null) {
+            RecordLog.warn(&quot;[CommandCenterInitFunc] Cannot resolve CommandCenter&quot;, new Object[0]);
+        } else {
+            commandCenter.beforeStart();
+            commandCenter.start();
+            RecordLog.info(&quot;[CommandCenterInit] Starting command center: &quot; + commandCenter.getClass().getCanonicalName(), new Object[0]);
+        }
+    }
+}
+
+&#x800C;CommandCenterProvider.getCommandCenter()&#x53D6;&#x51FA;&#x7684;&#x662F;SimpleHttpCommandCenter
+
+com.alibaba.csp.sentinel.transport.command.SimpleHttpCommandCenter#start{
+                TransportConfig.setRuntimePort(this.port);
+}
+</code></pre>
 <h6 id="&#x7B2C;&#x4E09;&#x4E2A;&#x5730;&#x65B9;"><a name="&#x7B2C;&#x4E09;&#x4E2A;&#x5730;&#x65B9;" class="plugin-anchor" href="#&#x7B2C;&#x4E09;&#x4E2A;&#x5730;&#x65B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B2C;&#x4E09;&#x4E2A;&#x5730;&#x65B9;</h6>
 <p>com.alibaba.csp.sentinel.transport.command.SimpleHttpCommandCenter#stop</p>
 <pre><code class="lang-java">    @Override
@@ -3277,7 +3341,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sentinel集群流控之TransportConfig","tags":["sentinel"],"date":"2020-11-30T20:42:37.000Z","categories":"sentinel","level":"1.5.5.1.4.4","depth":5,"next":{"title":"sentinel集群流控之心跳检测","level":"1.5.5.1.4.5","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之心跳检测.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控之心跳检测.md","articles":[]},"previous":{"title":"sentinel集群流控-ServerTransportConfig","level":"1.5.5.1.4.3","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之ServerTransportConfig.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控之ServerTransportConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之TransportConfig.md","mtime":"2021-01-30T09:11:07.127Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-30T09:11:11.680Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"sentinel集群流控之TransportConfig","tags":["sentinel"],"date":"2021-01-30T21:23:47.000Z","categories":"sentinel","level":"1.5.5.1.4.4","depth":5,"next":{"title":"sentinel集群流控之心跳检测","level":"1.5.5.1.4.5","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之心跳检测.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控之心跳检测.md","articles":[]},"previous":{"title":"sentinel集群流控-ServerTransportConfig","level":"1.5.5.1.4.3","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之ServerTransportConfig.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控之ServerTransportConfig.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控之TransportConfig.md","mtime":"2021-02-01T11:56:18.740Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-01T11:56:30.141Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>

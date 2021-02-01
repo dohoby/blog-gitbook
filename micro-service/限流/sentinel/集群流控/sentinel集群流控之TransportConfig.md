@@ -1,7 +1,7 @@
 ---
 title: sentinel集群流控之TransportConfig
 tags: [sentinel]
-date: 2020-11-30 20:42:37
+date: 2021-1-30 21:23:47
 categories: sentinel
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
@@ -111,6 +111,31 @@ com.alibaba.csp.sentinel.transport.command.SimpleHttpCommandCenter#start
     }
 ```
 
+```java
+   private static ServerSocket getServerSocketFromBasePort(int basePort) {
+        int tryCount = 0;
+
+        while(true) {
+            try {
+                ServerSocket server = new ServerSocket(basePort + tryCount / 3, 100);
+                server.setReuseAddress(true);
+                return server;
+            } catch (IOException var5) {
+                ++tryCount;
+
+                try {
+                    TimeUnit.MILLISECONDS.sleep(30L);
+                } catch (InterruptedException var4) {
+                    return null;
+                }
+            }
+        }
+    }
+```
+创建的ServerSocket如下：
+ServerSocket[addr=0.0.0.0/0.0.0.0,localport=8720]
+
+
 ![](source/_posts/micro-service/限流/sentinel/集群流控/sentinel集群流控/集群流控-5.png)
 
 分析：
@@ -123,7 +148,60 @@ com.alibaba.csp.sentinel.transport.command.SimpleHttpCommandCenter#start
 
 
 调用链：
+```java
+start:75, SimpleHttpCommandCenter (com.alibaba.csp.sentinel.transport.command)
+init:40, CommandCenterInitFunc (com.alibaba.csp.sentinel.transport.init)
+doInit:53, InitExecutor (com.alibaba.csp.sentinel.init)
+<clinit>:51, ClusterStateManager (com.alibaba.csp.sentinel.cluster)
+initStateProperty:323, RedisClusterInitFunc (com.fzs.iotcard.sentinel.cluster.redis)
+init:155, RedisClusterInitFunc (com.fzs.iotcard.sentinel.cluster.redis)
+```
 
+
+从下往上看：
+
+触发点是在这：
+```java
+com.fzs.iotcard.sentinel.cluster.redis.RedisClusterInitFunc#initStateProperty{
+        ClusterStateManager.registerProperty(clusterModeDs.getProperty());
+}
+
+ClusterStateManager
+    static {
+        InitExecutor.doInit();
+        stateProperty.addListener(PROPERTY_LISTENER);
+    }
+
+@InitOrder(-1)
+public class CommandCenterInitFunc implements InitFunc {
+    public CommandCenterInitFunc() {
+    }
+
+    public void init() throws Exception {
+        CommandCenter commandCenter = CommandCenterProvider.getCommandCenter();
+        if (commandCenter == null) {
+            RecordLog.warn("[CommandCenterInitFunc] Cannot resolve CommandCenter", new Object[0]);
+        } else {
+            commandCenter.beforeStart();
+            commandCenter.start();
+            RecordLog.info("[CommandCenterInit] Starting command center: " + commandCenter.getClass().getCanonicalName(), new Object[0]);
+        }
+    }
+}
+
+而CommandCenterProvider.getCommandCenter()取出的是SimpleHttpCommandCenter
+
+com.alibaba.csp.sentinel.transport.command.SimpleHttpCommandCenter#start{
+                TransportConfig.setRuntimePort(this.port);
+}
+
+
+
+
+
+
+
+```
 
 
 

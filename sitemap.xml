@@ -41,11 +41,11 @@
 <url> <loc>http://zhaoda.net/micro-service/配置中心/appollo/apollo客户端配置使用.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos-spring-cloud学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos安装和入门学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://zhaoda.net/micro-service/限流/sentinel/基础/sentinel命名空间namespace分析.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/基础/sentinel学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/基础/sentinel通过spi方式注册数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/控制台/sentinel控制台.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/源码分析/SentinelResource注解源码分析.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/限流/sentinel/源码分析/sentinel命名空间namespace分析.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/集群流控/sentinel集群流控.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/集群流控/sentinel集群流控之ClusterClientAssignConfig.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/集群流控/sentinel集群流控之ServerTransportConfig.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
