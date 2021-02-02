@@ -1,5 +1,5 @@
 ---
-title: sentinel集群流控-ServerTransportConfig
+title: sentinel集群流控2-ServerTransportConfig
 tags: [sentinel]
 date: 2021-1-30 21:23:47
 categories: sentinel

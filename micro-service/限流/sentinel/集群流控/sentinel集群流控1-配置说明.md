@@ -1,5 +1,5 @@
 ---
-title: sentinel集群流控之配置说明
+title: sentinel集群流控1-配置说明
 tags: [sentinel]
 date: 2021-1-30 21:23:47
 categories: sentinel
