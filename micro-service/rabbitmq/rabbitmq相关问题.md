@@ -121,11 +121,10 @@ spring.rabbitmq.listener.simple.acknowledge-mode = manual
 
 
 参考：  
-![http://blog.chinaunix.net/uid-192452-id-5837248.html](http://blog.chinaunix.net/uid-192452-id-5837248.html)
-![https://blog.csdn.net/more_try/article/details/82804387](https://blog.csdn.net/more_try/article/details/82804387)
-![https://www.cnblogs.com/littleatp/p/6087856.html](https://www.cnblogs.com/littleatp/p/6087856.html)
-![]()
-![]()
+[http://blog.chinaunix.net/uid-192452-id-5837248.html](http://blog.chinaunix.net/uid-192452-id-5837248.html)
+[https://blog.csdn.net/more_try/article/details/82804387](https://blog.csdn.net/more_try/article/details/82804387)
+[https://www.cnblogs.com/littleatp/p/6087856.html](https://www.cnblogs.com/littleatp/p/6087856.html)
+
 
 #### 连接超时问题
 
@@ -218,9 +217,9 @@ spring.rabbitmq.parsed-addresses:
 ```
 
 
-![https://www.cnblogs.com/imfx/p/12454299.html](https://www.cnblogs.com/imfx/p/12454299.html)
+[https://www.cnblogs.com/imfx/p/12454299.html](https://www.cnblogs.com/imfx/p/12454299.html)
 
-![https://www.cnblogs.com/qts-hope/p/11242559.html](https://www.cnblogs.com/qts-hope/p/11242559.html)
+[https://www.cnblogs.com/qts-hope/p/11242559.html](https://www.cnblogs.com/qts-hope/p/11242559.html)
 
 
 #### ForgivingExceptionHandler     : An unexpected connection driver error occured
@@ -410,9 +409,9 @@ Caused by: java.util.ConcurrentModificationException: null
 1. 
 2. 
 3. 
-![SpringBoot2.x下RabbitMQ的并发参数（concurrency和prefetch）](https://www.cnblogs.com/liukunjava/p/13163951.html)
+[SpringBoot2.x下RabbitMQ的并发参数（concurrency和prefetch）](https://www.cnblogs.com/liukunjava/p/13163951.html)
 
-![https://www.cnblogs.com/dolphin0520/p/3933551.html](https://www.cnblogs.com/dolphin0520/p/3933551.html)
+[https://www.cnblogs.com/dolphin0520/p/3933551.html](https://www.cnblogs.com/dolphin0520/p/3933551.html)
 
-![Java ConcurrentModificationException异常原因和解决方法](https://www.cnblogs.com/dolphin0520/p/3933551.html)
+[Java ConcurrentModificationException异常原因和解决方法](https://www.cnblogs.com/dolphin0520/p/3933551.html)
 
