@@ -34,6 +34,7 @@
 <url> <loc>http://zhaoda.net/java/数据源/动态数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/java/缓存/guava/guava缓存简单使用三部曲.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq相关问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合hikari数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合log4j打印mybatis的sql日志.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合redisTemplate.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
