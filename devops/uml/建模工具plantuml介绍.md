@@ -85,7 +85,7 @@ http://plantuml.com/object-diagram
 http://bj.96weixin.com/
 
 ##### demo
-![建模工具plantuml介绍](source/_posts/devops/uml/建模工具plantuml介绍/建模工具plantuml介绍-1.png)
+![建模工具plantuml介绍](建模工具plantuml介绍/建模工具plantuml介绍-1.png)
 
 
 ##### 待学习
