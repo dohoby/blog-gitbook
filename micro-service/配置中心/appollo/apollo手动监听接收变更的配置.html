@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>nacos安装和入门学习 · java实用笔记</title>
+        <title>apollo手动监听接收变更的配置 · java实用笔记</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -82,7 +82,7 @@
 
     
     
-    <link rel="prev" href="nacos-spring-cloud学习.html" />
+    <link rel="prev" href="apollo客户端配置使用.html" />
     
 
 
@@ -1321,9 +1321,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.4.1.1" data-path="../appollo/apollo客户端配置使用.html">
+        <li class="chapter " data-level="1.5.4.1.1" data-path="apollo客户端配置使用.html">
             
-                <a href="../appollo/apollo客户端配置使用.html">
+                <a href="apollo客户端配置使用.html">
             
                     
                         <b>1.5.4.1.1.</b>
@@ -1336,9 +1336,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4.1.2" data-path="../appollo/apollo手动监听接收变更的配置.html">
+        <li class="chapter active" data-level="1.5.4.1.2" data-path="apollo手动监听接收变更的配置.html">
             
-                <a href="../appollo/apollo手动监听接收变更的配置.html">
+                <a href="apollo手动监听接收变更的配置.html">
             
                     
                         <b>1.5.4.1.2.</b>
@@ -1372,9 +1372,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.4.2.1" data-path="nacos-spring-cloud学习.html">
+        <li class="chapter " data-level="1.5.4.2.1" data-path="../nacos/nacos-spring-cloud学习.html">
             
-                <a href="nacos-spring-cloud学习.html">
+                <a href="../nacos/nacos-spring-cloud学习.html">
             
                     
                         <b>1.5.4.2.1.</b>
@@ -1387,9 +1387,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4.2.2" data-path="nacos安装和入门学习.html">
+        <li class="chapter " data-level="1.5.4.2.2" data-path="../nacos/nacos安装和入门学习.html">
             
-                <a href="nacos安装和入门学习.html">
+                <a href="../nacos/nacos安装和入门学习.html">
             
                     
                         <b>1.5.4.2.2.</b>
@@ -3145,7 +3145,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../.." >nacos安装和入门学习</a>
+        <a href="../../.." >apollo手动监听接收变更的配置</a>
     </h1>
 </div>
 
@@ -3162,46 +3162,29 @@
                                 
                                 <p><strong>  </strong> <excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <!-- more -->
-<h3 id="&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;&#x542F;&#x52A8;"><a name="&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;&#x542F;&#x52A8;" class="plugin-anchor" href="#&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;&#x542F;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;&#x542F;&#x52A8;</h3>
-<h4 id="1&#x3001;&#x4E0B;&#x8F7D;nacos"><a name="1&#x3001;&#x4E0B;&#x8F7D;nacos" class="plugin-anchor" href="#1&#x3001;&#x4E0B;&#x8F7D;nacos"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x4E0B;&#x8F7D;nacos</h4>
-<p>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;
-<a href="https://github.com/alibaba/nacos/releases" target="_blank">https://github.com/alibaba/nacos/releases</a></p>
-<p>&#x89E3;&#x538B;&#x5230;&#x67D0;&#x76EE;&#x5F55;&#xFF0C;cd &#x5230;nacos\conf&#x6587;&#x4EF6;&#x5939;&#x4E0B;</p>
-<h4 id="2&#x3001;&#x4FEE;&#x6539;nacosconfapplicationproperties&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;"><a name="2&#x3001;&#x4FEE;&#x6539;nacosconfapplicationproperties&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;" class="plugin-anchor" href="#2&#x3001;&#x4FEE;&#x6539;nacosconfapplicationproperties&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x4FEE;&#x6539;nacos\conf\application.properties&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x4FE1;&#x606F;</h4>
-<p>&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>### Count of DB:
- db.num=1
-
-### Connect URL of DB:
- db.url.0=jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
- db.user=root
- db.password=root
-</code></pre><h4 id="3&#x3001;&#x6267;&#x884C;nacosconfnacos-mysqlsql&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;"><a name="3&#x3001;&#x6267;&#x884C;nacosconfnacos-mysqlsql&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;" class="plugin-anchor" href="#3&#x3001;&#x6267;&#x884C;nacosconfnacos-mysqlsql&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x6267;&#x884C;nacos\conf\nacos-mysql.sql&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;</h4>
-<p>&#x5728;mysql&#x4E2D;&#x521B;&#x5EFA;nacos&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;nacos\conf\nacos-mysql.sql&#x6570;&#x636E;&#x5E93;&#x811A;&#x672C;</p>
-<h4 id="4&#x3001;-startupcmd--m-standalone&#x542F;&#x52A8;nacos"><a name="4&#x3001;-startupcmd--m-standalone&#x542F;&#x52A8;nacos" class="plugin-anchor" href="#4&#x3001;-startupcmd--m-standalone&#x542F;&#x52A8;nacos"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001; startup.cmd -m standalone&#x542F;&#x52A8;nacos</h4>
-<p>cd&#x5230;nacos\bin&#x76EE;&#x5F55;&#xFF0C;&#x6267;&#x884C;</p>
-<pre><code>startup.cmd -m standalone
-</code></pre><p>&#x6CE8;&#x610F;&#x5355;&#x673A;&#x6A21;&#x5F0F;&#x4E0B;&#x8981;&#x52A0;&#x4E0A;&#x53C2;&#x6570; -m standalone &#x5426;&#x5219;&#x542F;&#x52A8;&#x5931;&#x8D25;&#x7684;</p>
-<h4 id="5&#x3001;&#x767B;&#x5F55;console&#x770B;&#x540E;&#x53F0;"><a name="5&#x3001;&#x767B;&#x5F55;console&#x770B;&#x540E;&#x53F0;" class="plugin-anchor" href="#5&#x3001;&#x767B;&#x5F55;console&#x770B;&#x540E;&#x53F0;"><i class="fa fa-link" aria-hidden="true"></i></a>5&#x3001;&#x767B;&#x5F55;Console&#x770B;&#x540E;&#x53F0;</h4>
-<p> &#x542F;&#x52A8;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x767B;&#x5F55;<a href="http://10.20.11.161:8848/nacos/index.html" target="_blank">http://10.20.11.161:8848/nacos/index.html</a>
- &#x9ED8;&#x8BA4;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x90FD;&#x662F;nacos</p>
-<h3 id="&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x53D1;&#x73B0;&#x548C;&#x914D;&#x7F6E;&#x7BA1;&#x7406;"><a name="&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x53D1;&#x73B0;&#x548C;&#x914D;&#x7F6E;&#x7BA1;&#x7406;" class="plugin-anchor" href="#&#x670D;&#x52A1;&#x6CE8;&#x518C;&#x53D1;&#x73B0;&#x548C;&#x914D;&#x7F6E;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x670D;&#x52A1;&#x6CE8;&#x518C;&amp;&#x53D1;&#x73B0;&#x548C;&#x914D;&#x7F6E;&#x7BA1;&#x7406;</h3>
-<h4 id="1&#x3001;&#x670D;&#x52A1;&#x6CE8;&#x518C;"><a name="1&#x3001;&#x670D;&#x52A1;&#x6CE8;&#x518C;" class="plugin-anchor" href="#1&#x3001;&#x670D;&#x52A1;&#x6CE8;&#x518C;"><i class="fa fa-link" aria-hidden="true"></i></a>1&#x3001;&#x670D;&#x52A1;&#x6CE8;&#x518C;</h4>
-<pre><code>curl -X POST &quot;http://127.0.0.1:8848/nacos/v1/ns/instance?serviceName=nacos.naming.serviceName&amp;ip=20.18.7.10&amp;port=8080&quot;
-</code></pre><h4 id="2&#x3001;&#x670D;&#x52A1;&#x53D1;&#x73B0;"><a name="2&#x3001;&#x670D;&#x52A1;&#x53D1;&#x73B0;" class="plugin-anchor" href="#2&#x3001;&#x670D;&#x52A1;&#x53D1;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>2&#x3001;&#x670D;&#x52A1;&#x53D1;&#x73B0;</h4>
-<pre><code class="lang-java">curl -X GET &quot;http://127.0.0.1:8848/nacos/v1/ns/instance/list?serviceName=nacos.naming.serviceName&quot;
+<h4 id="apolloconfigchangelistener"><a name="apolloconfigchangelistener" class="plugin-anchor" href="#apolloconfigchangelistener"><i class="fa fa-link" aria-hidden="true"></i></a>@ApolloConfigChangeListener</h4>
+<p>&#x5E94;&#x7528;&#x7AEF;&#x76D1;&#x63A7;Apollo&#x914D;&#x7F6E;&#x6539;&#x53D8;&#x540E;&#xFF0C;&#x63A5;&#x6536;&#x6D88;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x81EA;&#x5B9A;&#x4E49;&#x5904;&#x7406;&#xFF0C;&#x4E3B;&#x8981;&#x901A;&#x8FC7;&#x6CE8;&#x89E3;@ApolloConfigChangeListener&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java">    @ApolloConfigChangeListener(&quot;application&quot;)
+    public void configChangListener(ConfigChangeEvent changeEvent) {
+        for (String key : changeEvent.changedKeys()) {
+            log.info(&quot;&#x76D1;&#x542C;&#x5230;&#x53D8;&#x5316;&#x7684;&#x914D;&#x7F6E;key:{}&quot;, key);
+            if (&quot;cluster-flow-rules&quot;.equalsIgnoreCase(key)) {
+                ConfigChange configChange = changeEvent.getChange(key);
+                String newFlowRules = configChange.getNewValue();
+                //&#x66F4;&#x65B0;redis
+                stringRedisTemplate.opsForValue().set(clusterFlowRulesKey, newFlowRules);
+                //&#x66F4;&#x65B0;sentinel
+                stringRedisTemplate.convertAndSend(channel + clusterFlowRulesKey, newFlowRules);
+            }else {
+                log.info(&quot;&#x53D8;&#x5316;&#x7684;key&#x4E0D;&#x662F;cluster-flow-rules&#xFF0C;&#x4E0D;&#x7528;&#x64CD;&#x4F5C;&quot;);
+            }
+        }
+    }
 </code></pre>
-<p>&#x8FD4;&#x56DE;</p>
-<pre><code class="lang-java">{&quot;dom&quot;:&quot;nacos.naming.serviceName&quot;,&quot;hosts&quot;:[],&quot;name&quot;:&quot;DEFAULT_GROUP@@nacos.naming.serviceName&quot;,&quot;cacheMillis&quot;:3000,&quot;lastRefTime&quot;:1600085004554,&quot;checksum&quot;:&quot;7f882d81002bc22181203d423a20a16d&quot;,&quot;useSpecifiedURL&quot;:false,&quot;clusters&quot;:&quot;&quot;,&quot;env&quot;:&quot;&quot;,&quot;metadata&quot;:{}}
+<p>&#x53E6;&#x5916;Apollo&#x914D;&#x7F6E;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x8C03;&#x8BD5;&#x53D1;&#x73B0;&#x4F1A;&#x8DF3;&#x5230;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E2D;</p>
+<pre><code class="lang-java">com.ctrip.framework.apollo.spring.property.AutoUpdateConfigChangeListener#updateSpringValue
 </code></pre>
-<h4 id="3&#x3001;&#x53D1;&#x5E03;&#x914D;&#x7F6E;"><a name="3&#x3001;&#x53D1;&#x5E03;&#x914D;&#x7F6E;" class="plugin-anchor" href="#3&#x3001;&#x53D1;&#x5E03;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>3&#x3001;&#x53D1;&#x5E03;&#x914D;&#x7F6E;</h4>
-<pre><code class="lang-java">curl -X POST &quot;http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&amp;group=test&amp;content=HelloWorld&quot;
-</code></pre>
-<h4 id="4&#x3001;&#x83B7;&#x53D6;&#x914D;&#x7F6E;"><a name="4&#x3001;&#x83B7;&#x53D6;&#x914D;&#x7F6E;" class="plugin-anchor" href="#4&#x3001;&#x83B7;&#x53D6;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>4&#x3001;&#x83B7;&#x53D6;&#x914D;&#x7F6E;</h4>
-<pre><code class="lang-java">curl -X GET &quot;http://127.0.0.1:8848/nacos/v1/cs/configs?dataId=nacos.cfg.dataId&amp;group=test&quot;
-</code></pre>
-<p>&#x53C2;&#x8003;&#xFF1A;
-<a href="https://nacos.io/zh-cn/docs/quick-start.html" target="_blank">https://nacos.io/zh-cn/docs/quick-start.html</a></p>
+<p><a href="https://blog.csdn.net/weixin_43453386/article/details/112787765" target="_blank">Apollo&#x5BA2;&#x6237;&#x7AEF;&#x76D1;&#x542C;&#x914D;&#x7F6E;&#x53D8;&#x5316;&#x3001;&#x52A8;&#x6001;&#x5237;&#x65B0;</a></p>
 
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -3230,7 +3213,7 @@
 
             
                 
-                <a href="nacos-spring-cloud学习.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: nacos-spring-cloud学习">
+                <a href="apollo客户端配置使用.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: apollo客户端配置使用.md">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -3242,7 +3225,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"nacos安装和入门学习","tags":["nacos","配置中心"],"date":"2020-09-15T11:49:43.000Z","categories":"nacos,配置中心","level":"1.5.4.2.2","depth":4,"next":{"title":"限流","level":"1.5.5","depth":2,"ref":"","articles":[{"title":"Sentinel","level":"1.5.5.1","depth":3,"ref":"","articles":[{"title":"基础","level":"1.5.5.1.1","depth":4,"ref":"","articles":[{"title":"sentinel学习","level":"1.5.5.1.1.1","depth":5,"path":"micro-service/限流/sentinel/基础/sentinel学习.md","ref":"micro-service/限流/sentinel/基础/sentinel学习.md","articles":[]},{"title":"sentinel通过spi方式注册数据源","level":"1.5.5.1.1.2","depth":5,"path":"micro-service/限流/sentinel/基础/sentinel通过spi方式注册数据源.md","ref":"micro-service/限流/sentinel/基础/sentinel通过spi方式注册数据源.md","articles":[]}]},{"title":"控制台","level":"1.5.5.1.2","depth":4,"ref":"","articles":[{"title":"sentinel控制台改造","level":"1.5.5.1.2.1","depth":5,"path":"micro-service/限流/sentinel/控制台/sentinel控制台改造.md","ref":"micro-service/限流/sentinel/控制台/sentinel控制台改造.md","articles":[]},{"title":"sentinel控制台部署和应用接入","level":"1.5.5.1.2.2","depth":5,"path":"micro-service/限流/sentinel/控制台/sentinel控制台部署和应用接入.md","ref":"micro-service/限流/sentinel/控制台/sentinel控制台部署和应用接入.md","articles":[]}]},{"title":"源码分析","level":"1.5.5.1.3","depth":4,"ref":"","articles":[{"title":"SentinelResource注解源码分析","level":"1.5.5.1.3.1","depth":5,"path":"micro-service/限流/sentinel/源码分析/sentinel源码解析1-SentinelResource注解源码分析.md","ref":"micro-service/限流/sentinel/源码分析/sentinel源码解析1-SentinelResource注解源码分析.md","articles":[]},{"title":"sentinel命名空间namespace分析","level":"1.5.5.1.3.2","depth":5,"path":"micro-service/限流/sentinel/源码分析/sentinel源码解析2-sentinel命名空间namespace分析.md","ref":"micro-service/限流/sentinel/源码分析/sentinel源码解析2-sentinel命名空间namespace分析.md","articles":[]}]},{"title":"集群流控","level":"1.5.5.1.4","depth":4,"ref":"","articles":[{"title":"sentinel集群流控","level":"1.5.5.1.4.1","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控.md","articles":[]},{"title":"sentinel集群流控1-配置说明","level":"1.5.5.1.4.2","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控1-配置说明.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控1-配置说明.md","articles":[]},{"title":"sentinel集群流控2-ServerTransportConfig","level":"1.5.5.1.4.3","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控2-ServerTransportConfig.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控2-ServerTransportConfig.md","articles":[]},{"title":"sentinel集群流控3-TransportConfig","level":"1.5.5.1.4.4","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控3-TransportConfig.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控3-TransportConfig.md","articles":[]},{"title":"sentinel集群流控4-ClusterClientAssignConfig","level":"1.5.5.1.4.5","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控4-ClusterClientAssignConfig.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控4-ClusterClientAssignConfig.md","articles":[]},{"title":"sentinel集群流控5-心跳检测","level":"1.5.5.1.4.6","depth":5,"path":"micro-service/限流/sentinel/集群流控/sentinel集群流控5-心跳检测.md","ref":"micro-service/限流/sentinel/集群流控/sentinel集群流控5-心跳检测.md","articles":[]}]}]}]},"previous":{"title":"nacos-spring-cloud学习","level":"1.5.4.2.1","depth":4,"path":"micro-service/配置中心/nacos/nacos-spring-cloud学习.md","ref":"micro-service/配置中心/nacos/nacos-spring-cloud学习.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"micro-service/配置中心/nacos/nacos安装和入门学习.md","mtime":"2021-02-24T07:41:29.823Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-24T07:41:52.669Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"apollo手动监听接收变更的配置","tags":[],"date":"2021-02-21T20:44:35.000Z","categories":null,"level":"1.5.4.1.2","depth":4,"next":{"title":"Nacos","level":"1.5.4.2","depth":3,"ref":"","articles":[{"title":"nacos-spring-cloud学习","level":"1.5.4.2.1","depth":4,"path":"micro-service/配置中心/nacos/nacos-spring-cloud学习.md","ref":"micro-service/配置中心/nacos/nacos-spring-cloud学习.md","articles":[]},{"title":"nacos安装和入门学习","level":"1.5.4.2.2","depth":4,"path":"micro-service/配置中心/nacos/nacos安装和入门学习.md","ref":"micro-service/配置中心/nacos/nacos安装和入门学习.md","articles":[]}]},"previous":{"title":"apollo客户端配置使用.md","level":"1.5.4.1.1","depth":4,"path":"micro-service/配置中心/appollo/apollo客户端配置使用.md","ref":"micro-service/配置中心/appollo/apollo客户端配置使用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","-highlight","baidu","splitter","sitemap","back-to-top-button","code","splitter","-lunr","-search","search-pro","theme-comscore","popup","hide-element","anchors","nocache","page-toc-button"],"ignores":["friends","tags","categories","about"],"root":"./content","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"nocache":{},"github":{"url":"https://github.com/zhaoda/webpack-handbook"},"editlink":{"base":"https://github.com/zhaoda/webpack-handbook/blob/master/content","label":"编辑本页"},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"sitemap":{"hostname":"http://zhaoda.net/"},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"back-to-top-button":{},"baidu":{"token":"a9787f0ab45d5e237bab522431d0a7ec"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"SUMMARY.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"java实用笔记","language":"zh-hans","output.name":"site","catalog":["./source/_posts"],"links":{"sidebar":{"Home":"http://blog.liangqingxiang.top"}},"gitbook":"3.2.3","description":"学习笔记"},"file":{"path":"micro-service/配置中心/appollo/apollo手动监听接收变更的配置.md","mtime":"2021-02-24T07:41:30.156Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-24T07:41:52.669Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
