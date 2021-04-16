@@ -26,6 +26,22 @@ categories:
 [RabbitMQ（四）消息Ack确认机制](https://blog.csdn.net/Sadlay/article/details/86771830?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromBaidu-1.control)
 
 
+[Concurrency与Prefetch参数\RabbitMQ消费者的几个参数](https://www.jianshu.com/p/04a1d36f52ba)
+
+[消费RabbitMQ时的注意事项，如何禁止大量的消息涌到Consumer](https://www.cnblogs.com/atwind/p/5606120.html)
+
+
+
+rabbitMq消费者如何设置同时处理的消息数？
+
+node 使用 amqplib 库连接 rabbitMq，消费者采用需要手动ack方式。最近消息生产速度越来越快，消费者已经吃满cpu了，rabbitMq只要有消息就会马上发给消费者处理，如何才能让rabbitmq一次只给每个消费者几条消息，每ack一条消息再发一条呢？
+
+[如何才能让rabbitmq一次只给每个消费者几条消息](https://segmentfault.com/q/1010000020495252/a-1020000020495352#)
+
+
+
+
+
 #### 
 
 ```java

@@ -33,8 +33,9 @@
 <url> <loc>http://zhaoda.net/java/xxl-job/xxl-job定时任务教程.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/java/数据源/动态数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/java/缓存/guava/guava缓存简单使用三部曲.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq相关问题/rabbitmq相关问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq相关问题/rabbitmq-channel-shutdown问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>http://zhaoda.net/micro-service/rabbitmq/rabbitmq相关问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合hikari数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合log4j打印mybatis的sql日志.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/springboot/springboot整合redisTemplate.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -43,6 +44,7 @@
 <url> <loc>http://zhaoda.net/micro-service/配置中心/appollo/apollo手动监听接收变更的配置.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos-spring-cloud学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/配置中心/nacos/nacos安装和入门学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/限流/sentinel/sentinel问题汇总/sentinel问题汇总.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/基础/sentinel学习.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/基础/sentinel通过spi方式注册数据源.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/控制台/sentinel控制台改造.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
@@ -55,6 +57,7 @@
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/集群流控/sentinel集群流控3-TransportConfig.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/集群流控/sentinel集群流控4-ClusterClientAssignConfig.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/micro-service/限流/sentinel/集群流控/sentinel集群流控5-心跳检测.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>http://zhaoda.net/micro-service/限流/限流算法/限流算法.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/python/python入门.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/python/python小牛试刀-获取微信关注用户信息.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>http://zhaoda.net/中间件/mybatis-plus/mybatis-plus生成器相关问题.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
