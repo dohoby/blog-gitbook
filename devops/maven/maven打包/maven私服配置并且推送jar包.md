@@ -57,3 +57,10 @@ C:\Users\hoby\.m2/settings.xml
 ![](maven私服配置并且推送jar包/maven-jar-1.png)
 
 
+#### IDEA中Maven打包时如何跳过测试
+方法一、直接使用IDEA提供的方式
+Maven命令栏的工具栏有图标，上面就写着 Skip Tests
+
+方法二、自己编辑maven命令
+
+[IDEA中Maven打包时如何跳过测试](https://blog.csdn.net/weixin_46017976/article/details/109494797)

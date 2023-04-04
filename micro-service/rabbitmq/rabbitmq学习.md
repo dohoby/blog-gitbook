@@ -42,19 +42,52 @@ node 使用 amqplib 库连接 rabbitMq，消费者采用需要手动ack方式。
 
 
 
-#### 
-
+#### 消费消息的两种方式
+第一种是@RabbitListener注解，
 ```java
+    @RabbitListener(containerFactory = "defaultRabbitContainerFactory",
+            bindings = @QueueBinding(
+                    exchange = @Exchange(value = QueueConstant.FLOWSYN_YDZG_GZ_EXCHANGE),
+                    value = @Queue(value = QueueConstant.FLOWSYN_YDZG_GZ_QUEUE, durable = "false"),
+                    key = QueueConstant.FLOWSYN_YDZG_GZ_ROUTINGKEY
+            ),
+            admin = RabbitMqCoreConfig.adminName,
+            concurrency = "1",
+            ackMode = "MANUAL")
+    public void guangzhouListener(@Payload String message, Channel channel, Message message2) {
+            ///log.info("消息数据：{}", message);
 
+    }
 ```
 
-```java
 
+第二种是实现ChannelAwareMessageListener接口。
+```java
+public class BillDetailsPushBackCus implements ChannelAwareMessageListener {
+
+
+    @Override
+    public void onMessage(Message message, Channel channel) throws Exception {
+        try {
+            String msg = new String(message.getBody(), "utf-8");
+            channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
+
+        } catch (Exception e) {
+            log.error(":", e);
+        }
+    }
+
+}
 ```
-![]()
+
+
+![浅谈spring-boot-rabbitmq动态管理的方法](https://www.jb51.net/article/131708.htm)
 
 #### 
 ```java
+com.rabbitmq.client.impl.recovery.AutorecoveringChannel#recoverState
+org.springframework.amqp.rabbit.listener.BlockingQueueConsumer#setQosAndreateConsumers
+
 
 ```
 

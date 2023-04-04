@@ -121,9 +121,9 @@ spring.rabbitmq.listener.simple.acknowledge-mode = manual
 
 
 参考：  
-[http://blog.chinaunix.net/uid-192452-id-5837248.html](http://blog.chinaunix.net/uid-192452-id-5837248.html)
-[https://blog.csdn.net/more_try/article/details/82804387](https://blog.csdn.net/more_try/article/details/82804387)
-[https://www.cnblogs.com/littleatp/p/6087856.html](https://www.cnblogs.com/littleatp/p/6087856.html)
+[http://blog.chinaunix.net/uid-192452-id-5837248.html](http://blog.chinaunix.net/uid-192452-id-5837248.html)  
+[https://blog.csdn.net/more_try/article/details/82804387](https://blog.csdn.net/more_try/article/details/82804387)  
+[https://www.cnblogs.com/littleatp/p/6087856.html](https://www.cnblogs.com/littleatp/p/6087856.html)  
 
 
 #### 连接超时问题
