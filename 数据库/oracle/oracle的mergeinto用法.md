@@ -1,8 +1,8 @@
 ---
-title: oracle的mergeinto用法
+title: oracle的mergeinto更新用法
 tags: []
 date: 2022-04-21 11:42:45
-categories:
+categories: oracle,mergeinto
 ---
 ** {{ title }} ** <Excerpt in index | 首页摘要>
 
