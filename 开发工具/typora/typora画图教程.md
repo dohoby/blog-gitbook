@@ -310,9 +310,9 @@ classDiagram
 
 
 
-![类图中的关系](\typora画图教程\类图中的关系.jpg)
+![类图中的关系](.\typora画图教程\类图中的关系.jpg)
 
-![类图实例](\typora画图教程\类图实例.jpg)
+![类图实例](.\typora画图教程\类图实例.jpg)
 
 
 
